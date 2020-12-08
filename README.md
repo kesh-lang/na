@@ -81,4 +81,4 @@ call:   #bar(42, true)        -- using a tuple to pass multiple values (rpc)
 null:   #null                 -- if you must
 ```
 
-(Note: This [kon](https://github.com/kesh-lang/kon) document is itself an object, it is not an example of a stream!)
+(Note: This [kon](https://github.com/kesh-lang/kon) document is itself an object, it is not an example of a stream.)
