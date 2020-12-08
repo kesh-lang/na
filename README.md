@@ -47,7 +47,7 @@ numbers:                        -- IEEE 754 (64-bit double precision)
     decimal:     42
     separators:  1_000_000
     float:       3.141592654
-    fractional:  -0.01
+    fractional:  0.01
     exponent:    1e-2
     hex:         0xDECAFBAD
     octal:       0o755
