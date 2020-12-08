@@ -29,7 +29,7 @@ strings:                        -- utf-8
     simple:  'abc'              -- raw string
     complex: "this is a
         \"multiline\" string!"  -- supports multiline and escaping
-numbers:                        -- IEEE 754 (double precision)
+numbers:                        -- IEEE 754 (64-bit double precision)
     decimal:     42
     suffix:      42ms           -- suffix is ignored by the parser
     separators:  1_000_000
@@ -72,10 +72,10 @@ tuples: (
 )
 
 -- tagged values (parser must support the tag, output may vary by environment)
-date:   #instant "1985-04-12T23:20:50.52Z"
-uuid:   #uuid "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+date:   #instant '1985-04-12T23:20:50.52Z'
+uuid:   #uuid 'f81d4fae-7dec-11d0-a765-00a0c91e6bf6'
 set:    #[1, 2, 2, 3]
-map:    #{ ('one', 1), ('two', 2) }
+map:    #{ ('one', 1), ([1, 2, 3], true) }
 class:  #Foo { foo: 42, bar: true }
 call:   #bar(42, true)          -- using a tuple to pass multiple values (enables rpc)
 null:   #null                   -- if you must
