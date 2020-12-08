@@ -6,19 +6,27 @@
 
 ## Preliminary definition
 
+Inspired by Rich Hickey's [edn](https://github.com/edn-format/edn/), **na** is an extensible data notation for the conveyance of values.
+
+**na** is used as a subset for [kesh object notation](https://github.com/kesh-lang/kon) and the [kesh](https://github.com/kesh-lang/kesh) language. Unlike [kesh object notation](https://github.com/kesh-lang/kon), there is no enclosing element at the top level, making it suitable for streaming.
+
+The value types are intended to represent the basic set of data structures common to most programming languages. A parser should attempt to map the values types to programming language types with similar semantics. These should be considered immutable value types, to the extent possible.
+
 #### Value types
 
 - boolean
 - string
 - number
-- object
-- array
-- tuple
-- void
+- object (a collection of name/value pairs)
+- array (an ordered list of values)
+- tuple (a finite ordered list of values)
+- void (the absence of a value)
 
-#### Extension types
+#### Extensions
 
-- tag
+Like edn's [tagged elements](https://github.com/edn-format/edn/#tagged-elements), **na** supports extensibility through tagging of values. A tag indicates the semantic interpretation of the following value. Parsers should allow clients to register handlers for specific tags, that expand the received value. If a parser encounters a tag for which no handler is registered, it may ignore the tag and use the value as it is. If possible, it may attach the tag to the value as metadata. Parsers should be able to read any and all **na** data without causing errors.
+
+Unlike edn's tagged elements, a tag that is not followed by a value does not cause an error.
 
 ### Description
 
