@@ -33,7 +33,9 @@ Unlike edn's tagged elements, a tag that is not followed by a value does not cau
 Written in [kesh object notation](https://github.com/kesh-lang/kon). (This is not an example of a stream.)
 
 ```lua
--- primitive values
+-- this is a comment
+
+-- primitive values:
 booleans:
     true:  true
     false: false
@@ -55,12 +57,12 @@ numbers:                        -- IEEE 754 (64-bit double precision)
     no-number:   -NaN
 void: ()                        -- absence of value is represented by an empty tuple
 
--- composite values
+-- composite values:
 object:  { foo: 42, bar: true }
 array:   [1, 2, 3]
 tuple:   (42, true)
 
--- multiline and nested (commas are only required inline)
+-- multiline and nested: (commas are only required inline)
 objects: {
     foo:                        -- braces not required when nesting objects
         bar:
@@ -83,7 +85,7 @@ tuples: (
     ))
 )
 
--- tagged values (parser must support the tag, output may vary by environment)
+-- tagged values: (parser must support the tag, output may vary by environment)
 set:    #[1, 2, 2, 3]
 map:    #{ ('one', 1), ([1, 2, 3], true) }
 date:   #instant '1985-04-12T23:20:50.52Z'
