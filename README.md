@@ -45,7 +45,6 @@ strings:                        -- utf-8
         \"multiline\" string!"  -- supports multiline and escaping
 numbers:                        -- IEEE 754 (64-bit double precision)
     decimal:     42
-    suffix:      42ms           -- suffix is ignored by the parser
     separators:  1_000_000
     float:       3.141592654
     fractional:  -0.01
