@@ -2,7 +2,7 @@
 
 > **kesh** data notation format – suitable for streaming, or simply the conveyance of values
 
-**na** is the kesh word for river.
+**na** is the kesh word for _river_.
 
 ## Preliminary definition
 
