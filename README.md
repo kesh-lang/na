@@ -77,7 +77,7 @@ uuid:   #uuid "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
 set:    #[1, 2, 2, 3]
 map:    #{ ('one', 1), ('two', 2) }
 class:  #Foo { foo: 42, bar: true }
-call:   #bar(42, true)          -- using a tuple to pass multiple values (rpc)
+call:   #bar(42, true)          -- using a tuple to pass multiple values (enables rpc)
 null:   #null                   -- if you must
 ```
 
