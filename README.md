@@ -18,7 +18,9 @@
 
 - tag
 
-### Described using [kesh object notation](https://github.com/kesh-lang/kon)
+### Description
+
+Using [kesh object notation](https://github.com/kesh-lang/kon). (Note: This is not an example of a stream.)
 
 ```lua
 -- primitive values
@@ -80,5 +82,3 @@ class:  #Foo { foo: 42, bar: true }
 call:   #bar(42, true)          -- using a tuple to pass multiple values (enables rpc)
 null:   #null                   -- if you must
 ```
-
-(Note: This [kon](https://github.com/kesh-lang/kon) document is itself an object, it is not an example of a stream.)
