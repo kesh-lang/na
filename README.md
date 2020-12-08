@@ -30,7 +30,7 @@ Unlike edn's tagged elements, a tag that is not followed by a value does not cau
 
 ## Description
 
-Written in [kesh object notation](https://github.com/kesh-lang/kon). (Note: This is not an example of a stream.)
+Written in [kesh object notation](https://github.com/kesh-lang/kon). (This is not an example of a stream.)
 
 ```lua
 -- primitive values
