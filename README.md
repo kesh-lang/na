@@ -1,6 +1,6 @@
 # na
 
-> **kesh** data notation format, suitable for streaming or simply the conveyance of values
+> **kesh** data notation format, suitable for streaming, or simply the conveyance of values
 
 ## Preliminary definition
 
