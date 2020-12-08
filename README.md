@@ -18,7 +18,7 @@
 
 - tag
 
-### Described using kesh object notation
+### Described using [kesh object notation](https://github.com/kesh-lang/kon)
 
 ```lua
 -- primitive values
@@ -81,4 +81,4 @@ call:   #bar(42, true)        -- using a tuple to pass multiple values (rpc)
 null:   #null                 -- if you must
 ```
 
-(This kon document is itself an object.)
+(This [kon](https://github.com/kesh-lang/kon) document is itself an object.)
