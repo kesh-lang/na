@@ -1,2 +1,3 @@
 # na
-kesh data notation
+
+> **kesh** data notation. Suitable for streaming.
