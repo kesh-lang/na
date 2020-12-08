@@ -20,7 +20,7 @@
 
 ### Description
 
-Using [kesh object notation](https://github.com/kesh-lang/kon). (Note: This is not an example of a stream.)
+Written in [kesh object notation](https://github.com/kesh-lang/kon). (Note: This is not an example of a stream.)
 
 ```lua
 -- primitive values
