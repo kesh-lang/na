@@ -4,7 +4,7 @@
 
 ## Preliminary definition
 
-### Value types
+#### Value types
 
 - boolean
 - string
@@ -14,7 +14,7 @@
 - tuple
 - void
 
-### Extension types
+#### Extension types
 
 - tag
 
