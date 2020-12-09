@@ -18,8 +18,8 @@ The value types are intended to represent the basic set of data structures commo
 - number
 - string
 - object (a collection of name/value pairs)
-- array (an ordered collection of values, often of the same type)
-- tuple (a finite ordered list of values)
+- array (an ordered list of values, often homogeneous)
+- tuple (a finite ordered list of values, often heterogeneous)
 - void (the absence of a value)
 
 ### Extensions
