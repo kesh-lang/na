@@ -84,9 +84,13 @@ tuples: (
     ))
 )
 
--- tagged values: (parser must support the tag, output may vary by environment)
+-- extended value types: (if supported by the parser)
 set:    #[1, 2, 2, 3]
 map:    #{ ('one', 1), ([1, 2, 3], true) }
+bignum: #1124000727777607680000 -- arbitrary-precision number
+regexp: #"(?i)[^abc]"           -- with leading mode modifier for flags
+
+-- extended values: (parser must support the tag, output may vary by environment)
 date:   #instant '1985-04-12T23:20:50.52Z'
 uuid:   #uuid 'f81d4fae-7dec-11d0-a765-00a0c91e6bf6'
 class:  #Foo { foo: 42, bar: true }
