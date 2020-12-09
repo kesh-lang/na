@@ -15,8 +15,8 @@ The value types are intended to represent the basic set of data structures commo
 ### Value types
 
 - boolean
-- string
 - number
+- string
 - object (a collection of name/value pairs)
 - array (an ordered list of values)
 - tuple (a finite ordered list of values)
