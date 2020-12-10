@@ -88,7 +88,7 @@ tuples: (
 set:    #[1, 2, 2, 3]
 map:    #{ ('one', 1), ([1, 2, 3], true) }
 bignum: #1124000727777607680000 -- arbitrary-precision number
-regexp: #"(?i)[^abc]"           -- leading mode modifier for flags
+regexp: #'(?i)[^abc]'           -- leading mode modifier for flags
 
 -- tagges values: (parser must support the tag, output may vary by environment)
 date:   #instant '1985-04-12T23:20:50.52Z'
