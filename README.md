@@ -56,7 +56,7 @@ strings:                        -- utf-8
     plain: 'abc'                -- raw string
     fancy: "this is a
         \"multiline\" string!"  -- supports multiline and escaping
-numbers:                        -- IEEE 754 (64-bit double precision)
+numbers:                        -- IEEE 754 64-bit double-precision floating-point format
     decimal:     42
     separators:  1_000_000
     float:       3.141592654
