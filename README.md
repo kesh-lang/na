@@ -30,7 +30,7 @@ Inspired by Rich Hickey's [edn](https://github.com/edn-format/edn/), **na** is a
     Continue := Start, plus XID_Continue
     Medial := U+002D
 
-In other words, an identifier may not start with a `$` (dollar sign) or `_` (low line). It may contain but not start or end with `-` (hyphen-minus).
+In other words, an identifier may not start with a `$` or `_`. It may contain but not start or end with `-`.
 
 
 ### Extensions
