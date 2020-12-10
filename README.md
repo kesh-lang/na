@@ -22,6 +22,17 @@ Inspired by Rich Hickey's [edn](https://github.com/edn-format/edn/), **na** is a
 - tuple (a finite ordered list of values, often heterogeneous)
 - void (the absence of a value)
 
+### Identifiers
+
+**na** meets [UAX #31 R1](https://unicode.org/reports/tr31/#R1) by adopting a _profile_ adding some optional characters. In the terms of the grammar used in UAX #31:
+
+    Start := XID_Start
+    Continue := Start plus XID_Continue
+    Medial := U+002D
+
+In other words, an identifier may not start with a `$` (dollar sign) or `_` (low line). It may contain but not start or end with `-` (hyphen-minus).
+
+
 ### Extensions
 
 Like edn's [tagged elements](https://github.com/edn-format/edn/#tagged-elements), **na** supports extensibility through tagging of values. A tag indicates the semantic interpretation of the following value. Parsers should allow clients to register handlers for specific tags, that expand the received value. If a parser encounters a tag for which no handler is registered, it may ignore the tag and use the value as it is. If possible, it may attach the tag to the value as metadata. Parsers should be able to read any and all **na** data without causing errors.
