@@ -53,7 +53,7 @@ booleans:
     yep:  true
     nope: false
 strings:                        -- utf-8
-    plain: 'abc'               -- raw string
+    plain: 'abc'                -- raw string
     magic: "this is a
         \"multiline\" string!"  -- supports multiline and escaping
 numbers:                        -- IEEE 754 (64-bit double precision)
