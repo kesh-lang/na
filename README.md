@@ -24,13 +24,15 @@ Inspired by Rich Hickey's [edn](https://github.com/edn-format/edn/), **na** is a
 
 ### Identifiers
 
-**na** meets [UAX31-R1](https://unicode.org/reports/tr31/#R1) of Unicode 13 by adopting a _profile_ adding `-` as an allowed medial.
+**na** meets [UAX31-R1](https://unicode.org/reports/tr31/#R1) of Unicode 13 by adopting a _profile_ adding optional characters to the set of allowed characters.
 
-    Start := XID_Start
-    Continue := Start, plus XID_Continue
-    Medial := U+002D
+    <Identifier> := <Start> <Continue>* (<Medial> <Continue>+)*
+    
+    <Start> := XID_Start + U+005F
+    <Continue> := <Start> + XID_Continue
+    <Medial> := U+002D
 
-In other words, identifiers may contain but not start or end with `-`. Identifiers may not start with `$` or `_`
+In other words, identifiers may contain but not start or end with `-`. Identifiers may start with `_`, but not with `$`.
 
 
 ### Extensions
