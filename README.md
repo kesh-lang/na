@@ -20,7 +20,6 @@ The value types are intended to represent the basic set of data structures commo
 - object (a collection of key/value pairs)
 - array (an ordered list of values, often homogeneous)
 - tuple (a finite ordered list of values, often heterogeneous)
-- identifier (atom/symbol, often used as keys in objects)
 - void (the absence of a value)
 
 ### Extensions
@@ -55,7 +54,6 @@ numbers:                        -- IEEE 754 (64-bit double precision)
     binary:      0b101010
     infinity:    Infinity
     no-number:   NaN
-symbol: foo
 void: ()                        -- absence of value is represented by an empty tuple
 
 -- composite values:
