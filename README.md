@@ -87,7 +87,7 @@ tuples: (
 -- tagged literals: (if supported by the parser)
 set:    #[1, 2, 2, 3]
 map:    #{ ('one', 1), ([1, 2, 3], true) }
-bignum: #1124000727777607680000 -- signed arbitrary-precision integer
+bignum: #1124000727777607680000 -- signed arbitrary-precision number
 regexp: #'(?i)[^abc]'           -- leading mode modifier for flags
 
 -- tagged values: (parser must support the tag, output may vary by environment)
