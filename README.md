@@ -55,6 +55,7 @@ numbers:                        -- IEEE 754 (64-bit double precision)
     binary:      0b101010
     infinity:    Infinity
     no-number:   NaN
+symbol: foo
 void: ()                        -- absence of value is represented by an empty tuple
 
 -- composite values:
