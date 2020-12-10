@@ -27,7 +27,7 @@ Inspired by Rich Hickey's [edn](https://github.com/edn-format/edn/), **na** is a
 **na** meets [UAX31-R1](https://unicode.org/reports/tr31/#R1) of Unicode 13 by adopting a _profile_ adding `-` as an allowed medial. In the terms of the grammar used in UAX #31:
 
     Start := XID_Start
-    Continue := Start plus XID_Continue
+    Continue := Start, plus XID_Continue
     Medial := U+002D
 
 In other words, an identifier may not start with a `$` (dollar sign) or `_` (low line). It may contain but not start or end with `-` (hyphen-minus).
