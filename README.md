@@ -50,8 +50,8 @@ Written in [kesh object notation](https://github.com/kesh-lang/kon). (This is no
 
 -- primitive values:
 booleans:
-    true:  true
-    false: false
+    yep:  true
+    nope: false
 strings:                        -- utf-8
     simple:  'abc'              -- raw string
     complex: "this is a
