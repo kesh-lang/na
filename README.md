@@ -20,7 +20,7 @@ The value types are intended to represent the basic set of data structures commo
 - object (a collection of key/value pairs)
 - array (an ordered list of values, often homogeneous)
 - tuple (a finite ordered list of values, often heterogeneous)
-- symbol (an identifier, often used as keys in objects)
+- identifier (atom/symbol, often used as keys in objects)
 - void (the absence of a value)
 
 ### Extensions
