@@ -8,7 +8,7 @@
 
 Inspired by Rich Hickey's [edn](https://github.com/edn-format/edn/), **na** is an extensible data notation for the conveyance of values.
 
-**na** is used as a subset for [kesh object notation](https://github.com/kesh-lang/kon) and the [kesh](https://github.com/kesh-lang/kesh) programming language. Unlike [kesh object notation](https://github.com/kesh-lang/kon), there is no enclosing element at the top level, making it suitable for streaming. Values are separated by newline, alternatively comma and spaces if inlined.
+**na** is used as a strict subset for [kesh object notation](https://github.com/kesh-lang/kon) and the [kesh](https://github.com/kesh-lang/kesh) programming language. Unlike [kesh object notation](https://github.com/kesh-lang/kon), there is no enclosing element at the top level, making it suitable for streaming. Values are separated by newline, alternatively comma and spaces if inlined.
 
 **na**'s value types are intended to represent the basic set of data structures common to most programming languages. A parser should attempt to map the value types to programming language types with similar semantics. These should be considered immutable value types, to the extent possible.
 
