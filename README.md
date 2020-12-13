@@ -52,11 +52,11 @@ Written in [kesh object notation](https://github.com/kesh-lang/kon). (This is no
 booleans:
     yep:  true
     nope: false
-strings:                        -- utf-8
-    plain: 'abc'                -- raw string
+strings:                          -- utf-8
+    plain: 'abc'                  -- raw string
     fancy: "this is a
-        \"multiline\" string!"  -- supports multiline and escaping
-numbers:                        -- IEEE 754 64-bit double-precision floating-point format
+        \"multiline\" string!"    -- supports multiline and escaping
+numbers:                          -- IEEE 754 64-bit double-precision floating-point format
     decimal:     42
     separators:  1_000_000
     float:       3.141592654
@@ -67,7 +67,7 @@ numbers:                        -- IEEE 754 64-bit double-precision floating-poi
     binary:      0b101010
     infinity:    Infinity
     no-number:   NaN
-void: ()                        -- absence of value is represented by an empty tuple
+void: ()                          -- absence of value is represented by an empty tuple
 
 -- composite values:
 object:  { foo: 42, bar: true }
@@ -76,12 +76,12 @@ tuple:   (42, true)
 
 -- multiline and nested: (commas are only required inline)
 objects: {
-    foo:                        -- braces not required when nesting objects
+    foo:                          -- braces not required when nesting objects
         bar:
             baz: 42
-            'string key': true  -- key can either be a name or a string
-    path-shortcut:
-        foo.bar.'string key': 42
+            'string key': true    -- key can either be a name or a string
+    object-path:
+        foo.bar.'string key': 42  -- expands to nested objects
 }
 arrays: [
     'one'
@@ -100,13 +100,13 @@ tuples: (
 -- tagged literals: (if supported by the parser)
 set:    #[1, 2, 2, 3]
 map:    #{ ('one', 1), ([1, 2, 3], true) }
-bignum: #1124000727777607680000 -- signed arbitrary-precision number
-regexp: #'(?i)[^abc]'           -- leading mode modifier for flags
+bignum: #1124000727777607680000   -- signed arbitrary-precision number
+regexp: #'(?i)[^abc]'             -- leading mode modifier for flags
 
 -- tagged values: (parser must support the tag, output may vary by environment)
 date:   #instant '1985-04-12T23:20:50.52Z'
 uuid:   #uuid 'f81d4fae-7dec-11d0-a765-00a0c91e6bf6'
 class:  #Foo { foo: 42, bar: true }
-call:   #bar(42, true)          -- using a tuple to pass multiple values to handler function
-null:   #null                   -- if you must
+call:   #bar(42, true)            -- using a tuple to pass multiple values to handler function
+null:   #null                     -- if you must
 ```
