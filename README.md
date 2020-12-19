@@ -104,18 +104,18 @@ set:    #[1, 2, 2, 3]
 map:    #{ ('one', 1), ([1, 2, 3], true) }
 bignum: #1124000727777607680000   -- signed arbitrary-precision number
 regexp: #'(?i)[^abc]'             -- leading mode modifier for flags
-s-exp:  #(cons 1 2)               -- s-expression (their intepretation and semantics are not defined)
+s-exp:  #(cons 1 2)               -- s-expression (its interpretation and semantics are not defined by na)
 
 -- tagged values:
 date:   #instant '1985-04-12T23:20:50.52Z'
 uuid:   #uuid 'f81d4fae-7dec-11d0-a765-00a0c91e6bf6'
 base64: #base64 'aGVsbG8sIHdvcmxkIQ=='
 class:  #Foo { foo: 42, bar: true }
-call:   #bar(42, true)            -- using a tuple to pass multiple values to handler function
-null:   #null                     -- if you must
-```
+call:   #bar(42, true)            -- using a tuple to pass multiple values to a handler function
 
 -- static typing:
-number: #number 42                -- explicitly typed value (standard value types)
+bool:   #boolean                  -- a void typed value
+number: #number 42                -- explicitly typed value
 float:  #float 42                 -- custom type (not standard)
-bool:   #boolean ()               -- a void boolean value
+null:   #null                     -- if you must (requires a null handler)
+```
