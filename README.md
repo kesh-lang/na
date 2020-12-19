@@ -24,15 +24,15 @@ Inspired by Rich Hickey's [edn](https://github.com/edn-format/edn/), **na** is a
 
 ### Identifiers
 
-**na** meets [UAX31-R1](https://unicode.org/reports/tr31/#R1) of Unicode 13 by adopting a _profile_ adding the optional characters `-` and `_`.
+**na** meets [UAX31-R1](https://unicode.org/reports/tr31/#R1) of Unicode 13 by adopting a _profile_ adding the optional characters `-` (hyphen-minus), `_` (low line) and `$` (dollar sign).
 
     <Identifier> := <Start> <Continue>* (<Medial> <Continue>+)*
     
-    <Start> := XID_Start + U+005F
+    <Start> := XID_Start + U+005F and U+0024
     <Continue> := <Start> + XID_Continue
     <Medial> := U+002D
 
-In other words, identifiers may contain but not start or end with `-`. Identifiers may start with `_`, but not with `$`.
+In other words, the characters `_` (low line) and `$` (dollar sign) are permitted anywhere in an identifier. Identifiers may contain but not start or end with `-` (hyphen-minus).
 
 
 ### Extensions
