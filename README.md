@@ -103,8 +103,8 @@ tuples: (
 set:    #[1, 2, 2, 3]
 map:    #{ ('one', 1), ([1, 2, 3], true) }
 bignum: #1124000727777607680000   -- signed arbitrary-precision number
-regexp: #'(?i)[^abc]'             -- leading mode modifier for flags
-s-exp:  #(cons 1 2)               -- s-expression (its interpretation is not defined by na)
+symbol: #'!@#'
+s-expr: #(cons 1 2)               -- its interpretation is not defined by na, but it could use na value types
 
 -- tagged values:
 date:   #instant '1985-04-12T23:20:50.52Z'
