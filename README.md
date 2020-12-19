@@ -48,7 +48,7 @@ Unlike edn's tagged elements, a tag that is not followed by a value does not cau
 Written in [kesh object notation](https://github.com/kesh-lang/kon). (This is not an example of a stream.)
 
 ```lua
--- this is a comment
+-- this is a line comment
 
 -- primitive values:
 booleans:
