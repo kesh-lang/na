@@ -37,7 +37,7 @@ In other words, the characters `_` and `$` are permitted anywhere in an identifi
 
 ### Extensions
 
-Like edn's [tagged elements](https://github.com/edn-format/edn/#tagged-elements), **na** supports extensibility through tagging of values. A tag indicates the semantic interpretation of the following value. Parsers should allow clients to register handlers for specific tags, transforming received values into appropriate data types. If a parser encounters a tag for which no handler is registered, it may ignore the tag and use the value as it is. Resilience is important, parsers should be able to read any and all **na** data without causing errors.
+Like edn's [tagged elements](https://github.com/edn-format/edn/#tagged-elements), **na** supports extensibility through tagging of values. A tag indicates the semantic interpretation of the following value. Parsers should allow clients to register handlers for specific tags, transforming received values into appropriate data types. If a parser encounters a tag for which no handler is registered, it may ignore the tag and use its verbatim value, possibly converting it to a more appropriate data type. Resilience is important, parsers should be able to read any and all **na** data without causing errors.
 
 Unlike edn's tagged elements, a tag that is not followed by a value does not cause an error. A handler that is registered for the tag can provide a value, otherwise a void value should be used.
 
@@ -97,16 +97,23 @@ tuples: (
     ))
 )
 
--- tagged literals: (if supported by the parser)
+-- tagged literals:
 set:    #[1, 2, 2, 3]
 map:    #{ ('one', 1), ([1, 2, 3], true) }
 bignum: #1124000727777607680000   -- signed arbitrary-precision number
 regexp: #'(?i)[^abc]'             -- leading mode modifier for flags
+s-exp:  #(cons 1 2)               -- s-expression (their intepretation and semantics are not defined)
 
--- tagged values: (parser must support the tag, output may vary by environment)
+-- tagged values:
 date:   #instant '1985-04-12T23:20:50.52Z'
 uuid:   #uuid 'f81d4fae-7dec-11d0-a765-00a0c91e6bf6'
+base64: #base64 'aGVsbG8sIHdvcmxkIQ=='
 class:  #Foo { foo: 42, bar: true }
 call:   #bar(42, true)            -- using a tuple to pass multiple values to handler function
 null:   #null                     -- if you must
 ```
+
+-- static typing:
+number: #number 42                -- explicitly typed value (standard value types)
+float:  #float 42                 -- custom type (not standard)
+bool:   #boolean ()               -- a void boolean value
