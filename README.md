@@ -52,7 +52,7 @@ Written in [kesh object notation](https://github.com/kesh-lang/kon). (This is no
 booleans:
     yep:  true
     nope: false
-strings:                          -- utf-8
+strings:                          -- UTF-8
     plain: 'abc'                  -- raw string
     fancy: "this is a
         \"multiline\" string!"    -- supports multiline and escaping
