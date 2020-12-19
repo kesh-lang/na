@@ -106,7 +106,7 @@ regexp: #'(?i)[^abc]'             -- leading mode modifier for flags
 -- tagged values: (parser must support the tag, output may vary by environment)
 date:   #instant '1985-04-12T23:20:50.52Z'
 uuid:   #uuid 'f81d4fae-7dec-11d0-a765-00a0c91e6bf6'
-object: #Foo { foo: 42, bar: true }
+class:  #Foo { foo: 42, bar: true }
 call:   #bar(42, true)            -- using a tuple to pass multiple values to handler function
 null:   #null                     -- if you must
 ```
