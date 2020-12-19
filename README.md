@@ -32,7 +32,7 @@ Inspired by Rich Hickey's [edn](https://github.com/edn-format/edn/), **na** is a
     <Continue> := <Start> + XID_Continue
     <Medial> := U+002D
 
-In other words, the characters `_` and `$` are permitted anywhere in an identifier. Identifiers may contain but not start or end with `-`.
+In other words, identifiers may contain but not start or end with `-`. The characters `_` and `$` are permitted anywhere in an identifier.
 
 
 ### Extensions
