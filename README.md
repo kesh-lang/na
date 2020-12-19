@@ -99,11 +99,11 @@ tuples: (
     ))
 )
 
--- tagged literals:
+-- extended types:
 set:    #[1, 2, 2, 3]
 map:    #{ ('one', 1), ([1, 2, 3], true) }
 bignum: #1124000727777607680000   -- signed arbitrary-precision number
-symbol: #'!@#'
+symbol: #'!@#'                    -- unlike identifiers, symbols are values
 s-expr: #(cons 1 2)               -- its interpretation is not defined by na
 
 -- tagged values:
@@ -114,7 +114,7 @@ class:  #Foo { foo: 42, bar: true }
 call:   #bar(42, true)            -- using a tuple to pass multiple values to a handler function
 
 -- static typing:
-bool:   #boolean                  -- a typed value that is void
+bool:   #boolean                  -- typed value that is void
 number: #number 42                -- explicitly typed value
 float:  #float 42                 -- custom type
 null:   #null                     -- if you must (requires a null handler)
