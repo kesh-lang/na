@@ -114,8 +114,8 @@ class:  #Foo { foo: 42, bar: true }
 call:   #bar(42, true)            -- using a tuple to pass multiple values to a handler function
 
 -- static typing:
-bool:   #boolean                  -- a void typed value
+bool:   #boolean                  -- a typed value that is void
 number: #number 42                -- explicitly typed value
-float:  #float 42                 -- custom type (not standard)
+float:  #float 42                 -- custom type
 null:   #null                     -- if you must (requires a null handler)
 ```
