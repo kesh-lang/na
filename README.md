@@ -41,7 +41,7 @@ Like edn's [tagged elements](https://github.com/edn-format/edn/#tagged-elements)
 
 If a parser encounters a tag for which no handler is registered, it may ignore the tag and use its verbatim value, possibly converting it to a more appropriate data type. Resilience is important, parsers should be able to read any and all **na** data without causing errors.
 
-Unlike edn's tagged elements, a tag that is not followed by a value does not cause an error. A handler that is registered for the tag can provide a value, otherwise a void value should be used.
+Unlike edn's tagged elements, a tag that is not followed by a value does not cause an error. A handler that is registered for the tag can provide a default value, otherwise a void value should be used.
 
 ## Description
 
