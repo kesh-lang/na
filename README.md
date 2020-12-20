@@ -12,7 +12,7 @@ Inspired by Rich Hickey's [edn](https://github.com/edn-format/edn/), **na** is a
 
 **na**'s value types are intended to represent the basic set of data structures common to most programming languages. A parser should attempt to map the value types to programming language types with similar semantics. These should be considered immutable value types, to the extent possible.
 
-### Value types
+### Core value types
 
 - **boolean**
 - **number** – IEEE 754 64-bit double-precision floating-point
@@ -99,11 +99,11 @@ tuples: (
     ))
 )
 
--- extended types:
+-- extended value types:
 set:    #[1, 2, 2, 3]
 map:    #{ ('one', 1), ([1, 2, 3], true) }
 bignum: #1124000727777607680000   -- signed arbitrary-precision number
-s-expr: #(a (b c))                -- its interpretation is not defined by na
+s-expr: #(a (b c))                -- with application-defined semantics
 
 -- tagged values:
 date:   #instant '1985-04-12T23:20:50.52Z'
