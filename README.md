@@ -103,7 +103,7 @@ tuples: (
 set:    #[1, 2, 2, 3]
 map:    #{ ('one', 1), ([1, 2, 3], true) }
 bignum: #1124000727777607680000   -- signed arbitrary-precision number
-symbol: #'!@#'                    -- its semantics varies by programming language
+symbol: #'foo!@#'                    -- its semantics varies by programming language
 s-expr: #(a (b c))                -- its interpretation is not defined by na
 
 -- tagged values:
