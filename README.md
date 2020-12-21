@@ -103,7 +103,7 @@ tuples: (
 set:    #[1, 2, 2, 3]
 map:    #{ ('one', 1), ([1, 2, 3], true) }
 bignum: #1124000727777607680000   -- signed arbitrary-precision number
-s-expr: #(a, (b, c))                -- with application-defined semantics
+s-expr: #(a, (b, c))              -- with application-defined semantics
 
 -- tagged values:
 date:   #instant '1985-04-12T23:20:50.52Z'
