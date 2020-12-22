@@ -78,7 +78,7 @@ tuple:   (42, true)
 
 -- multiline and nested: (commas are only required inline)
 objects: {
-    foo:                          -- braces not required when nesting objects
+    foo:                          -- braces not required when nesting multiline objects
         bar:
             baz: 42
             'string key': true    -- key can either be a name or a string
