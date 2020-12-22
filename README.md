@@ -24,7 +24,7 @@ Inspired by Rich Hickey's [edn](https://github.com/edn-format/edn/), **na** is a
 
 ### Identifiers
 
-**na** meets [UAX31-R1](https://unicode.org/reports/tr31/#R1) of Unicode 13 by adopting a _profile_ adding the optional medial character `-` (hyphen-minus) and optional start characters `_` (low line) and `$` (dollar sign).
+**na** meets [UAX31-R1](https://unicode.org/reports/tr31/#R1) of Unicode 13 by adopting a _profile_ adding the optional medial character `-` (hyphen-minus) and optional start characters `_` (low line) and `$` (dollar sign). In the syntax of UAX31:
 
     <Identifier> := <Start> <Continue>* (<Medial> <Continue>+)*
     
