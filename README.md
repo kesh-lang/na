@@ -22,6 +22,14 @@ Inspired by Rich Hickey's [edn](https://github.com/edn-format/edn/), **na** is a
 - **tuple** – a finite ordered list of values, often heterogeneous
 - **void** – the absence of a value
 
+### Extensions
+
+Like edn's [tagged elements](https://github.com/edn-format/edn/#tagged-elements), **na** supports extensibility through tagging of values. A tag indicates the semantic interpretation of the following value. Parsers should allow clients to register handlers for specific tags, transforming received values into appropriate data types.
+
+If a parser encounters a tag for which no handler is registered, it may ignore the tag and use its verbatim value, possibly converting it to a more appropriate data type. Resilience is important, parsers should be able to read any and all **na** data without causing errors.
+
+Unlike edn's tagged elements, a tag that is not followed by a value does not cause an error. A handler that is registered for the tag can provide a default value, otherwise a void value should be used.
+
 ### Identifiers
 
 **na** meets [UAX31-R1](https://unicode.org/reports/tr31/#R1) of Unicode 13 by adopting a _profile_ adding the optional medial character `-` (hyphen-minus) and optional start characters `_` (low line) and `$` (dollar sign). In the syntax of UAX31:
@@ -34,14 +42,6 @@ Inspired by Rich Hickey's [edn](https://github.com/edn-format/edn/), **na** is a
 
 In other words, identifiers may contain but not start or end with `-`. The characters `_` and `$` are permitted anywhere in an identifier.
 
-
-### Extensions
-
-Like edn's [tagged elements](https://github.com/edn-format/edn/#tagged-elements), **na** supports extensibility through tagging of values. A tag indicates the semantic interpretation of the following value. Parsers should allow clients to register handlers for specific tags, transforming received values into appropriate data types.
-
-If a parser encounters a tag for which no handler is registered, it may ignore the tag and use its verbatim value, possibly converting it to a more appropriate data type. Resilience is important, parsers should be able to read any and all **na** data without causing errors.
-
-Unlike edn's tagged elements, a tag that is not followed by a value does not cause an error. A handler that is registered for the tag can provide a default value, otherwise a void value should be used.
 
 ## Description
 
