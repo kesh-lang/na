@@ -32,15 +32,15 @@ Unlike edn's tagged elements, a tag that is not followed by a value does not cau
 
 ### Identifiers
 
-**na** meets [UAX31-R1](https://unicode.org/reports/tr31/#R1) of Unicode 13 by adopting a _profile_ adding the optional medial character `-` (hyphen-minus) and optional start characters `_` (low line) and `$` (dollar sign). In the syntax of UAX31:
+**na** meets [UAX31-R1](https://unicode.org/reports/tr31/#R1) of Unicode 13 by adopting a _profile_ adding the optional start character `_` (low line) and the optional medial character `-` (hyphen-minus). In the syntax of UAX31:
 
     <Identifier> := <Start> <Continue>* (<Medial> <Continue>+)*
     
-    <Start> := XID_Start + U+005F and U+0024
+    <Start> := XID_Start + U+005F
     <Continue> := <Start> + XID_Continue
     <Medial> := U+002D
 
-In other words, identifiers may contain but not start or end with `-`. The characters `_` and `$` are permitted anywhere in an identifier.
+In other words, identifiers may contain but not start or end with `-`. The character `_` is permitted anywhere in an identifier.
 
 
 ## Description
