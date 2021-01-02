@@ -112,9 +112,9 @@ base64: #base64 'aGVsbG8sIHdvcmxkIQ=='
 class:  #Foo { foo: 42, bar: true }
 call:   #bar(42, true)            -- using a tuple to pass multiple values to a handler function
 
--- static typing:
+-- typed values:
 bool:   #boolean                  -- typed value that is void
-number: #number 42                -- explicitly typed value
+number: #number 42                -- explicitly typed or type cast value
 float:  #float 42                 -- custom type
 null:   #null                     -- if you must (requires a null handler)
 ```
