@@ -19,7 +19,7 @@ Inspired by Rich Hickey's [edn](https://github.com/edn-format/edn/), **na** is a
 - **string** – UTF-8
 - **object** – a collection of key/value pairs
 - **array** – an ordered list of values, often homogeneous
-- **tuple** – a finite ordered list of values, often heterogeneous
+- **tuple** – an ordered list of values, often heterogeneous and finite
 - **void** – the absence of a value
 
 ### Extensions
