@@ -115,6 +115,6 @@ call:   #bar(42, true)            -- applying a handler function to a tuple of v
 -- typed values:
 bool:   #boolean                  -- typed value that is void
 number: #number 42                -- explicitly typed (or type cast) value
-uint8:  #uint8 42                 -- custom type (requires a handler)
+uint8:  #uint8 255                -- custom type (requires a handler)
 null:   #null                     -- if you must (requires a handler)
 ```
