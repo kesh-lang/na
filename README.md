@@ -81,10 +81,9 @@ tuple:   (42, true)
 objects: {
     foo:                          -- braces not required when nesting multiline objects
         bar:
-            baz: 42
-            'string key': true    -- key can either be a name or a string
-    object-path:
-        foo.bar.'string key': 42  -- expands to nested objects
+            baz: 10
+            'string key': true    -- key can either be an identifier or a string
+    foo.bar.the-answer: 42        -- paths are expanded when read
 }
 arrays: [
     'one'
@@ -93,10 +92,10 @@ arrays: [
 ]
 tuples: (
     (1, 'one')
-    (2, ('two', true))
+    (2, ('two', 42))
     (3, (
         (3, 'three')
-        (3.141592654, 'pi')
+        (3.14, 'pi')
     ))
 )
 
@@ -104,18 +103,18 @@ tuples: (
 set:    #[1, 2, 2, 3]
 map:    #{ ('one', 1), ([1, 2, 3], true) }
 bignum: #1124000727777607680000   -- signed arbitrary-precision number
-s-expr: #(a, (b, c))              -- with application-defined semantics
+s-expr: #(a, (b, c))              -- s-expression with application-defined semantics
 
 -- tagged values:
 date:   #instant '1985-04-12T23:20:50.52Z'
 uuid:   #uuid 'f81d4fae-7dec-11d0-a765-00a0c91e6bf6'
 base64: #base64 'aGVsbG8sIHdvcmxkIQ=='
 class:  #Foo { foo: 42, bar: true }
-call:   #bar(42, true)            -- using a tuple to pass multiple values to a handler function
+call:   #bar(42, true)            -- applying a handler function to a tuple of values (arguments)
 
 -- typed values:
 bool:   #boolean                  -- typed value that is void
 number: #number 42                -- explicitly typed (or type cast) value
-float:  #float 42                 -- custom type
-null:   #null                     -- if you must (requires a null handler)
+uint8:  #uint8 42                 -- custom type (requires a handler)
+null:   #null                     -- if you must (requires a handler)
 ```
