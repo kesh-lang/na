@@ -55,13 +55,14 @@ booleans:
     yep:  true
     nope: false
 strings:                          -- UTF-8
-    plain: 'abc'                  -- raw string
+    plain: 'abc'                  -- raw string, supports only the escaping of ' (\')
     fancy: "this is a
         \"multiline\" string!"    -- supports multiline and escaping
 numbers:                          -- IEEE 754 64-bit double-precision floating-point format
     decimal:     42
+    suffix:      10KB
     separators:  1_000_000
-    float:       3.141592654
+    float:       3.14
     fractional:  0.01
     exponent:    1e-2
     hex:         0xDECAFBAD
