@@ -68,6 +68,7 @@ numbers:                          -- IEEE 754 64-bit double-precision floating-p
     hex:         0xDECAFBAD
     octal:       0o755
     binary:      0b101010
+    radix:       12r50
     infinity:    Infinity
     no-number:   NaN
 void: ()                          -- absence of value is represented by an empty tuple
