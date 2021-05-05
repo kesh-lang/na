@@ -45,7 +45,7 @@ In other words, identifiers may contain but not start or end with `-`. The chara
 
 ## Description
 
-Written in [sode](https://github.com/kesh-lang/sode). (This is not an example of a stream.)
+Written in [sode](https://github.com/kesh-lang/sode). (This is not an example of a **na** stream.)
 
 ```lua
 -- this is a line comment
