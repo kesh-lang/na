@@ -80,11 +80,11 @@ list:    (42, true)
 
 -- multiline and nested: (commas are only required inline)
 records: {
-    foo:                          -- braces not required when nesting multiline records
+    foo:                          -- braces may be omitted for nested multiline records
         bar:
             baz: 10
             'string key': true    -- key can either be an identifier or a string
-    foo.bar.the-answer: 42        -- paths are expanded when read
+    foo.bar.the-answer: 42        -- inline paths will be expanded when read
 }
 arrays: [
     'one'
@@ -111,7 +111,7 @@ date:   #instant '1985-04-12T23:20:50.52Z'
 uuid:   #uuid 'f81d4fae-7dec-11d0-a765-00a0c91e6bf6'
 base64: #base64 'aGVsbG8sIHdvcmxkIQ=='
 class:  #Foo { foo: 42, bar: true }
-call:   #bar(42, true)            -- applying a handler function to a list of values (arguments)
+func:   #bar(42, true)            -- applying a handler function to a list of values (arguments)
 
 -- typed values:
 bool:   #boolean                  -- typed value that is void
