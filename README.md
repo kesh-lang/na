@@ -55,7 +55,7 @@ booleans:
     yep:  true
     nope: false
 strings:                          -- UTF-8
-    plain: 'abc'                  -- raw string, supports only the escaping of ' (\')
+    plain: 'abc'                  -- raw string
     fancy: "this is a
         \"multiline\" string!"    -- supports multiline and escaping
 numbers:                          -- IEEE 754 64-bit double-precision floating-point format
