@@ -17,9 +17,9 @@ Inspired by Rich Hickey's [edn](https://github.com/edn-format/edn/), **na** is a
 - **boolean**
 - **number** – IEEE 754 64-bit double-precision floating-point
 - **string** – UTF-8
-- **object** – a collection of key/value pairs
-- **array** – an ordered list of values, often homogeneous
-- **tuple** – an ordered list of values, often heterogeneous and finite
+- **record** – a collection of key/value pairs
+- **array** – an ordered collection of homogeneous values
+- **list** – an ordered collection of heterogeneous values
 - **void** – the absence of a value
 
 ### Extensions
@@ -71,16 +71,16 @@ numbers:                          -- IEEE 754 64-bit double-precision floating-p
     radix:       12r36
     infinity:    Infinity
     no-number:   NaN
-void: ()                          -- absence of value is represented by an empty tuple
+void: ()                          -- absence of value is represented by an empty list
 
 -- composite values:
-object:  { foo: 42, bar: true }
+record:  { foo: 42, bar: true }
 array:   [1, 2, 3]
-tuple:   (42, true)
+list:    (42, true)
 
 -- multiline and nested: (commas are only required inline)
-objects: {
-    foo:                          -- braces not required when nesting multiline objects
+records: {
+    foo:                          -- braces not required when nesting multiline records
         bar:
             baz: 10
             'string key': true    -- key can either be an identifier or a string
@@ -91,7 +91,7 @@ arrays: [
     'two'
     ['three', 'four']
 ]
-tuples: (
+lists: (
     (1, 'one')
     (2, ('two', 42))
     (3, (
@@ -111,7 +111,7 @@ date:   #instant '1985-04-12T23:20:50.52Z'
 uuid:   #uuid 'f81d4fae-7dec-11d0-a765-00a0c91e6bf6'
 base64: #base64 'aGVsbG8sIHdvcmxkIQ=='
 class:  #Foo { foo: 42, bar: true }
-call:   #bar(42, true)            -- applying a handler function to a tuple of values (arguments)
+call:   #bar(42, true)            -- applying a handler function to a list of values (arguments)
 
 -- typed values:
 bool:   #boolean                  -- typed value that is void
