@@ -68,10 +68,10 @@ strings:                          -- UTF-8
             \"multiline\"!"       -- supports multiline and escaping
 
 -- absence of value:
-nothing: ()                       -- nothing (null/undefined) is represented by an empty collection
+nothing: ()                       -- nothing is represented by an empty immutable collection
 
 -- immutable collections (round brackets):
-array:   (1, 2, 3)                -- ordered collection (zero-indexed)
+array:   (1, 2, 3)                -- zero-indexed ordered collection
 record:  (foo: 42, bar: true)     -- keyed collection
 
 -- mutable collections (square/curly brackets):
