@@ -70,11 +70,11 @@ strings:                          -- UTF-8
 -- absence of value:
 nothing: ()                       -- nothing (null/undefined) is represented by an empty collection
 
--- immutable collections use round brackets:
+-- immutable collections (round brackets):
 array:   (1, 2, 3)                -- ordered collection (zero-indexed)
 record:  (foo: 42, bar: true)     -- keyed collection
 
--- mutable collections use square and curly brackets:
+-- mutable collections (square/curly brackets):
 array:   [1, 2, 3]
 record:  { foo: 42, bar: true }
 
