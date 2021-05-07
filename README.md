@@ -72,7 +72,7 @@ array:   (1, 2, 3)                -- ordered collection (zero-indexed)
 record:  (foo: 42, bar: true)     -- keyed collection
 
 -- absence of value:
-nothing: ()                       -- nothing is represented by an empty collection (related to void/null/undefined)
+nothing: ()                       -- nothing (null/undefined) is represented by an empty collection
 
 -- multiline and nested collections:
 array:
@@ -97,7 +97,7 @@ map:    #(true: 42, (): true)     -- keys can be any value
 date:   #instant '1985-04-12T23:20:50.52Z'
 uuid:   #uuid 'f81d4fae-7dec-11d0-a765-00a0c91e6bf6'
 base64: #base64 'aGVsbG8sIHdvcmxkIQ=='
-func:   #greet(name: 'joe')       -- applying a handler function to a collection of values (arguments)
+func:   #greet(name: 'joe')       -- apply a handler function to arguments (a collection of values)
 
 -- typed values:
 bool:   #boolean                  -- a typed boolean value that is void
