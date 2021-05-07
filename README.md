@@ -15,7 +15,7 @@ Inspired by Rich Hickey's [edn](https://github.com/edn-format/edn/), **na** is a
 1. **boolean**
 2. **number** – IEEE 754 64-bit double-precision floating-point
 3. **string** – UTF-8
-4. **collection** – a collection of either ordered values or key/value pairs
+4. **collection** – a collection of either ordered values or key/value pairs, either immutable or mutable
 
 ### Extensions
 
@@ -68,7 +68,7 @@ strings:                          -- UTF-8
             \"multiline\"!"       -- supports multiline and escaping
 
 -- absence of value:
-nothing: ()                       -- nothing is represented by an empty immutable collection
+nothing: ()                       -- null/void is represented by an empty immutable collection
 
 -- immutable collections (round brackets):
 array:   (1, 2, 3)                -- zero-indexed ordered collection
