@@ -67,16 +67,20 @@ strings:                          -- UTF-8
     fancy: "this string is
             \"multiline\"!"       -- supports multiline and escaping
 
--- composite values:
-array:   (1, 2, 3)                -- ordered collection (zero-indexed)
-record:  (foo: 42, bar: true)     -- keyed collection
-
 -- absence of value:
 nothing: ()                       -- nothing (null/undefined) is represented by an empty collection
 
+-- immutable collections use round brackets:
+array:   (1, 2, 3)                -- ordered collection (zero-indexed)
+record:  (foo: 42, bar: true)     -- keyed collection
+
+-- mutable collections use square and curly brackets:
+array:   [1, 2, 3]
+record:  { foo: 42, bar: true }
+
 -- multiline and nested collections:
 array:
-    (1, 'one')                    -- inline collections require parens
+    (1, 'one')                    -- inline collections require brackets
     (2, 'two')
     (3, 'three', (3.14, 'pi'))
 record:
