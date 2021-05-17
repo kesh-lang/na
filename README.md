@@ -71,8 +71,8 @@ strings:                          -- UTF-8 by default
 nothing: ()                       -- null/undefined is represented by an empty immutable collection
 
 -- collections (round brackets):
-array:  (1, 2, 3)                 -- zero-indexed ordered collection
-record: (foo: 42, bar: true)      -- keyed collection
+array:  (1, 2, 3)                 -- zero-indexed ordered values
+record: (foo: 42, bar: true)      -- key/value pairs
 
 -- multiline and nested collections:
 arrays:                           -- brackets and commas are optional when multiline
