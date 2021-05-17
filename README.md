@@ -80,8 +80,8 @@ record:  { foo: 42, bar: true }   -- keys, not curly brackets, make it a record
 
 -- multiline and nested collections:
 array:                            -- brackets and commas are optional when multiline
-    (1, 'one')                    -- inline collections require brackets and commas
-    (2, 'two')
+    (1, 'one')                    -- with no outer brackets, items must be indented
+    (2, 'two')                    -- inline collections require brackets and commas
     (3, 'three', (3.14, 'pi'))
 record:
     foo:                          -- nested records
