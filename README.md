@@ -82,13 +82,13 @@ record:  { foo: 42, bar: true }   -- keys, not curly brackets, make it a record
 array:                            -- brackets and commas are optional when multiline
     (1, 'one')                    -- with no outer brackets, items must be indented
     (2, 'two')                    -- inline collections require brackets and commas
-    (3, 'three', (3.14, 'pi'))
+    (3, 'three', (3.14, 'pi'))    -- nested inline arrays
 record:
-    foo:                          -- nested records
+    foo:                          -- nested multiline records
         bar:
             baz: true
-    foo: (bar: (baz: true))       -- inline nested records
-    foo.bar.baz: true             -- inline paths are expanded
+    foo: (bar: (baz: true))       -- nested inline records
+    foo.bar.baz: true             -- path shorthand
     'string': true                -- string as key
     42: true                      -- number as key
 
