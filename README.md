@@ -94,7 +94,7 @@ record:
 
 -- tagged values:
 bool:   #boolean                  -- typed value that is void
-float:  #float64 3.14             -- typed or type cast value (IEEE 754 double-precision float)
+double: #float64 3.14             -- typed or type cast value (IEEE 754 double-precision float)
 date:   #instant '1985-04-12T23:20:50.52Z'
 uuid:   #uuid 'f81d4fae-7dec-11d0-a765-00a0c91e6bf6'
 base64: #base64 'aGVsbG8sIHdvcmxkIQ=='
