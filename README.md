@@ -79,8 +79,8 @@ array:   [1, 2, 3]
 record:  { foo: 42, bar: true }
 
 -- multiline and nested collections:
-array:
-    (1, 'one')                    -- inline collections require brackets
+array:                            -- brackets and commas are optional when multiline
+    (1, 'one')                    -- inline collections require brackets and commas
     (2, 'two')
     (3, 'three', (3.14, 'pi'))
 record:
