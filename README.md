@@ -68,7 +68,7 @@ strings:                          -- UTF-8 by default
             \"multiline\"!"       -- supports multiline and escaping
 
 -- absence of value:
-nothing: ()                       -- null/void is represented by an empty immutable collection
+nothing: ()                       -- null/undefined is represented by an empty immutable collection
 
 -- immutable collections (round brackets):
 array:   (1, 2, 3)                -- zero-indexed ordered collection
