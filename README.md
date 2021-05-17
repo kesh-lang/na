@@ -13,8 +13,8 @@ Inspired by Rich Hickey's [edn](https://github.com/edn-format/edn/), **na** is a
 ### Core value types
 
 1. **boolean**
-2. **number** – IEEE 754 64-bit double-precision floating-point
-3. **string** – UTF-8
+2. **number**
+3. **string**
 4. **collection** – a collection of either ordered values or key/value pairs, either immutable or mutable
 
 ### Identifiers
@@ -49,12 +49,12 @@ Written in [sode](https://github.com/kesh-lang/sode). (This is not an example of
 booleans:
     yep:  true
     nope: false
-numbers:                          -- IEEE 754 64-bit double-precision floating-point format
+numbers:                          -– arbitrary precision by default
     decimal:     42
     suffix:      10KB
     separators:  1_000_000
     float:       3.14
-    fractional:  0.01
+    ratio:       1/3
     exponent:    1e-2
     hex:         0xDECAFBAD
     octal:       0o755
@@ -62,7 +62,7 @@ numbers:                          -- IEEE 754 64-bit double-precision floating-p
     radix:       12r36
     infinity:    Infinity
     no-number:   NaN
-strings:                          -- UTF-8
+strings:                          -- UTF-8 by default
     plain: 'abc'                  -- raw string
     fancy: "this string is
             \"multiline\"!"       -- supports multiline and escaping
@@ -93,19 +93,15 @@ record:
     42: true                      -- number as key
 
 -- extended value types:
-bignum: #1124000727777607680000   -- signed arbitrary-precision number
 set:    #(1, 2, 2, 3)             -- unique values
 map:    #(true: 42, (): true)     -- keys can be any value
 
 -- tagged values:
+bool:   #boolean                  -- a typed boolean value that is void
 date:   #instant '1985-04-12T23:20:50.52Z'
 uuid:   #uuid 'f81d4fae-7dec-11d0-a765-00a0c91e6bf6'
 base64: #base64 'aGVsbG8sIHdvcmxkIQ=='
+float:  #float64 3.14             -- explicitly typed or type cast value (IEEE 754)
 func:   #greet(name: 'joe')       -- apply a handler function to arguments (a collection of values)
-
--- typed values:
-bool:   #boolean                  -- a typed boolean value that is void
-number: #number 42                -- explicitly typed (or type cast) value
-uint8:  #uint8 255                -- custom type (requires a handler)
-null:   #null                     -- if you must (requires a handler)
+null:   #null                     -- if you insist
 ```
