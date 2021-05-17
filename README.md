@@ -92,10 +92,6 @@ record:
     'string': true                -- string as key
     42: true                      -- number as key
 
--- extended value types:
-set:    #(1, 2, 2, 3)             -- unique values
-map:    #(true: 42, (): true)     -- keys may be of any type
-
 -- tagged values:
 typed:  #boolean                  -- typed value that is void
 float:  #float64 3.14             -- typed or type cast value (IEEE 754 double-precision float)
@@ -105,4 +101,8 @@ base64: #base64 'aGVsbG8sIHdvcmxkIQ=='
 apply:  boolean(1)                -- apply tag handler directly (value must be a collection)
 func:   greet(name: 'joe')        -- apply tag handler to named arguments (a record)
 symbol: foo                       -- a tag handler may reference a constant/variable symbol's value
+
+-- extended value types:
+set:    #(1, 2, 2, 3)             -- unique values
+map:    #(true: 42, (): true)     -- keys may be of any type
 ```
