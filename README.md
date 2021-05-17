@@ -74,9 +74,9 @@ nothing: ()                       -- null/void is represented by an empty immuta
 array:   (1, 2, 3)                -- zero-indexed ordered collection
 record:  (foo: 42, bar: true)     -- keyed collection
 
--- mutable collections (square/curly brackets):
+-- mutable collections (square/curly brackets, semantically equivalent):
 array:   [1, 2, 3]
-record:  { foo: 42, bar: true }
+record:  { foo: 42, bar: true }   -- keys, not curly brackets, make it a record
 
 -- multiline and nested collections:
 array:                            -- brackets and commas are optional when multiline
