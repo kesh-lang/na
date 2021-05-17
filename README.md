@@ -98,11 +98,11 @@ map:    #(true: 42, (): true)     -- keys can be any value
 
 -- tagged values:
 typed:  #boolean                  -- a typed value (boolean) that is void
-apply:  boolean()                 -- apply handler directly (value must be a collection)
-func:   greet(name: 'joe')        -- apply a handler function to arguments (a collection of values)
 float:  #float64 3.14             -- explicitly typed or type cast value (IEEE 754)
 date:   #instant '1985-04-12T23:20:50.52Z'
 uuid:   #uuid 'f81d4fae-7dec-11d0-a765-00a0c91e6bf6'
 base64: #base64 'aGVsbG8sIHdvcmxkIQ=='
 null:   #null                     -- if you insist
+apply:  boolean()                 -- apply handler directly (value must be a collection)
+func:   greet(name: 'joe')        -- apply a handler function to arguments (a collection of values)
 ```
