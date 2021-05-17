@@ -89,8 +89,8 @@ records:
     42: true                      -- number as key
 
 -- alternative collection syntax (square/curly brackets, context dependent semantic meaning):
-s-array:  [ 1, 2, 3 ]             -- resembles javascript array, python list, swift array
-c-array:  { 1, 2, 3 }             -- resembles java array, c array, go array
+s-array:  [ 1, 2, 3 ]             -- resembles javascript/swift/rust array, python list
+c-array:  { 1, 2, 3 }             -- resembles java/c/go array
 s-record: [ foo: 42, bar: true ]  -- resembles swift dictionary, elixir keyword list
 c-record: { foo: 42, bar: true }  -- resembles javascript object, python dict, go map
 
