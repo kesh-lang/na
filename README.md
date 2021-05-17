@@ -15,7 +15,7 @@ Inspired by Rich Hickey's [edn](https://github.com/edn-format/edn/), **na** is a
 1. **boolean**
 2. **number**
 3. **string**
-4. **collection** – a collection of either ordered values or key/value pairs, either immutable or mutable
+4. **collection** – a collection of either ordered values or key/value pairs
 
 ### Identifiers
 
@@ -70,20 +70,16 @@ strings:                          -- UTF-8 by default
 -- absence of value:
 nothing: ()                       -- null/undefined is represented by an empty immutable collection
 
--- immutable collections (round brackets):
-array:   (1, 2, 3)                -- zero-indexed ordered collection
-record:  (foo: 42, bar: true)     -- keyed collection
-
--- mutable collections (square/curly brackets, semantically equivalent):
-array:   [1, 2, 3]                -- type of brackets should match host language's syntax
-record:  { foo: 42, bar: true }   -- keys, not curly brackets, make it a record
+-- collections (round brackets):
+array:  (1, 2, 3)                 -- zero-indexed ordered collection
+record: (foo: 42, bar: true)      -- keyed collection
 
 -- multiline and nested collections:
-array:                            -- brackets and commas are optional when multiline
+arrays:                           -- brackets and commas are optional when multiline
     (1, 'one')                    -- with no outer brackets, items must be indented
     (2, 'two')                    -- inline collections require brackets and commas
     (3, 'three', (3.14, 'pi'))    -- nested inline arrays
-record:
+records:
     foo:                          -- nested multiline records
         bar:
             baz: true
@@ -91,6 +87,16 @@ record:
     foo.bar.baz: true             -- path shorthand
     'string': true                -- string as key
     42: true                      -- number as key
+
+-- alternative collection syntax (square/curly brackets, context dependent semantic meaning):
+s-array:  [ 1, 2, 3 ]             -- resembles javascript array, python list, swift array
+c-array:  { 1, 2, 3 }             -- resembles java array, c array, go array
+s-record: [ foo: 42, bar: true ]  -- resembles swift dictionary, elixir keyword list
+c-record: { foo: 42, bar: true }  -- resembles javascript object, python dict, go map
+
+-- extended collection types:
+set: #(1, 2, 2, 3)                -- unique values
+map: #(true: 42, (): true)        -- keys may be of any type
 
 -- tagged values:
 bool:   #boolean                  -- typed value that is void
@@ -101,8 +107,4 @@ base64: #base64 'aGVsbG8sIHdvcmxkIQ=='
 apply:  boolean(1)                -- apply tag handler directly (value must be a collection)
 func:   greet(name: 'joe')        -- apply tag handler to named arguments (a record)
 symbol: foo                       -- a tag handler may reference a constant/variable symbol's value
-
--- extended value types:
-set:    #(1, 2, 2, 3)             -- unique values
-map:    #(true: 42, (): true)     -- keys may be of any type
 ```
