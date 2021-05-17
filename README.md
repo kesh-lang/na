@@ -49,7 +49,7 @@ Written in [sode](https://github.com/kesh-lang/sode). (This is not an example of
 booleans:
     yep:  true
     nope: false
-numbers:                          -– arbitrary precision by default
+numbers:                          -- arbitrary precision by default
     decimal:     42
     suffix:      10KB
     separators:  1_000_000
