@@ -33,7 +33,7 @@ In other words, identifiers may contain but not start or end with `-`. The chara
 
 Like edn's [tagged elements](https://github.com/edn-format/edn/#tagged-elements), **na** supports extensibility through tagging of values. A tag indicates the semantic interpretation of the following value. Parsers should allow clients to register handlers for specific tags, transforming received values into appropriate data types.
 
-If a parser encounters a tag for which no handler is registered, it may reference a variable/constant symbol of the same name. Alternatively, it should ignore the tag and use its verbatim value, possibly converting it to a more appropriate data type. Resilience is important, parsers must be able to read any valid **na** data without causing errors.
+If a parser encounters a tag for which no handler is registered, it may ignore the tag and use its verbatim value, possibly converting it to a more appropriate data type. Resilience is important, parsers must be able to read any valid **na** data without causing errors.
 
 Unlike edn's tagged elements, a tag that is not followed by a value must not cause an error. A handler that is registered for the tag may provide a default value, otherwise a void value should be used.
 
