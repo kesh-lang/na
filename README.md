@@ -104,5 +104,5 @@ uuid:   #uuid 'f81d4fae-7dec-11d0-a765-00a0c91e6bf6'
 base64: #base64 'aGVsbG8sIHdvcmxkIQ=='
 apply:  boolean(1)                -- apply tag handler directly (value must be a collection)
 func:   greet(name: 'joe')        -- apply tag handler to named arguments (a record)
-ref:    foo                       -- a tag handler may also reference a constant/variable symbol's value
+ref:    foo                       -- a tag handler may also reference a constant/variable symbol
 ```
