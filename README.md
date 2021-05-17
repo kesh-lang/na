@@ -50,18 +50,18 @@ booleans:
     yep:  true
     nope: false
 numbers:                          -- arbitrary precision by default
-    decimal:     42
-    suffix:      10KB
-    separators:  1_000_000
-    float:       3.14
-    ratio:       1/3
-    exponent:    1e-2
-    hex:         0xDECAFBAD
-    octal:       0o755
-    binary:      0b101010
-    radix:       12r36
-    infinity:    Infinity
-    no-number:   NaN
+    decimal:    42
+    suffix:     10KB
+    separators: 1_000_000
+    float:      3.14
+    ratio:      1/3
+    exponent:   1e-2
+    hex:        0xDECAFBAD
+    octal:      0o755
+    binary:     0b101010
+    radix:      12r36
+    infinity:   Infinity
+    no-number:  NaN
 strings:                          -- UTF-8 by default
     plain: 'abc'                  -- raw string
     fancy: "this string is
@@ -94,10 +94,6 @@ c-array:  { 1, 2, 3 }             -- resembles java array, c array, go array
 s-record: [ foo: 42, bar: true ]  -- resembles swift dictionary, elixir keyword list
 c-record: { foo: 42, bar: true }  -- resembles javascript object, python dict, go map
 
--- extended collection types:
-set: #(1, 2, 2, 3)                -- unique values
-map: #(true: 42, (): true)        -- keys may be of any type
-
 -- tagged values:
 bool:   #boolean                  -- typed value that is void
 double: #float64 3.14             -- typed or type cast value (IEEE 754 double-precision float)
@@ -107,4 +103,8 @@ base64: #base64 'aGVsbG8sIHdvcmxkIQ=='
 apply:  boolean(1)                -- apply tag handler directly (value must be a collection)
 func:   greet(name: 'joe')        -- apply tag handler to named arguments (a record)
 symbol: foo                       -- a tag handler may reference a constant/variable symbol's value
+
+-- extended collection types:
+set:    #(1, 2, 2, 3)             -- unique values
+map:    #(true: 42, (): true)     -- keys may be of any type
 ```
