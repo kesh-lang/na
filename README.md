@@ -75,7 +75,7 @@ array:   (1, 2, 3)                -- zero-indexed ordered collection
 record:  (foo: 42, bar: true)     -- keyed collection
 
 -- mutable collections (square/curly brackets, semantically equivalent):
-array:   [1, 2, 3]
+array:   [1, 2, 3]                -- type of brackets should match host language's syntax
 record:  { foo: 42, bar: true }   -- keys, not curly brackets, make it a record
 
 -- multiline and nested collections:
