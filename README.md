@@ -33,9 +33,9 @@ In other words, identifiers may contain but not start or end with `-`. The chara
 
 Like edn's [tagged elements](https://github.com/edn-format/edn/#tagged-elements), **na** supports extensibility through tagging of values. A tag indicates the semantic interpretation of the following value. Parsers should allow clients to register handlers for specific tags, transforming received values into appropriate data types.
 
-If a parser encounters a tag for which no handler is registered, it may ignore the tag and use its verbatim value, possibly converting it to a more appropriate data type. Resilience is important, parsers should be able to read any valid **na** data without causing errors.
+If a parser encounters a tag for which no handler is registered, it may reference a variable/constant symbol of the same name. Alternatively, it should ignore the tag and use its verbatim value, possibly converting it to a more appropriate data type. Resilience is important, parsers must be able to read any valid **na** data without causing errors.
 
-Unlike edn's tagged elements, a tag that is not followed by a value does not cause an error. A handler that is registered for the tag can provide a default value, otherwise a void value should be used.
+Unlike edn's tagged elements, a tag that is not followed by a value must not cause an error. A handler that is registered for the tag may provide a default value, otherwise a void value should be used.
 
 
 ## Description
@@ -94,15 +94,15 @@ record:
 
 -- extended value types:
 set:    #(1, 2, 2, 3)             -- unique values
-map:    #(true: 42, (): true)     -- keys can be any value
+map:    #(true: 42, (): true)     -- keys may be of any type
 
 -- tagged values:
-typed:  #boolean                  -- typed value (boolean) that is void
+typed:  #boolean                  -- typed value that is void
 float:  #float64 3.14             -- typed or type cast value (IEEE 754 double-precision float)
 date:   #instant '1985-04-12T23:20:50.52Z'
 uuid:   #uuid 'f81d4fae-7dec-11d0-a765-00a0c91e6bf6'
 base64: #base64 'aGVsbG8sIHdvcmxkIQ=='
-null:   #null                     -- if you insist
-apply:  boolean()                 -- apply handler directly (value must be a collection)
-func:   greet(name: 'joe')        -- apply a handler function to arguments (a collection of values)
+apply:  boolean(1)                -- apply tag handler directly (value must be a collection)
+func:   greet(name: 'joe')        -- apply tag handler to named arguments (a record)
+ref:    foo                       -- a tag handler may also reference a constant/variable symbol's value
 ```
