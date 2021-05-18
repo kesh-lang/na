@@ -97,12 +97,12 @@ s-record: [ foo: 42, bar: true ]  -- resembles swift dictionary, elixir keyword 
 c-record: { foo: 42, bar: true }  -- resembles javascript object, python dict, go map
 
 -- tagged values:
-bool:   #boolean                  -- typed value that is void
-double: #float64 3.14             -- typed or type cast value (IEEE 754 double-precision float)
-date:   #instant '1985-04-12T23:20:50.52Z'
-uuid:   #uuid 'f81d4fae-7dec-11d0-a765-00a0c91e6bf6'
-base64: #base64 'aGVsbG8sIHdvcmxkIQ=='
-apply:  boolean(1)                -- apply a tag handler directly to a collection (arguments)
-func:   greet(name: 'joe')        -- apply a tag handler directly to a record (named arguments)
-symbol: foo                       -- a tag handler may reference a constant/variable symbol's value
+double: float64 3.14              -- typed/cast value (IEEE 754 double-precision float)
+date:   instant '1985-04-12T23:20:50.52Z'
+uuid:   uuid 'f81d4fae-7dec-11d0-a765-00a0c91e6bf6'
+base64: base64 'aGVsbG8sIHdvcmxkIQ=='
+bool:   boolean                   -- typed field (implicitly void)
+point:  Point(4, 5)               -- tag handler applied directly to an array (arguments)
+hello:  greet(name: 'joe')        -- tag handler applied directly to a record (named arguments)
+symbol: foo                       -- tag handler referencing a constant/variable symbol's value
 ```
