@@ -97,10 +97,10 @@ s-record: [ foo: 42, bar: true ]  -- resembles swift dictionary, elixir keyword 
 c-record: { foo: 42, bar: true }  -- resembles javascript object, python dict, go map
 
 -- tagged values:
-double: float64 3.14              -- typed/cast value (IEEE 754 double-precision float)
 date:   instant '1985-04-12T23:20:50.52Z'
 uuid:   uuid 'f81d4fae-7dec-11d0-a765-00a0c91e6bf6'
 base64: base64 'aGVsbG8sIHdvcmxkIQ=='
+double: float64 3.14              -- typed/cast value (IEEE 754 double-precision float)
 bool:   boolean                   -- typed field (implicitly void)
 point:  Point(4, 5)               -- tag handler applied to an array (arguments)
 hello:  greet(name: 'joe')        -- tag handler applied to a record (named arguments)
