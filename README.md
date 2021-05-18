@@ -75,7 +75,7 @@ array:  (1, 2, 3)                 -- zero-indexed ordered values
 record: (foo: 42, bar: true)      -- key/value pairs
 
 -- multiline and nested collections:
-nested-arrays:                    -- brackets and commas are optional when multiline
+nested-arrays:                    -- brackets are optional
     (1, 'one')                    -- with no outer brackets, items must be indented
     (2, 'two')                    -- inline collections require brackets and commas
     (3, 'three', (3.14, 'pi'))    -- nested inline arrays
@@ -88,7 +88,7 @@ nested-records:
     'string': true                -- string as key
     42: true                      -- number as key
 
--- alternative collection syntax (square/curly brackets, context dependent semantic meaning):
+-- alternative collection syntax (square/curly brackets, context dependent semantics):
 s-array:  [ 1, 2, 3 ]             -- resembles javascript/swift/rust array, python list
 c-array:  { 1, 2, 3 }             -- resembles java/c/go array
 s-record: [ foo: 42, bar: true ]  -- resembles swift dictionary, elixir keyword list
@@ -100,7 +100,7 @@ double: #float64 3.14             -- typed or type cast value (IEEE 754 double-p
 date:   #instant '1985-04-12T23:20:50.52Z'
 uuid:   #uuid 'f81d4fae-7dec-11d0-a765-00a0c91e6bf6'
 base64: #base64 'aGVsbG8sIHdvcmxkIQ=='
-apply:  boolean(1)                -- apply tag handler directly (value must be a collection)
-func:   greet(name: 'joe')        -- apply tag handler to named arguments (a record)
+apply:  boolean(1)                -- apply a tag handler directly to a collection (arguments)
+func:   greet(name: 'joe')        -- apply a tag handler directly to a record (named arguments)
 symbol: foo                       -- a tag handler may reference a constant/variable symbol's value
 ```
