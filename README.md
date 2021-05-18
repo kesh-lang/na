@@ -89,7 +89,8 @@ nested-records:                   -- no brackets makes indentation significant
     'string': true                -- string as key
     42: true                      -- number as key
 
--- alternative collection syntax (square/curly brackets, context dependent semantics):
+-- alternative collections (square/curly brackets):
+-- semantics are context dependent, syntax within brackets are the same as for regular collections
 s-array:  [ 1, 2, 3 ]             -- resembles javascript/swift/rust array, python list
 c-array:  { 1, 2, 3 }             -- resembles java/c/go array
 s-record: [ foo: 42, bar: true ]  -- resembles swift dictionary, elixir keyword list
