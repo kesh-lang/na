@@ -102,7 +102,7 @@ date:   instant '1985-04-12T23:20:50.52Z'
 uuid:   uuid 'f81d4fae-7dec-11d0-a765-00a0c91e6bf6'
 base64: base64 'aGVsbG8sIHdvcmxkIQ=='
 bool:   boolean                   -- typed field (implicitly void)
-point:  Point(4, 5)               -- tag handler applied directly to an array (arguments)
-hello:  greet(name: 'joe')        -- tag handler applied directly to a record (named arguments)
+point:  Point(4, 5)               -- tag handler applied to an array (arguments)
+hello:  greet(name: 'joe')        -- tag handler applied to a record (named arguments)
 symbol: foo                       -- tag handler referencing a constant/variable symbol's value
 ```
