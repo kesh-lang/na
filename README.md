@@ -75,11 +75,12 @@ array:  (1, 2, 3)                 -- zero-indexed ordered values
 record: (foo: 42, bar: true)      -- key/value pairs
 
 -- multiline and nested collections:
-nested-arrays:                    -- no brackets makes indentation significant
+nested-arrays: (
     (1, 'one')                    -- commas are optional if newline is used to separate items
     (2, 'two')                    -- inline collections require brackets and commas
     (3, 'three', (3.14, 'pi'))    -- nested inline arrays
-nested-records:
+)
+nested-records:                   -- no brackets makes indentation significant
     foo:                          -- nested multiline records
         bar:
             baz: true
