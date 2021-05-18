@@ -38,7 +38,7 @@ If a parser encounters a tag for which no handler is registered, it may ignore t
 Unlike edn's tagged elements, a tag that is not followed by a value must not cause an error. A handler that is registered for the tag may provide a default value, otherwise a void value should be used.
 
 
-## Description
+## Examples
 
 Written in [sode](https://github.com/kesh-lang/sode). (This is not an example of a **na** stream.)
 
