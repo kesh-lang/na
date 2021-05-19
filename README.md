@@ -45,6 +45,8 @@ Written in [sode](https://github.com/kesh-lang/sode). (This is not an example of
 ```lua
 -- this is a line comment
 
+(-- this is a block comment --)
+
 -- primitive values:
 booleans:
     yep:  true
