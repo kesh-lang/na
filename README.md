@@ -50,7 +50,7 @@ booleans:
     yep:  true
     nope: false
 numbers:                          -- arbitrary precision by default
-    decimal:    42
+    integer:    42
     suffix:     10KB
     separators: 1_000_000
     float:      3.14
@@ -87,7 +87,7 @@ nested-records:                   -- no brackets makes indentation significant
     foo: (bar: (baz: true))       -- nested inline records
     foo.bar.baz: true             -- path shorthand
     'string': true                -- string as key
-    42: true                      -- number as key
+    42: true                      -- integer as key
 
 -- alternative collections (square/curly brackets, semantics are context dependent):
 s-array:  [ 1, 2, 3 ]             -- resembles javascript/swift/rust array, python list
