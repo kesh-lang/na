@@ -12,10 +12,18 @@ Inspired by Rich Hickey's [edn](https://github.com/edn-format/edn/), **na** is a
 
 ### Core value types
 
-1. **boolean**
-2. **number**
-3. **string**
-4. **collection** – a collection of either ordered values or key/value pairs
+#### Primitive values
+
+- **boolean**
+- **number**
+- **string**
+
+#### Composite values
+
+- **tuple** – a list of either ordered values (usually heterogeneous) or key/value pairs
+- **collection** – a collection of either ordered values (usually homogeneous) or key/value pairs
+
+Valid keys are identifiers, strings and numbers.
 
 ### Identifiers
 
@@ -28,15 +36,6 @@ Inspired by Rich Hickey's [edn](https://github.com/edn-format/edn/), **na** is a
     <Medial> := U+002D
 
 In other words, identifiers may contain but not start or end with `-`. The character `_` is permitted anywhere in an identifier.
-
-### Extensions
-
-Like edn's [tagged elements](https://github.com/edn-format/edn/#tagged-elements), **na** supports extensibility through tagging of values. A tag indicates the semantic interpretation of the following value. Parsers should allow clients to register handlers for specific tags, transforming received values into appropriate data types.
-
-If a parser encounters a tag for which no handler is registered, it may ignore the tag and use its verbatim value, possibly converting it to a more appropriate data type. Resilience is important, parsers must be able to read any valid **na** data without causing errors.
-
-Unlike edn's tagged elements, a tag that is not followed by a value must not cause an error. A handler that is registered for the tag may provide a default value, otherwise a void value should be used.
-
 
 ## Examples
 
@@ -67,39 +66,33 @@ strings:                          -- UTF-8 by default
     fancy: "this string is
             \"multiline\"!"       -- supports multiline and escaping
 
--- absence of value:
-nothing: ()                       -- null/void is represented by an empty immutable collection
+-- tuples:
+nothing: ()                       -- an empty tuple represents null/void/undefined
+something: (42)                   -- a 1-tuple is equivalent to the value it contains
+ordered: ("joe", 27)              -- ordered values
+keyed: (name: "joe", age: 27)     -- key/value pairs
 
--- collections (round brackets):
-array:  (1, 2, 3)                 -- zero-indexed ordered values
-record: (foo: 42, bar: true)      -- key/value pairs
+-- collections:
+array:  [ 1, 2, 3 ]               -- ordered values
+record: [ foo: 42, bar: true ]    -- key/value pairs
 
--- multiline and nested collections:
-nested-arrays:                    -- without brackets, indentation and newline are significant
-    (1, 'one')                    -- commas are optional if newline is used to separate items
-    (2, 'two')                    -- inline collections do require brackets and commas
-    (3, 'three', (3.14, 'pi'))    -- nested inline arrays
-nested-records:                   
-    foo:                          -- nested multiline records
-        bar:
-            baz: true
-    foo: (bar: (baz: true))       -- nested inline records
-    foo.bar.baz: true             -- path shorthand
-    'string': true                -- string as key
-    42: true                      -- integer as key
-
--- alternative collection syntax (square/curly brackets):
+-- square and curly brackets are equivalent:
 s-array:  [ 1, 2, 3 ]             -- resembles javascript/swift/rust array, python list
 c-array:  { 1, 2, 3 }             -- resembles java/c/go array
 s-record: [ foo: 42, bar: true ]  -- resembles swift dictionary, elixir keyword list
 c-record: { foo: 42, bar: true }  -- resembles javascript object, python dict, go map
 
--- tagged values:
-date:   instant '1985-04-12T23:20:50.52Z'
-uuid:   uuid 'f81d4fae-7dec-11d0-a765-00a0c91e6bf6'
-double: float64 1/3               -- typed/cast value (IEEE 754 double-precision float)
-bool:   boolean                   -- typed field (implicitly void)
-point:  Point(4, 5)               -- tag handler applied to an array (arguments)
-hello:  greet(name: 'joe')        -- tag handler applied to a record (named arguments)
-symbol: foo                       -- tag handler referencing a constant/variable symbol's value
+-- multiline and nested collections:
+nested-arrays:                    -- without brackets, indentation and newline are significant
+    [1, 'one']                    -- commas are optional if newline is used to separate items
+    [2, 'two']                    -- inline collections do require brackets and commas
+    [3, 'three', [3.14, 'pi']]    -- nested inline arrays
+nested-records:                   
+    foo:                          -- nested multiline records
+        bar:
+            baz: true
+    foo: { bar: { baz: true } }   -- nested inline records
+    foo.bar.baz: true             -- path shorthand
+    'string': true                -- string as key
+    42: true                      -- integer as key
 ```
