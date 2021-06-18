@@ -93,6 +93,6 @@ nested-records:
             baz: true
     foo: { bar: { baz: true } }   -- nested inline records
     foo.bar.baz: true             -- path shorthand
-    'string': true                -- string as key
+    'string key': true                -- string as key
     42: true                      -- integer as key
 ```
