@@ -84,7 +84,7 @@ c-record: { foo: 42, bar: true }  -- resembles javascript object, python dict, g
 
 -- multiline and nested collections:
 nested-arrays:                    -- without brackets, indentation and newline are significant
-    [1, 'one']                    -- commas are optional if newline is used to separate items
+    [1]                           -- commas are optional if newline is used to separate items
     [2, 'two']                    -- inline collections do require brackets and commas
     [3, 'three', [3.14, 'pi']]    -- nested inline arrays
 nested-records:                   
