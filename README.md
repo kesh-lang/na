@@ -69,8 +69,8 @@ strings:                          -- UTF-8 by default
 -- tuples:
 nothing: ()                       -- an empty tuple represents null/void/undefined
 something: (42)                   -- a 1-tuple is equivalent to the value it contains
-ordered: ("joe", 27)              -- ordered values
-keyed: (name: "joe", age: 27)     -- key/value pairs
+ordered: ('joe', 27)              -- ordered values
+keyed: (name: 'joe', age: 27)     -- key/value pairs
 
 -- collections:
 array:  [ 1, 2, 3 ]               -- ordered values
@@ -84,15 +84,15 @@ c-record: { foo: 42, bar: true }  -- resembles javascript object, python dict, g
 
 -- multiline and nested collections:
 nested-arrays:                    -- without brackets, indentation and newline are significant
-    [1]                           -- commas are optional if newline is used to separate items
-    [2, 'two']                    -- inline collections do require brackets and commas
-    [3, 'three', [3.14, 'pi']]    -- nested inline arrays
+    ['one']                       -- commas are optional if newline is used to separate items
+    ['two', 2]                    -- inline collections do require brackets and commas
+    ['three', 3, ['pi', 3.14]]    -- nested inline arrays
 nested-records:                   
     foo:                          -- nested multiline records
         bar:
             baz: true
     foo: { bar: { baz: true } }   -- nested inline records
     foo.bar.baz: true             -- path shorthand
-    'a string': true            -- string as key
+    'a string': true              -- string as key
     42: true                      -- integer as key
 ```
