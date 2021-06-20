@@ -12,13 +12,13 @@ Inspired by Rich Hickey's [edn](https://github.com/edn-format/edn/), **na** is a
 
 ### Value types
 
-#### Primitive values
+#### Primitive types
 
 - **boolean**
 - **number**
 - **string**
 
-#### Composite values
+#### Composite types
 
 - **tuple** – a list of either ordered values (usually heterogeneous) or key/value pairs
 - **collection** – a collection of either ordered values (usually homogeneous) or key/value pairs
