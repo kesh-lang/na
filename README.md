@@ -35,9 +35,7 @@ Valid keys are identifiers, strings and numbers.
     <Continue> := <Start> + XID_Continue
     <Medial> := U+002D
 
-In other words, identifiers may contain but not start or end with `-`. The character `_` is permitted anywhere in an identifier.
-
-A parser should attempt to represent identifiers as verbatim as possible. If the target language does not support the `-` character in identifiers, it may be replaced with `_`.
+In other words, identifiers may contain but not start or end with `-`. The character `_` is permitted anywhere in an identifier. A parser should attempt to represent identifiers as verbatim as possible. If the target language does not support the `-` character in identifiers, it may be replaced with `_`.
 
 ## Examples
 
