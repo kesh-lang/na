@@ -1,4 +1,6 @@
-### Tagged values
+# Extensions
+
+## Tagged values
 
 **na**'s core value types may be extended similarly to [edn's tagged elements](https://github.com/edn-format/edn/#tagged-elements). A tag indicates the semantic interpretation of the following value. Tags can be either _types_, indicated by a leading `#`, or _functions_.
 
@@ -8,7 +10,9 @@ If a parser encounters a tag for which no handler is registered, it may ignore t
 
 Unlike edn's tagged elements, a tag that is not followed by a value must not cause an error. A handler that is registered for the tag may provide a default value, otherwise a void value should be used.
 
-```
+### Examples
+
+```lua
 -- types:
 #person:                             -- type definition
     name: #string                    -- typed element
