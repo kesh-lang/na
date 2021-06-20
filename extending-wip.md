@@ -1,6 +1,6 @@
 ### Tagged values
 
-na's core value types may be extended similarly to [edn's tagged elements](https://github.com/edn-format/edn/#tagged-elements). A tag indicates the semantic interpretation of the following value. Tags can be either _types_, indicated by a leading `#`, or _functions_.
+**na**'s core value types may be extended similarly to [edn's tagged elements](https://github.com/edn-format/edn/#tagged-elements). A tag indicates the semantic interpretation of the following value. Tags can be either _types_, indicated by a leading `#`, or _functions_.
 
 Parsers should allow clients to register handlers for specific tags, transforming received **na** values into data types of the target language. A parser must be stateless, any handlers should be pure functions as far as the parsed data is concerned.
 
