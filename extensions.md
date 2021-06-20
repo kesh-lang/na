@@ -22,6 +22,6 @@ joe: #person [name: 'Joe']           -- typed record
 -- functions:
 area:   square(length: 7, width: 6)  -- function call (handler applied to arguments)
 point:  Point(4, 5)                  -- constructor function producing a value
-date:   instant '1985-04-12T23:20:50.52Z'  -- function applied to a single argument
+date:   instant '1985-04-12T23:20:50.52Z'  -- function applied to a single argument (RFC 3339 timestamp)
 double: float64 1/3                  -- casting a value (to IEEE 754 double-precision float)
 ```
