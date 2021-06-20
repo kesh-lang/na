@@ -8,7 +8,7 @@
 
 Inspired by Rich Hickey's [edn](https://github.com/edn-format/edn/), **na** is a simple yet extensible data notation for the conveyance of values. It serves as a strict subset for the [sode](https://github.com/kesh-lang/sode) file format and the [kesh](https://github.com/kesh-lang/kesh) programming language.
 
-**na**'s value types are intended to represent a minimal set of data structures common to most programming languages. A parser should attempt to map the value types to programming language types with similar semantics. These should ideally be considered immutable value types, to the extent possible.
+**na**'s value types are intended to represent a minimal set of data types common to most programming languages. A parser should attempt to map the value types to data types in the target language having similar semantics.
 
 ### Value types
 
@@ -37,6 +37,8 @@ Valid keys are identifiers, strings and numbers.
 
 In other words, identifiers may contain but not start or end with `-`. The character `_` is permitted anywhere in an identifier.
 
+A parser should attempt to represent identifiers as verbatim as possible. If the target language does not support the `-` character in identifiers, it may be replaced with `_`.
+
 ## Examples
 
 Written in [sode](https://github.com/kesh-lang/sode). (This is not an example of a **na** stream.)
@@ -61,7 +63,7 @@ numbers:                          -- arbitrary precision by default
     radix:      12r36
     infinity:   Infinity
     no-number:  NaN
-strings:                          -- UTF-8 by default
+strings:                          -- utf-8 by default
     plain: 'abc'                  -- raw string
     fancy: "this string is
             \"multiline\"!"       -- supports multiline and escaping
