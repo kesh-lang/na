@@ -25,3 +25,7 @@ point:  Point(4, 5)                  -- constructor function producing a value
 date:   instant '1985-04-12T23:20:50.52Z'  -- function applied to a single argument (RFC 3339 timestamp)
 double: float64 1/3                  -- casting a value (to IEEE 754 double-precision float)
 ```
+
+## Derived formats
+
+**na** itself may be used as a subset of other formats. For example, curly brackets (`{ }`) could add support for additional data types.
