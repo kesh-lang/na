@@ -2,7 +2,7 @@
 
 na's core value types may be extended similarly to [edn's tagged elements](https://github.com/edn-format/edn/#tagged-elements). A tag indicates the semantic interpretation of the following value. Tags can be either _types_, indicated by a leading `#`, or _functions_.
 
-Parsers should allow clients to register handlers for specific tags, transforming received **na** values into data types of the target language. A handler should be a pure function.
+Parsers should allow clients to register handlers for specific tags, transforming received **na** values into data types of the target language. A parser must be stateless, any handlers should be pure functions as far as the parsed data is concerned.
 
 If a parser encounters a tag for which no handler is registered, it may ignore the tag and use its verbatim value instead, possibly converting it to a more appropriate data type. Resilience is important. Parsers must be able to read any valid **na** data without causing errors.
 
