@@ -85,12 +85,6 @@ keyed: (name: 'joe', age: 27)     -- key/value pairs
 array:  [ 1, 2, 3 ]               -- ordered values
 record: [ foo: 42, bar: true ]    -- key/value pairs
 
--- square and curly brackets are equivalent:
-s-array:  [ 1, 2, 3 ]             -- resembles javascript/swift/rust array, python list
-c-array:  { 1, 2, 3 }             -- resembles java/c/go array
-s-record: [ foo: 42, bar: true ]  -- resembles swift dictionary, elixir keyword list
-c-record: { foo: 42, bar: true }  -- resembles javascript object, python dict, go map
-
 -- multiline and nested collections:
 nested-arrays:                    -- without brackets, indentation and newline are significant
     ['one']                       -- commas are optional if newline is used to separate items
@@ -100,7 +94,7 @@ nested-records:
     foo:                          -- nested multiline records
         bar:
             baz: true
-    foo: { bar: { baz: true } }   -- nested inline records
+    foo: [ bar: [ baz: true ] ]   -- nested inline records
     foo.bar.baz: true             -- path shorthand
     'a string': true              -- string as key
     42: true                      -- integer as key
