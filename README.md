@@ -35,7 +35,7 @@ Valid keys are identifiers, strings and numbers.
     <Continue> := <Start> + XID_Continue
     <Medial> := U+002D
 
-In other words, the character `_` is permitted anywhere in an identifier, and an identifier may contain but not start or end with `-`. As medial characters, `_` and `-` are interchangeable, and identifiers are case-insensitive: `foo-bar` is equivalent to `FOO_bar`.
+In other words, the character `_` is permitted anywhere in an identifier. An identifier may contain but not start or end with `-`. As medial characters, `_` and `-` are interchangeable, and identifiers are case-insensitive: `foo-bar` is equivalent to `FOO_bar`.
 
 A parser should attempt to represent identifiers as verbatim as possible. If the target language does not support the `-` character in identifiers, it may be replaced with `_`.
 
