@@ -16,7 +16,7 @@ Unlike edn's tagged elements, a tag that is not followed by a value must not cau
 -- types:
 #person: [                           -- type definition
     name: #string                    -- typed element
-    friends: #person[]?              -- typed array (optional)
+    friends?: #person[]              -- typed array (optional)
 ]
 joe: #person [name: 'Joe']           -- typed record
 
