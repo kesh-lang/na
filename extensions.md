@@ -28,4 +28,4 @@ double: float64 1/3                  -- casting a value (to IEEE 754 double-prec
 
 ## Derived formats
 
-**na** itself may be used as a subset of other formats. For example, curly brackets `{ }` could add support for additional data types or functionality.
+**na** itself may be used as a strict subset of other formats.
