@@ -20,10 +20,10 @@ Inspired by Rich Hickey's [edn](https://github.com/edn-format/edn/), **na** is a
 
 #### Composite types
 
-- **tuple** – a list of either ordered values (usually heterogeneous) or key/value pairs
-- **collection** – a collection of either ordered values (usually homogeneous) or key/value pairs
+- **tuple** – a set of values, either ordered (usually heterogeneous) or key/value pairs
+- **collection** – a collection of values, either ordered (usually homogeneous) or key/value pairs
 
-Valid keys are identifiers, strings and numbers.
+Valid keys are identifiers, strings and whole numbers.
 
 ### Identifiers
 
@@ -77,13 +77,14 @@ strings:                          -- utf-8 by default
 
 -- tuples:
 nothing: ()                       -- an empty tuple represents null/void/undefined
-something: (42)                   -- a 1-tuple is equivalent to the value it contains
-ordered: ('joe', 27)              -- ordered values
-keyed: (name: 'joe', age: 27)     -- key/value pairs
+one-thing: (42)                   -- a 1-tuple is equivalent to the value it contains
+ordered: ('joe', 27)              -- multiple values indexed by order
+keyed: (name: 'joe', age: 27)     -- multiple values indexed by key
 
 -- collections:
-array:  [ 1, 2, 3 ]               -- ordered values
-record: [ foo: 42, bar: true ]    -- key/value pairs
+empty:  []                        -- an empty collection
+array:  [ 1, 2, 3 ]               -- multiple values indexed by order
+record: [ foo: 42, bar: true ]    -- multiple values indexed by key
 
 -- multiline and nested collections:
 nested-arrays:                    -- without brackets, indentation and newline are significant
