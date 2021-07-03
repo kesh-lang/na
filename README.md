@@ -42,7 +42,7 @@ Valid keys are identifiers, strings and whole numbers.
 
 For example, `foo-bar` is equivalent to `FOO_BAR`.
 
-A parser should attempt to represent identifiers as verbatim as possible. If the target language does not support the `-` character in identifiers, it may be replaced with `_`.
+A parser should represent identifiers as verbatim as possible. If the target language does not support the `-` character in identifiers, it may be replaced with `_`.
 
 ## Examples
 
