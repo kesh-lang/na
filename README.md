@@ -60,7 +60,7 @@ numbers:                          -- arbitrary precision by default
     suffix:     1000ms
     separators: 1_000_000
     float:      3.14
-    ratio:      1/3
+    fraction:   1/3
     exponent:   1e-2
     hex:        0xDECAFBAD
     octal:      0o755
