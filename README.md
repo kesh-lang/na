@@ -35,10 +35,10 @@ Valid keys are identifiers, strings and whole numbers.
     <Continue> := <Start> + XID_Continue
     <Medial> := U+002D
 
-- Identifiers are case-insensitive
 - `_` is permitted anywhere in an identifier
 - An identifier may contain but not start or end with `-`
 - When used as hyphenation characters, `_` and `-` are interchangeable
+- Identifiers are case-insensitive
 
 For example, `foo-bar` is equivalent to `FOO_BAR`.
 
