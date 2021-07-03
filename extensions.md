@@ -23,7 +23,6 @@ joe: #person [name: 'Joe']           -- type assertion
 -- functions:
 date:   instant '1985-04-12T23:20:50.52Z'  -- applying a function to a single argument (RFC 3339 timestamp)
 area:   square(length: 7, width: 6)  -- applying a function to a tuple of (labeled) arguments
-point:  Point(4, 5)                  -- calling a constructor function
 double: float64 1/3                  -- casting a value (to IEEE 754 double-precision float)
 ```
 
