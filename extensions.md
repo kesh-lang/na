@@ -15,15 +15,15 @@ Unlike edn's tagged elements, a tag that is not followed by a value must not cau
 ```lua
 -- types:
 #person: [                           -- type definition
-    name: #string                    -- typed element
-    friends?: [#person]              -- typed array (optional)
+    name: #string                    -- type annotation
+    friends?: [#person]              -- typed array (optional element)
 ]
-joe: #person [name: 'Joe']           -- typed record
+joe: #person [name: 'Joe']           -- type assertion
 
 -- functions:
-area:   square(length: 7, width: 6)  -- function call (handler applied to arguments)
-point:  Point(4, 5)                  -- constructor function producing a value
-date:   instant '1985-04-12T23:20:50.52Z'  -- function applied to a single argument (RFC 3339 timestamp)
+date:   instant '1985-04-12T23:20:50.52Z'  -- applying a function to a single argument (RFC 3339 timestamp)
+area:   square(length: 7, width: 6)  -- applying a function to a tuple of (labeled) arguments
+point:  Point(4, 5)                  -- calling a constructor function
 double: float64 1/3                  -- casting a value (to IEEE 754 double-precision float)
 ```
 
