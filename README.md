@@ -57,7 +57,7 @@ booleans:
     nope: false
 numbers:                          -- arbitrary precision by default
     integer:    42
-    suffix:     1000 ms
+    suffix:     1000ms
     separators: 1_000_000
     float:      3.14
     ratio:      1/3
