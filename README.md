@@ -20,8 +20,8 @@ Inspired by Rich Hickey's [edn](https://github.com/edn-format/edn/), **na** is a
 
 #### Composite types
 
-- **tuple** – a set of values, either ordered (usually heterogeneous) or key/value pairs
-- **collection** – a collection of values, either ordered (usually homogeneous) or key/value pairs
+- **tuple** – a sequence of elements, either ordered values (usually heterogeneous) or key/value pairs
+- **collection** – a collection of elements, either ordered values (usually homogeneous) or key/value pairs
 
 Valid keys are identifiers, strings and whole numbers.
 
