@@ -77,12 +77,12 @@ strings:                          -- utf-8 by default
 nothing: ()                       -- an empty tuple represents null/void/undefined
 one-thing: (42)                   -- a 1-tuple is equivalent to the value it contains
 ordered: ('joe', 27)              -- multiple values indexed by order
-keyed: (name: 'joe', age: 27)     -- multiple values indexed by key
+keyed: (name: 'joe', age: 27)     -- multiple values mapped by key
 
 -- collections:
 empty:  []                        -- an empty collection
 array:  [ 1, 2, 3 ]               -- multiple values indexed by order
-record: [ foo: 42, bar: true ]    -- multiple values indexed by key
+record: [ foo: 42, bar: true ]    -- multiple values mapped by key
 
 -- multiline and nested collections:
 nested-arrays:                    -- without brackets, indentation and newline are significant
