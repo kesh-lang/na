@@ -87,7 +87,7 @@ record: [ foo: 42, bar: true ]    -- multiple values mapped by key
 -- multiline and nested collections:
 nested-arrays: [
     ['one']                       -- commas are optional if newline is used to separate items
-    ['two', 2]                    -- inline collections do require brackets and commas
+    ['two', 2]                    -- inline collections do require commas
     ['three', 3, ['pi', 3.14]]    -- nested inline arrays
 ]
 nested-records:                   -- without brackets, indentation and newline are significant
