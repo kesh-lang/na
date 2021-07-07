@@ -85,11 +85,12 @@ array:  [ 1, 2, 3 ]               -- multiple values indexed by order
 record: [ foo: 42, bar: true ]    -- multiple values mapped by key
 
 -- multiline and nested collections:
-nested-arrays:                    -- without brackets, indentation and newline are significant
+nested-arrays: [
     ['one']                       -- commas are optional if newline is used to separate items
     ['two', 2]                    -- inline collections do require brackets and commas
     ['three', 3, ['pi', 3.14]]    -- nested inline arrays
-nested-records:                   
+]
+nested-records:                   -- without brackets, indentation and newline are significant
     foo:                          -- nested multiline records
         bar:
             baz: true
