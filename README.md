@@ -103,9 +103,10 @@ nested-records:                   -- if brackets are omitted, indentation become
     42: true                      -- whole number as key
 
 -- features:
-human-readable: true
-line-oriented:  true
-typed:          true              -- see extensions.md
-extensible:     true              -- see extensions.md
-separators:     ("\n", ',')       -- newline is significant
+human-readable:    true
+line-oriented:     true
+indentation-based: (false, true)  -- optional
+typed:             true           -- see extensions.md
+extensible:        true           -- see extensions.md
+separators:        ("\n", ',')    -- newline is significant
 ```
