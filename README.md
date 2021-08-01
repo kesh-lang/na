@@ -69,9 +69,12 @@ numbers:                          -- arbitrary precision by default
     infinity:   infinity
     nan:        nan
 strings:                          -- utf-8 by default
-    plain: 'abc'                  -- raw string
-    fancy: "this string is
-            \"multiline\"!"       -- supports multiline and escaping
+    single: 'abc'                 -- verbatim string
+    double: "escaped\nstring"     -- supports escape sequences
+    triple: '''
+            it's a verbatim
+            multiline string
+            '''                   -- multiline here-doc
 
 -- tuples:
 nothing: ()                       -- an empty tuple represents null/void/undefined
@@ -98,4 +101,8 @@ nested-records:                   -- if brackets are omitted, indentation become
     foo.bar.baz: true             -- path shorthand
     'a string': true              -- string as key
     42: true                      -- whole number as key
+
+-- features:
+line-oriented: true
+separators:    ("\n", ',')        -- newline is significant
 ```
