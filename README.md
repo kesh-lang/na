@@ -105,7 +105,7 @@ nested-records:                   -- if brackets are omitted, indentation become
 -- features:
 human-readable: true
 line-oriented:  true
-separators:     ("\n", ',')       -- newline is significant
 typed:          true              -- see extensions.md
 extensible:     true              -- see extensions.md
+separators:     ("\n", ',')       -- newline is significant
 ```
