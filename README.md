@@ -56,18 +56,18 @@ booleans:
     yep:  true
     nope: false
 numbers:                          -- arbitrary precision by default
-    integer:    42
-    float:      3.14
-    fraction:   1/3
-    separators: 1_000_000
-    suffix:     1000ms
-    exponent:   1e-2
-    hex:        0xDECAFBAD
-    octal:      0o755
-    binary:     0b101010
-    radix:      12r36
-    infinity:   Infinity
-    no-number:  NaN
+    integer:      42
+    float:        3.14
+    fraction:     1/3
+    separators:   1_000_000
+    suffix:       1000ms
+    exponent:     1e-2
+    hex:          0xDECAFBAD
+    octal:        0o755
+    binary:       0b101010
+    radix:        12r36
+    infinity:     infinity
+    not-a-number: nan
 strings:                          -- utf-8 by default
     plain: 'abc'                  -- raw string
     fancy: "this string is
