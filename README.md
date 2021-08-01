@@ -62,7 +62,7 @@ numbers:                          -- arbitrary precision by default
     separators: 1_000_000
     suffix:     1000ms
     exponent:   1e-2
-    hex:        0xDECAFBAD
+    hex:        0xdecafbad
     octal:      0o755
     binary:     0b101010
     radix:      12r36
