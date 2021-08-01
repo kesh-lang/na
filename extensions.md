@@ -23,7 +23,7 @@ joe: #person [name: 'Joe']           -- type casting/assertion
 -- functions:
 date:   instant '1985-04-12T23:20:50.52Z'  -- applying a function to a value (an RFC 3339 timestamp string)
 area:   square(length: 7, width: 6)  -- applying a function to a tuple of values
-double: float64 1/3                  -- converting/casting a value (to IEEE 754 double-precision float)
+double: float64 1/3                  -- casting/converting a value (to IEEE 754 double-precision float)
 ```
 
 ## Derived formats
