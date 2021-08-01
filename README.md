@@ -77,7 +77,7 @@ strings:                          -- utf-8 by default
             """                   -- multiline here-doc
 
 -- tuples:
-nothing: ()                       -- an empty tuple represents null/void/undefined
+nothing: ()                       -- a 0-tuple is the unit type (null/void/undefined)
 one-thing: (42)                   -- a 1-tuple is equivalent to the value it contains
 ordered: ('joe', 27)              -- multiple values indexed by order
 keyed: (name: 'joe', age: 27)     -- multiple values mapped by key
