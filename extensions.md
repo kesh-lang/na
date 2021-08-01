@@ -18,12 +18,12 @@ Unlike edn's tagged elements, a tag that is not followed by a value must not cau
     name: #string                    -- type annotation
     friends?: [#person]              -- typed array (optional element)
 ]
-joe: #person [name: 'Joe']           -- type assertion
+joe: #person [name: 'Joe']           -- type casting/assertion
 
 -- functions:
-date:   instant '1985-04-12T23:20:50.52Z'  -- applying a function to a single argument (RFC 3339 timestamp)
-area:   square(length: 7, width: 6)  -- applying a function to a tuple of (labeled) arguments
-double: float64 1/3                  -- casting a value (to IEEE 754 double-precision float)
+date:   instant '1985-04-12T23:20:50.52Z'  -- applying a function to a value (an RFC 3339 timestamp string)
+area:   square(length: 7, width: 6)  -- applying a function to a tuple of values
+double: float64 1/3                  -- converting/casting a value (to IEEE 754 double-precision float)
 ```
 
 ## Derived formats
