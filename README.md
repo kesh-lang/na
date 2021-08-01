@@ -72,7 +72,7 @@ strings:                          -- utf-8 by default
     single: 'abc'                 -- verbatim string
     double: "escaped\nstring"     -- supports escape sequences
     triple: """
-            it's a verbatim
+            this is a
             multiline string
             """                   -- multiline here-doc
 
