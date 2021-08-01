@@ -71,10 +71,10 @@ numbers:                          -- arbitrary precision by default
 strings:                          -- utf-8 by default
     single: 'abc'                 -- verbatim string
     double: "escaped\nstring"     -- supports escape sequences
-    triple: '''
+    triple: """
             it's a verbatim
             multiline string
-            '''                   -- multiline here-doc
+            """                   -- multiline here-doc
 
 -- tuples:
 nothing: ()                       -- an empty tuple represents null/void/undefined
