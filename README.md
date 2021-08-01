@@ -57,10 +57,10 @@ booleans:
     nope: false
 numbers:                          -- arbitrary precision by default
     integer:    42
-    suffix:     1000ms
-    separators: 1_000_000
     float:      3.14
     fraction:   1/3
+    separators: 1_000_000
+    suffix:     1000ms
     exponent:   1e-2
     hex:        0xDECAFBAD
     octal:      0o755
@@ -86,16 +86,16 @@ record: [ foo: 42, bar: true ]    -- multiple values mapped by key
 
 -- multiline and nested collections:
 nested-arrays: [
-    ['one']                       -- commas are optional if newline is used to separate items
-    ['two', 2]                    -- inline collections do require commas
+    ['one']                       -- items may be separated by newline (trailing commas are optional)
+    ['two', 2]                    -- inline items are separated by commas
     ['three', 3, ['pi', 3.14]]    -- nested inline arrays
 ]
-nested-records:                   -- without brackets, indentation and newline are significant
+nested-records:                   -- if brackets are omitted, indentation becomes significant
     foo:                          -- nested multiline records
         bar:
             baz: true
     foo: [ bar: [ baz: true ] ]   -- nested inline records
     foo.bar.baz: true             -- path shorthand
     'a string': true              -- string as key
-    42: true                      -- integer as key
+    42: true                      -- whole number as key
 ```
