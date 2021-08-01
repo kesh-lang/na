@@ -37,7 +37,7 @@ Valid keys are identifiers, strings and whole numbers.
 
 - `_` is permitted anywhere in an identifier
 - An identifier may contain but not start or end with `-`
-- When used as hyphenation characters, `_` and `-` are interchangeable
+- `_` and `-` are interchangeable when used as hyphenation characters
 - Identifiers are case-insensitive
 
 For example, `foo-bar` is equivalent to `FOO_BAR`.
