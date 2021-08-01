@@ -89,7 +89,7 @@ record: [ foo: 42, bar: true ]    -- multiple values mapped by key
 
 -- multiline and nested collections:
 nested-arrays: [
-    ['one']                       -- items may be separated by newline
+    ['one']                       -- multiline items are separated by newline
     ['two', 2]                    -- inline items are separated by commas
     ['three', 3, ['pi', 3.14]]    -- nested inline arrays
 ]
