@@ -69,6 +69,7 @@ Arbitrary precision by default.
 42          -- integer
 3.14        -- float
 1/3         -- fraction
+-1          -- negative
 1_000_000   -- separators
 1000ms      -- suffix
 1e-2        -- exponent
@@ -122,7 +123,6 @@ multiline string
 [1, 2, 3]                   -- multiple values indexed by order (array/list)
 [foo: 42, bar: true]        -- multiple values mapped by key (object/record)
 ['string': true, 42: true]  -- strings and whole numbers are valid keys
-
 ```
 
 ##### Multiline and nesting
@@ -135,15 +135,21 @@ multiline string
         ['three', 3, ['pi', 3.14]]  -- nested inline arrays
     ]
     nested-objects: [
-            foo: [bar: [baz: true]]  -- inline objects
-            foo.bar.qux: true        -- path shorthand
+        foo: [bar: [baz: true]]     -- inline objects
+        foo.bar.qux: true           -- path shorthand
     ]
-    -- when brackets are omitted within an object, indentation becomes significant
-    minimal-syntax: [
-        foo:
-            bar:
-                baz: true
-    ]
+]
+```
+
+##### Minimal syntax
+
+When brackets are omitted within an object, indentation becomes significant.
+
+```lua
+[
+    foo:
+        bar:
+            baz: true
 ]
 ```
 
@@ -153,7 +159,7 @@ multiline string
 [
     human-readable:    true
     line-oriented:     true
-    indentation-based: (false, true)  -- optional
+    indentation-based: (false, true)  -- optional for objects
     typed:             true           -- see extensions.md
     extensible:        true           -- see extensions.md
     separators:        ("\n", ',')    -- newline is significant
