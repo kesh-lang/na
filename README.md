@@ -100,7 +100,7 @@ this is a
 multiline string
 '''                -- verbatim multiline string
 """
-this is\n\ta
+this\nis\na
 multiline string
 """                -- multiline string supporting escape sequences
 ```
