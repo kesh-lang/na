@@ -16,7 +16,7 @@ Unlike edn's tagged elements, a tag that is not followed by a value must _not_ c
 
 ### Examples
 
-Written in [sode](https://github.com/kesh-lang/sode).
+These examples are written in [sode](https://github.com/kesh-lang/sode).
 
 #### Types
 
