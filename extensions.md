@@ -6,7 +6,7 @@
 
 Parsers may allow clients to register handler functions for specific tags, transforming **na** values into data types of the target language. Handlers should be pure functions without side effects.
 
-**Security is [paramount](https://github.com/OWASP/Top10/blob/master/2017/en/0xa8-insecure-deserialization.md).** A parser's built-in handlers must be pure functions with no side effects. Further, parsers must by default _not_ allow clients to register tag handlers. To allow client defined tag handlers, a parser must be explicitly instructed to run in unsafe mode.
+**Security is [paramount](https://github.com/OWASP/Top10/blob/567a84c2a88ad691a65a0de38f98408d48d8b9b5/2017/en/0xa8-insecure-deserialization.md).** A parser's built-in handlers must be pure functions with no side effects. Further, parsers must by default _not_ allow clients to register tag handlers. To allow client defined tag handlers, a parser must be explicitly instructed to run in unsafe mode.
 
 If a parser encounters a tag for which no handler is registered, it may ignore the tag and use the value verbatim instead.
 
