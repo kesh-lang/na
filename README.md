@@ -144,7 +144,7 @@ multiline string
 
 ##### Minimal syntax
 
-When brackets are omitted within an object, indentation becomes significant.
+When brackets are omitted within a collection, indentation becomes significant.
 
 ```lua
 [
