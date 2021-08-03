@@ -2,13 +2,17 @@
 
 ## Tagged values
 
-**na**'s core value types may be extended similarly to [edn's tagged elements](https://github.com/edn-format/edn/#tagged-elements). A tag indicates the semantic interpretation of the following value. Tags can be either _types_, indicated by a leading `#`, or _functions_.
+**na**'s core value types may be extended similarly to [edn's tagged elements](https://github.com/edn-format/edn/#tagged-elements). A tag indicates the semantic interpretation of the following value. Tags can be either _types_, indicated by a leading `#`, or _functions_, without a leading `#`.
 
 Parsers should allow clients to register handlers for specific tags, transforming received **na** values into data types of the target language. Handlers should be pure functions.
 
-If a parser encounters a tag for which no handler is registered, it may ignore the tag and use its verbatim value instead, possibly converting it to a more appropriate data type. Resilience is important. Parsers must be able to read any valid **na** data without causing errors.
+**Security is [important](https://owasp.org/www-project-top-ten/2017/A8_2017-Insecure_Deserialization).** Parsers must by default _not_ allow clients to register tag handlers. To allow client defined tag handlers, a parser must be explicitly instructed to run in unsafe mode.
 
-Unlike edn's tagged elements, a tag that is not followed by a value must not cause an error. A handler that is registered for the tag may provide a default value, otherwise a void value should be used.
+If a parser encounters a tag for which no handler is registered, it may ignore the tag and use the value verbatim instead.
+
+Unlike edn's tagged elements, a tag that is not followed by a value must _not_ cause an error. A handler that is registered for the tag may provide a default value. If the handler does not return a default value, or no handler is registered for the tag, the tag should be parsed as the unit type.
+
+**Resilience is important.** Parsers must be able to read any valid **na** data without causing errors. Errors may however be raised if the parser is run in strict mode.
 
 ### Examples
 
@@ -18,14 +22,14 @@ Unlike edn's tagged elements, a tag that is not followed by a value must not cau
     name: #string                    -- type annotation
     friends?: [#person]              -- typed array (optional element)
 ]
-joe: #person [name: 'Joe']           -- type casting/assertion
+joe: #person [name: 'Joe']           -- type assertion
 
 -- functions:
-date:   instant '1985-04-12T23:20:50.52Z'  -- applying a function to a value (an RFC 3339 timestamp string)
+double: float64 1/3                  -- casting a fraction to an IEEE 754 double-precision float
+date:   instant '1985-04-12T23:20:50.52Z'  -- casting a string to an RFC 3339/ISO 8601 timestamp
 area:   square(length: 7, width: 6)  -- applying a function to a tuple of values
-double: float64 1/3                  -- casting/converting a value (to IEEE 754 double-precision float)
 ```
 
 ## Derived formats
 
-**na** itself may be used as a strict subset of other formats.
+**na** itself may be used as a strict subset of other formats. [sode](https://github.com/kesh-lang/sode) is one such format.
