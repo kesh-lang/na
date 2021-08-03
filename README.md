@@ -161,7 +161,7 @@ When brackets are omitted within a collection, indentation becomes significant.
     human-readable:    true
     line-oriented:     true
     indentation-based: (false, true)  -- optional for collections
-    typed:             true           -- see extensions.md
+    statically-typed:  true           -- see extensions.md
     extensible:        true           -- see extensions.md
     separators:        ("\n", ',')    -- newline is significant
 ]
