@@ -10,7 +10,7 @@ Parsers may allow clients to register handler functions for specific tags, trans
 
 If a parser encounters a tag for which no handler is registered, it may ignore the tag and use the value verbatim instead.
 
-Unlike edn's tagged elements, a tag that is not followed by a value must _not_ cause an error. A handler that is registered for the tag may provide a default value. If the handler does not return a default value, or no handler is registered for the tag, the tag should be parsed as the unit type.
+Unlike edn's tagged elements, a tag that is not followed by a value must _not_ cause an error. A handler that is registered for the tag may provide a default value. If the handler does not return a default value, or no handler is registered for the tag, the tag should be parsed as the unit type `()`.
 
 **Resilience is important.** Parsers must be able to read any valid **na** data without causing errors. Errors may however be raised if the parser is run in strict mode.
 
