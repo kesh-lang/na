@@ -4,7 +4,7 @@
 
 **na** is the kesh word for _river_.
 
-## Preliminary definition
+## Definition
 
 Inspired by Rich Hickey's [edn](https://github.com/edn-format/edn/), **na** is a simple yet resilient data notation for the conveyance of values. It serves as a strict subset for the [sode](https://github.com/kesh-lang/sode) file format and the [kesh](https://github.com/kesh-lang/kesh) programming language.
 
