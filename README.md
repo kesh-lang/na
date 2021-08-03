@@ -99,6 +99,7 @@ UTF-8 by default.
 this is a
 multiline string
 '''                -- verbatim multiline string
+
 """
 this\nis\na
 multiline string
