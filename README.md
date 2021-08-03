@@ -44,69 +44,118 @@ For example, `foo-bar` is equivalent to `FOO_BAR`.
 
 A parser should represent identifiers as verbatim as possible. If the target language does not support the `-` character in identifiers, it may be replaced with `_`.
 
-## Examples
+## Syntax
 
-Written in [sode](https://github.com/kesh-lang/sode). (This is not an example of a **na** stream.)
+### Comments
 
 ```lua
 -- this is a line comment
+```
 
--- primitive values:
-booleans:
-    yep:  true
-    nope: false
-numbers:                          -- arbitrary precision by default
-    integer:    42
-    float:      3.14
-    fraction:   1/3
-    separators: 1_000_000
-    suffix:     1000ms
-    exponent:   1e-2
-    hex:        0xdecafbad
-    octal:      0o755
-    binary:     0b101010
-    radix:      12r36
-    infinity:   infinity
-    nan:        nan
-strings:                          -- utf-8 by default
-    single: 'abc'                 -- verbatim string
-    double: "escaped\nstring"     -- supports escape sequences
-    triple: """
-            this is a
-            multiline string
-            """                   -- multiline here-doc
+### Primitive values
 
--- tuples:
-nothing: ()                       -- a 0-tuple is the unit type (null/void/undefined)
-one-thing: (42)                   -- a 1-tuple is equivalent to the value it contains
-ordered: ('joe', 27)              -- multiple values indexed by order
-keyed: (name: 'joe', age: 27)     -- multiple values mapped by key
+#### Booleans
 
--- collections:
-empty:  []                        -- an empty collection
-array:  [ 1, 2, 3 ]               -- multiple values indexed by order
-record: [ foo: 42, bar: true ]    -- multiple values mapped by key
+```lua
+true
+false
+```
 
--- multiline and nested collections:
-nested-arrays: [
-    ['one']                       -- multiline items are separated by newline
-    ['two', 2]                    -- inline items are separated by commas
-    ['three', 3, ['pi', 3.14]]    -- nested inline arrays
+#### Numbers
+
+Arbitrary precision by default.
+
+```lua
+42          -- integer
+3.14        -- float
+1/3         -- fraction
+1_000_000   -- separators
+1000ms      -- suffix
+1e-2        -- exponent
+0xdecafbad  -- hex
+0o755       -- octal
+0b101010    -- binary
+12r36       -- radix
+infinity    -- infinity
+nan         -- not a number
+```
+
+#### Strings
+
+UTF-8 by default.
+
+##### Inline
+
+```lua
+'abc'              -- verbatim string
+"escaped\nstring"  -- supports escape sequences
+```
+
+##### Multiline
+
+```lua
+'''
+this is a
+multiline string
+'''                -- verbatim multiline string
+"""
+this is\n\ta
+multiline string
+"""                -- multiline string supporting escape sequences
+```
+
+### Composite values
+
+#### Tuples
+
+```lua
+()                      -- a 0-tuple is the unit type (null/void/undefined)
+(42)                    -- a 1-tuple is equivalent to the value it contains
+('joe', 27)             -- multiple values indexed by order
+(name: 'joe', age: 27)  -- multiple values mapped by key
+```
+
+#### Collections
+
+```lua
+[]                          -- an empty collection
+[1, 2, 3]                   -- multiple values indexed by order (array/list)
+[foo: 42, bar: true]        -- multiple values mapped by key (object/record)
+['string': true, 42: true]  -- strings and whole numbers are valid keys
+
+```
+
+##### Multiline and nesting
+
+```lua
+[
+    nested-arrays: [
+        ['one']                     -- multiline items are separated by newline
+        ['two', 2]                  -- inline items are separated by comma
+        ['three', 3, ['pi', 3.14]]  -- nested inline arrays
+    ]
+    nested-objects: [
+            foo: [bar: [baz: true]]  -- inline
+            foo.bar.qux: true        -- path shorthand
+    ]
+    -- if brackets are omitted within an object, indentation becomes significant
+    minimal-syntax: [
+        foo:
+            bar:
+                baz: true
+    ]
 ]
-nested-records:                   -- if brackets are omitted, indentation becomes significant
-    foo:                          -- nested multiline records
-        bar:
-            baz: true
-    foo: [ bar: [ baz: true ] ]   -- nested inline records
-    foo.bar.baz: true             -- path shorthand
-    'a string': true              -- string as key
-    42: true                      -- whole number as key
+```
 
--- features:
-human-readable:    true
-line-oriented:     true
-indentation-based: (false, true)  -- optional
-typed:             true           -- see extensions.md
-extensible:        true           -- see extensions.md
-separators:        ("\n", ',')    -- newline is significant
+## Features
+
+```lua
+[
+    human-readable:    true
+    line-oriented:     true
+    indentation-based: (false, true)  -- optional
+    typed:             true           -- see extensions.md
+    extensible:        true           -- see extensions.md
+    separators:        ("\n", ',')    -- newline is significant
+]
 ```
