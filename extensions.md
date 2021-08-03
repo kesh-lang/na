@@ -31,9 +31,9 @@ joe: #person [name: 'Joe']  -- type assertion
 #### Functions
 
 ```lua
-double: float64 1/3                  -- casting a fraction to an IEEE 754 double-precision float
+double: float64 1/3                        -- casting a fraction to an IEEE 754 double-precision float
 date:   instant '1985-04-12T23:20:50.52Z'  -- casting a string to an RFC 3339/ISO 8601 timestamp
-area:   square(length: 7, width: 6)  -- applying a function to a tuple of values
+area:   square(length: 7, width: 6)        -- applying a function to a tuple of values
 ```
 
 ## Derived formats
