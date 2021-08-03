@@ -135,10 +135,10 @@ multiline string
         ['three', 3, ['pi', 3.14]]  -- nested inline arrays
     ]
     nested-objects: [
-            foo: [bar: [baz: true]]  -- inline
+            foo: [bar: [baz: true]]  -- inline objects
             foo.bar.qux: true        -- path shorthand
     ]
-    -- if brackets are omitted within an object, indentation becomes significant
+    -- when brackets are omitted within an object, indentation becomes significant
     minimal-syntax: [
         foo:
             bar:
