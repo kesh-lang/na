@@ -4,7 +4,7 @@
 
 **na**'s core value types may be extended similarly to [edn's tagged elements](https://github.com/edn-format/edn/#tagged-elements). A tag indicates the semantic interpretation of the following value. Tags can either be _types_, with a leading `#`, or _functions_, without a leading `#`.
 
-Parsers should allow clients to register handler functions for specific tags, transforming **na** values into data types of the target language. Handlers should be pure functions.
+Parsers may allow clients to register handler functions for specific tags, transforming **na** values into data types of the target language. Handlers should be pure functions.
 
 **Security is [important](https://owasp.org/www-project-top-ten/2017/A8_2017-Insecure_Deserialization).** Parsers must by default _not_ allow clients to register tag handlers. To allow client defined tag handlers, a parser must be explicitly instructed to run in unsafe mode. A parser's built-in handlers must be pure functions with no side effects.
 
