@@ -122,7 +122,7 @@ multiline string
 ```lua
 []                          -- an empty collection
 [1, 2, 3]                   -- multiple values indexed by order (array/list)
-[foo: 42, bar: true]        -- multiple values mapped by key (object/record/dictionary)
+[foo: 42, bar: true]        -- multiple values mapped by key (object/record/struct/dictionary)
 ['string': true, 42: true]  -- strings and whole numbers are valid keys
 ```
 
