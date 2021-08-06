@@ -35,8 +35,11 @@ Valid keys for collections are identifiers, strings and whole numbers. Valid key
     <Continue> := <Start> + XID_Continue
     <Medial> := U+002D
 
+That is:
 - `_` is permitted anywhere in an identifier
 - An identifier may contain but not start or end with `-`
+
+Further:
 - `_` and `-` are interchangeable when used as hyphenation characters
 - Identifiers are case-insensitive
 
