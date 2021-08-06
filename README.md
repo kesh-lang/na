@@ -126,7 +126,7 @@ multiline string
 
 #### Collections
 
-The only data structure in na, able to represent both linear and associative [collections](https://en.m.wikipedia.org/wiki/Collection_(abstract_data_type)).
+The only data structure in **na**, able to represent both linear and associative [collections](https://en.m.wikipedia.org/wiki/Collection_(abstract_data_type)).
 
 ```lua
 []                          -- an empty collection
