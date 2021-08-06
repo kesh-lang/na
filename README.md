@@ -27,7 +27,7 @@ Valid keys for collections are identifiers, strings and whole numbers. Valid key
 
 #### Unit type
 
-An empty tuple represents null/void/undefined/nothing. See [Tuples](#tuples).
+An empty tuple represents `null`/`void`/`undefined`/`nothing`. See [Tuples](#tuples).
 
 ### Identifiers
 
