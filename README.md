@@ -117,6 +117,8 @@ multiline string
 
 #### Tuples
 
+A simple sequence of values.
+
 ```lua
 ()                      -- a 0-tuple is the unit type
 (42)                    -- a 1-tuple is equivalent to the value it contains
@@ -126,7 +128,7 @@ multiline string
 
 #### Collections
 
-The only data structure in **na**, able to represent both linear and associative [collections](https://en.m.wikipedia.org/wiki/Collection_(abstract_data_type)).
+A flexible data structure able to represent both linear and associative [collections](https://en.m.wikipedia.org/wiki/Collection_(abstract_data_type)).
 
 ```lua
 []                          -- an empty collection
