@@ -25,6 +25,10 @@ Inspired by Rich Hickey's [edn](https://github.com/edn-format/edn/), **na** is a
 
 Valid keys for collections are identifiers, strings and whole numbers. Valid keys for tuples are identifiers only.
 
+#### Unit type
+
+An empty tuple represents null/void/undefined/nothing. See [Tuples](#tuples).
+
 ### Identifiers
 
 **na** meets [UAX31-R1](https://unicode.org/reports/tr31/#R1) of Unicode 13 by adopting a _profile_ adding the optional start character `_` (low line) and the optional medial character `-` (hyphen-minus). In the syntax of UAX31:
@@ -114,7 +118,7 @@ multiline string
 #### Tuples
 
 ```lua
-()                      -- a 0-tuple is the unit type (null/void/undefined)
+()                      -- a 0-tuple is the unit type
 (42)                    -- a 1-tuple is equivalent to the value it contains
 ('joe', 27)             -- multiple values indexed by order
 (name: 'joe', age: 27)  -- multiple values indexed by order and labeled with keys
