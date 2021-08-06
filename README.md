@@ -126,9 +126,11 @@ multiline string
 
 #### Collections
 
+Collection is the only data structure in na, able to represent both linear and associative [collections](https://en.m.wikipedia.org/wiki/Collection_(abstract_data_type).
+
 ```lua
 []                          -- an empty collection
-[1, 2, 3]                   -- multiple values indexed by order (array/list)
+[1, 2, 3]                   -- multiple values indexed by order (array/sequence/stack/queue)
 [foo: 42, bar: true]        -- multiple values mapped by key (object/record/struct/map/dict/hash)
 ['string': true, 42: true]  -- strings and whole numbers are valid keys
 ```
