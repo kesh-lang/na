@@ -184,3 +184,5 @@ When brackets are omitted within a collection, indentation becomes significant.
     extensible:        true           -- see extensions.md
 ]
 ```
+
+<sub>[Illustration](https://commons.wikimedia.org/wiki/File:Double_spirale.svg) is [CC BY-NC-ND](https://creativecommons.org/licenses/by-nc-nd/4.0/) Ursula K. Le Guin Literary Trust. From [Ursula Le Guin](https://www.ursulakleguin.com/)'s novel about the Kesh, [Always Coming Home](https://www.ursulakleguin.com/always-coming-home-book).</sub>
