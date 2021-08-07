@@ -10,9 +10,7 @@ Inspired by Rich Hickey's [edn](https://github.com/edn-format/edn/), **na** is a
 
 It serves as a strict subset for the [sode data format](https://github.com/kesh-lang/sode) and the [kesh programming language](https://github.com/kesh-lang/kesh).
 
-**na**'s value types are intended to represent a minimal set of data types common to most programming languages.
-
-A parser should attempt to map the values to data types in the target language having similar semantics.
+**na**'s value types are intended to represent a minimal set of data types common to most programming languages. A parser should attempt to map the values to data types in the target language having similar semantics.
 
 ### Value types
 
