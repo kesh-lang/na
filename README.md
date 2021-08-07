@@ -2,7 +2,7 @@
 
 > **kesh** data notation format – suitable for the conveyance of values
 
-**na** is the kesh word for _river_.
+**na** is the [kesh](https://www.ursulakleguin.com/always-coming-home-book) word for _river_.
 
 ## Definition
 
