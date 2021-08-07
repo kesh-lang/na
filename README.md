@@ -1,7 +1,7 @@
 # na ( )
 
 <p>&nbsp;</p>
-<p align="center" width="100%"><img width="33%" alt="A Kesh map of the watershed of Sinshan Creek, given to the Editor by Little Bear Woman of Sinshan" src="https://i.imgur.com/zxqjVsQ.png"></p>
+<p align="center" width="100%"><img height="381px" alt="A Talismanic Map of the Na Valley and the springs of the River and its tributaries" src="https://i.imgur.com/izJ9Gyd.png"></p>
 <p>&nbsp;</p>
 
 > **kesh** data notation format – suitable for the conveyance of values
