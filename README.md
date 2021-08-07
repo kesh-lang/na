@@ -1,5 +1,9 @@
 # na ( )
 
+<p>&nbsp;</p>
+<p align="center" width="100%"><img width="33%" alt="A Kesh map of the watershed of Sinshan Creek, given to the Editor by Little Bear Woman of Sinshan" src="https://i.imgur.com/zxqjVsQ.png"></p>
+<p>&nbsp;</p>
+
 > **kesh** data notation format – suitable for the conveyance of values
 
 **na** is the [kesh](https://www.ursulakleguin.com/always-coming-home-book) word for _river_.
