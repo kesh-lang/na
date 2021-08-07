@@ -132,7 +132,7 @@ A flexible data structure able to represent both linear and associative [collect
 
 ```lua
 []                          -- an empty collection
-[1, 2, 3]                   -- multiple values indexed by order (array/sequence/stack/queue)
+[1, 2, 3]                   -- multiple values indexed by order (array/list/sequence/stack/queue)
 [foo: 42, bar: true]        -- multiple values mapped by key (object/record/struct/map/dict/hash)
 ['string': true, 42: true]  -- strings and whole numbers are valid keys
 ```
