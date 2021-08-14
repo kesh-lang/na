@@ -23,7 +23,7 @@ These examples are written in [sode](https://github.com/kesh-lang/sode).
 ```lua
 #person: [                  -- type definition (user defined)
     name: #string           -- type annotation
-    friends?: [#person]     -- typed array (optional element)
+    friends?: #person[]     -- typed array (optional element)
 ]
 joe: #person [name: 'Joe']  -- type assertion/casting
 ```
