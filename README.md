@@ -159,7 +159,7 @@ A flexible data structure able to represent both linear and associative [collect
 ]
 ```
 
-##### Minimal syntax
+##### Bracketless
 
 When brackets are omitted within a collection, indentation becomes significant.
 
