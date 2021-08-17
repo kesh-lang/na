@@ -26,10 +26,10 @@ It serves as a proper subset for the [sode data format](https://github.com/kesh-
 
 #### Composite types
 
-- **tuple** – a sequence of ordered values (usually heterogeneous), which may be labeled with keys
+- **tuple** – a sequence of ordered values (usually heterogeneous), which may be named
 - **collection** – a collection of elements, either ordered values (usually homogeneous) or key/value pairs
 
-Valid keys for collections are identifiers, strings and whole numbers. Valid keys for tuples are identifiers only.
+Valid keys for collections are identifiers, strings and whole numbers. Valid names for tuples are identifiers only.
 
 #### Unit type
 
