@@ -137,7 +137,8 @@ A simple sequence of values.
 A flexible data structure able to represent either linear or associative [collections](https://en.wikipedia.org/wiki/Collection_(abstract_data_type)).
 
 ```lua
-[]                          -- an empty collection
+[]                          -- an empty (linear) collection
+[:]                         -- an empty associative collection
 [1, 2, 3]                   -- multiple values indexed by order (array/list/sequence/stack/queue)
 [foo: 42, bar: true]        -- multiple values mapped by key (object/record/struct/map/dict/hash)
 ['string': true, 42: true]  -- strings and whole numbers are valid keys
