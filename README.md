@@ -134,7 +134,7 @@ A simple sequence of values.
 
 #### Collections
 
-A flexible data structure able to represent both linear and associative [collections](https://en.wikipedia.org/wiki/Collection_(abstract_data_type)).
+A flexible data structure able to represent either linear or associative [collections](https://en.wikipedia.org/wiki/Collection_(abstract_data_type)).
 
 ```lua
 []                          -- an empty collection
