@@ -129,7 +129,7 @@ A simple sequence of values.
 ()                      -- a 0-tuple is the unit type
 (42)                    -- a 1-tuple is equivalent to the value it contains
 ('joe', 27)             -- multiple values indexed by order
-(name: 'joe', age: 27)  -- multiple values indexed by order and named
+(name: 'joe', age: 27)  -- multiple values indexed by order, named
 ```
 
 #### Collections
