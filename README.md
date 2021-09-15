@@ -29,13 +29,13 @@ It serves as a proper subset for the [sode data format](https://github.com/kesh-
 - **tuple** – a sequence of ordered values (usually heterogeneous), which may be named
 - **collection** – a collection of elements, either ordered values (usually homogeneous) or key/value pairs
 
-Valid keys for collections are identifiers, strings and whole numbers. Valid names for tuples are identifiers only.
+Valid keys for collections are names, strings and whole numbers.
 
 #### Unit type
 
 An empty tuple represents `null`/`void`/`none`/`undefined`/`nothing`.
 
-### Identifiers
+### Names
 
 **na** meets [UAX31-R1](https://unicode.org/reports/tr31/#R1) of Unicode 13 by adopting a _profile_ adding the optional start character `_` (low line) and the optional medial character `-` (hyphen-minus). In the syntax of UAX31:
 
@@ -46,16 +46,16 @@ An empty tuple represents `null`/`void`/`none`/`undefined`/`nothing`.
     <Medial> := U+002D
 
 That is:
-- `_` is permitted anywhere in an identifier
-- An identifier may contain but not start or end with `-`
+- `_` is permitted anywhere in a name
+- A name may contain but not start or end with `-`
 
 Further:
 - `_` and `-` are interchangeable when used as hyphenation characters
-- Identifiers are case-insensitive
+- Names are case-insensitive
 
 For example, `foo-bar` is equivalent to `FOO_BAR`.
 
-A parser should represent identifiers as verbatim as possible. If the target language does not support the `-` character in identifiers, it may be replaced with `_`.
+A parser should represent names as verbatim as possible. If the target language does not support the `-` character in names, it may be replaced with `_`.
 
 ## Syntax
 
@@ -129,7 +129,7 @@ A simple sequence of values.
 ()                      -- a 0-tuple is the unit type
 (42)                    -- a 1-tuple is equivalent to the value it contains
 ('joe', 27)             -- multiple values indexed by order
-(name: 'joe', age: 27)  -- multiple values indexed by order and named with identifiers
+(name: 'joe', age: 27)  -- multiple values indexed by order and named
 ```
 
 #### Collections
