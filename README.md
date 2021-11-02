@@ -89,9 +89,7 @@ Arbitrary precision by default.
 0xdecafbad  -- hex
 0o755       -- octal
 0b101010    -- binary
-12r36       -- radix
-infinity    -- infinity
-nan         -- not a number
+20r22       -- radix (from 2 to 36)
 ```
 
 #### Strings
