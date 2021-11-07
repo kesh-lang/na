@@ -84,7 +84,7 @@ Arbitrary precision by default.
 1/3         -- fraction
 -1          -- negative
 1_000_000   -- separators
-1000ms      -- suffix
+100°C       -- suffix
 1e-2        -- exponent
 0xdecafbad  -- hex
 0o755       -- octal
