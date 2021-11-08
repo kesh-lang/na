@@ -51,9 +51,9 @@ That is:
 
 Further:
 - `_` and `-` are interchangeable when used as hyphenation characters
-- Names are case-insensitive
+<!-- - Names are case-insensitive -->
 
-For example, `foo-bar` is equivalent to `FOO_BAR`.
+<!-- For example, `foo-bar` is equivalent to `FOO_BAR`. -->
 
 A parser should represent names as verbatim as possible. If the target language does not support the `-` character in names, it may be replaced with `_`.
 
