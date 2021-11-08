@@ -55,7 +55,9 @@ Further:
 
 <!-- For example, `foo-bar` is equivalent to `FOO_BAR`. -->
 
-A parser should represent names as verbatim as possible. If the target language does not support the `-` character in names, it may be replaced with `_`.
+A parser should represent names as verbatim as possible.
+
+If the target language does not support the `-` character in names, it may be replaced with `_`.
 
 ## Syntax
 
