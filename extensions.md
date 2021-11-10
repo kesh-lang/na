@@ -48,4 +48,4 @@ area:   square(length: 7, width: 6)        -- applying a function to a tuple of 
 
 ## Derived formats
 
-**na** itself may be used as a proper subset of other formats. [sode](https://github.com/kesh-lang/sode) is one such format.
+**na** itself may be used as a proper subset of other data formats. [sode](https://github.com/kesh-lang/sode) is one such format.
