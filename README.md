@@ -1,8 +1,10 @@
 # na ( )
 
+<!--
 <p>&nbsp;</p>
 <p align="center" width="100%"><img height="381px" alt="A Kesh map of the watershed of Sinshan Creek" src="https://i.imgur.com/JsIGehK.png"></p>
 <p>&nbsp;</p>
+-->
 
 > **kesh** data notation format – suitable for the conveyance of values
 
