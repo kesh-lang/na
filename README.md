@@ -48,8 +48,8 @@ An empty tuple represents `null`/`void`/`none`/`undefined`/`nothing`.
     <Medial> := U+002D
 
 That is:
-- A name may start with, contain and end with `_`
-- A name may contain but not start or end with `-`, it may only be used as a hyphen
+- A name may start with, contain and end with `_` (low line)
+- A name may contain but not start or end with `-` (hyphen-minus), it may only be used as a hyphen
 - A name may not start with `$` (dollar sign)
 
 <!--
