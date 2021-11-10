@@ -50,7 +50,7 @@ An empty tuple represents `null`/`void`/`none`/`undefined`/`nothing`.
 That is:
 - A name may start with, contain and end with `_` (low line)
 - A name may contain but not start or end with `-` (hyphen-minus), it may only be used as a hyphen
-- A name may not start with `$` (dollar sign), as it is reserved for internal use
+- A name may not start with `$` (dollar sign), being reserved for internal use
 
 <!--
 Hyphenation:
