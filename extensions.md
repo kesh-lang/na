@@ -2,7 +2,7 @@
 
 ## Modifiers
 
-**na**'s core value types may be extended with modifiers, similarly to [edn's tagged elements](https://github.com/edn-format/edn/#tagged-elements). A modifier indicates the semantic interpretation of the following value. Modifiers can either be _types_, with a leading `#`, or _functions_, without a leading `#`.
+**na**'s core value types may be extended with modifiers, similar to [edn's tagged elements](https://github.com/edn-format/edn/#tagged-elements). A modifier indicates the semantic interpretation of the following value. Modifiers can either be _types_, with a leading `#`, or _functions_, without a leading `#`.
 
 Parsers may allow clients to register handler functions for specific modifiers, transforming **na** values into data types of the target language. Handlers should be pure functions without side effects.
 
