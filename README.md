@@ -49,7 +49,7 @@ An empty tuple represents `null`/`void`/`none`/`undefined`/`nothing`.
 
 That is:
 - A name may start with, contain and end with `_`
-- A name may contain but not start or end with `-`
+- A name may contain but not start or end with `-`, it may only be used as a hyphen
 
 <!--
 Hyphenation:
