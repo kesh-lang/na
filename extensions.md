@@ -16,7 +16,7 @@ Unlike edn's tagged elements, a modifier that is not followed by a value must _n
 
 ### Resilience is important
 
-Parsers must be able to read any valid **na** data without causing errors. Errors may however be raised if the parser is run in strict mode.
+Parsers must be able to read any valid **na** data without causing errors. Errors may, however, be raised if the parser is run in strict mode.
 
 ### Examples
 
