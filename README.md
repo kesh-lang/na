@@ -48,18 +48,20 @@ An empty tuple represents `null`/`void`/`none`/`undefined`/`nothing`.
     <Medial> := U+002D
 
 That is:
-- `_` is permitted anywhere in a name
+- A name may start with, contain and end with `_`
 - A name may contain but not start or end with `-`
 
-Further:
-- `_` and `-` are interchangeable when used as hyphenation characters
-<!-- - Names are case-insensitive -->
+<!--
+Hyphenation:
+- `_` and `-` are interchangeable when used to join words
+- Names are case-insensitive
 
-<!-- For example, `foo-bar` is equivalent to `FOO_BAR`. -->
+For example, `foo-bar` is equivalent to `foo_bar`.
+-->
 
 <!-- A parser should represent names as verbatim as possible. -->
 
-If the target language does not support `kebab-case`, it may be transliterated to a compatible [case style](https://en.wikipedia.org/wiki/Naming_convention_(programming)#Multiple-word_identifiers), such as `snake_case` or `camelCase`.
+If the target language does not support `kebab-case`, it may be transliterated to a compatible [case style](https://en.wikipedia.org/wiki/Naming_convention_(programming)#Multiple-word_identifiers) that maintains the separation of words.
 
 ## Syntax
 
