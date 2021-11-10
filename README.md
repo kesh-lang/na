@@ -29,7 +29,7 @@ It serves as a proper subset for the [sode data format](https://github.com/kesh-
 - **tuple** – a sequence of ordered values (usually heterogeneous), which may be named
 - **collection** – a collection of elements, either ordered values (usually homogeneous) or key/value pairs
 
-Valid keys for collections are names, strings and whole numbers.
+Valid keys for collections are names and whole numbers.
 
 #### Unit type
 
@@ -55,9 +55,9 @@ Further:
 
 <!-- For example, `foo-bar` is equivalent to `FOO_BAR`. -->
 
-A parser should represent names as verbatim as possible.
+<!-- A parser should represent names as verbatim as possible. -->
 
-If the target language does not support the `-` character in names, it may be replaced with `_`.
+If the target language does not support `kebab-case`, it may be transliterated to a compatible [case style](https://en.wikipedia.org/wiki/Naming_convention_(programming)#Multiple-word_identifiers), such as `snake_case` or `camelCase`.
 
 ## Syntax
 
@@ -140,7 +140,7 @@ A flexible data structure able to represent either linear or associative [collec
 []                          -- an empty collection
 [1, 2, 3]                   -- multiple values indexed by order (array/list/sequence/stack/queue)
 [foo: 42, bar: true]        -- multiple values keyed by name (object/record/struct/map/dict/hash)
-['string': true, 42: true]  -- strings and whole numbers are valid keys
+[1: false, 42: true]        -- whole numbers are valid keys (sparse array)
 ```
 
 ##### Multiline and nesting
