@@ -131,15 +131,15 @@ UTF-8 by default.
 
 ```
 '''
-a verbatim
+it's a "verbatim"
 multiline string
 '''
 ```
 
 ```
 """
-\u0061\u006e escaped
-"multiline" string
+it's \u0061\u006e "escaped"
+multiline string
 """
 ```
 
