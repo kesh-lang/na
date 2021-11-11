@@ -106,11 +106,11 @@ UTF-8 by default.
 ##### Inline
 
 ```lua
-'a verbatim string'
+'a "verbatim" string'
 ```
 
 ```lua
-"an escaped\nstring"
+"an \"escaped\" string"
 ```
 
 `""` strings support the following escape sequences:
@@ -138,7 +138,7 @@ multiline string
 
 ```
 """
-\u0061 unicode escaped
+\u0061\u006e escaped
 "multiline" string
 """
 ```
