@@ -107,10 +107,25 @@ UTF-8 by default.
 
 ```lua
 'a verbatim string'
+```
+
+```lua
 "an escaped\nstring"
 ```
 
-`""` strings support `\b` (backspace), `\f` (form feed), `\n` (line feed), `\r` (carriage return), `\t` (horizontal tab), `\v` (vertical tab), `\0` (null character), `\'` (single quote), `\"` (double quote), `\\` (backslash) and `\u…` (unicode) escape sequences.
+`""` strings support the following escape sequences:
+
+- `\b` (backspace)
+- `\f` (form feed)
+- `\n` (line feed)
+- `\r` (carriage return)
+- `\t` (horizontal tab)
+- `\v` (vertical tab)
+- `\0` (null character)
+- `\'` (single quote)
+- `\"` (double quote)
+- `\\` (backslash)
+- `\u` (unicode)
 
 ##### Multiline
 
