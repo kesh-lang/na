@@ -101,7 +101,7 @@ Arbitrary precision by default.
 
 #### Strings
 
-UTF-8 by default.
+UTF-8.
 
 ##### Inline
 
