@@ -143,7 +143,7 @@ multiline string
 """
 ```
 
-Multiline strings follow the same syntax rules as Julia's [triple-quoted string literals](https://docs.julialang.org/en/v1/manual/strings/#Triple-Quoted-String-Literals).
+Multiline strings follow the same rules as Julia's [triple-quoted string literals](https://docs.julialang.org/en/v1/manual/strings/#Triple-Quoted-String-Literals).
 
 ### Composite values
 
