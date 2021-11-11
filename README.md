@@ -110,19 +110,25 @@ UTF-8 by default.
 "escaped\nstring"  -- supports escape sequences
 ```
 
+Supportes escape sequences are: `\b`, `\f`, `\n`, `\r`, `\t`, `\v`, `\0`, `\'`, `\"`, `\\` and `\u…` unicode escape sequences.
+
 ##### Multiline
 
 ```lua
 '''
-this is a
+a verbatim
 multiline string
-'''                -- multiline verbatim string
-
-"""
-this\nis\na
-multiline string
-"""                -- multiline string supporting escape sequences
+'''
 ```
+
+```lua
+"""
+\u0061 unicode escaped
+"multiline" string
+"""
+```
+
+Multiline strings follow the same syntax rules as Julia's [triple-quoted string literals](https://docs.julialang.org/en/v1/manual/strings/#Triple-Quoted-String-Literals).
 
 ### Composite values
 
