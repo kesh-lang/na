@@ -4,7 +4,7 @@
 
 **na**'s core value types may be extended with indicators, similar to [edn's tagged elements](https://github.com/edn-format/edn/#tagged-elements). An indicator communicates the semantic interpretation of the following value.
 
-Indicators can either be _types_, with a leading `#`, or _functions_, without a leading `#`.
+Indicators can either be _types_ or _functions_. Types have a leading `#`, functions do not.
 
 Parsers may allow clients to register handler functions for specific indicators, transforming **na** values into data types of the target language. Handlers should be pure functions without side effects.
 
