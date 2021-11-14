@@ -12,7 +12,7 @@ Parsers may allow clients to register handler functions for specific indicators,
 
 ### Security is [paramount](https://github.com/OWASP/Top10/blob/567a84c2a88ad691a65a0de38f98408d48d8b9b5/2017/en/0xa8-insecure-deserialization.md)
 
-A parser's built-in handlers must be pure functions with no side effects. Further, parsers must by default _not_ allow clients to register indicators. To enable client defined indicators, a parser must be explicitly instructed to run in unsafe mode.
+A parser's built-in handlers must be pure functions with no side effects. Further, parsers must by default _not_ allow clients to register indicators. To enable client defined indicators, a parser must be explicitly instructed to run in unsafe mode, which should raise a warning.
 
 If a parser encounters an indicator for which no handler is registered, it may ignore the indicator and use the value verbatim instead.
 
