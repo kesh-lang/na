@@ -14,9 +14,9 @@ Parsers may allow clients to register handler functions for specific indicators,
 
 A parser's built-in handlers must be pure functions with no side effects. Further, parsers must by default _not_ allow clients to register indicators. To enable client defined indicators, a parser must be explicitly instructed to run in unsafe mode, which should raise a warning.
 
-If a parser encounters an indicator for which no handler is registered, it may ignore the indicator and use the value verbatim instead.
-
 ### Resilience is important
+
+If a parser encounters an indicator for which no handler is registered, it may ignore the indicator and use the value verbatim instead.
 
 Unlike edn's tagged elements, an indicator that is not followed by a value must _not_ cause an error. A handler that is registered for the indicator may provide a default value. If the handler does not return a default value, or no handler is registered for the indicator, the indicator should be parsed as the unit type `()`.
 
