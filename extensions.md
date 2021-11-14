@@ -1,20 +1,20 @@
 # Extensions
 
-## Modifiers
+## Markers
 
-**na**'s core value types may be extended with modifiers, similar to [edn's tagged elements](https://github.com/edn-format/edn/#tagged-elements). A modifier indicates the semantic interpretation of the following value.
+**na**'s core value types may be extended with markers, similar to [edn's tagged elements](https://github.com/edn-format/edn/#tagged-elements). A marker indicates the semantic interpretation of the following value.
 
-Modifiers can either be _types_, with a leading `#`, or _functions_, without a leading `#`.
+Markers can either be _types_, with a leading `#`, or _functions_, without a leading `#`.
 
-Parsers may allow clients to register handler functions for specific modifiers, transforming **na** values into data types of the target language. Handlers should be pure functions without side effects.
+Parsers may allow clients to register handler functions for specific markers, transforming **na** values into data types of the target language. Handlers should be pure functions without side effects.
 
 ### Security is [paramount](https://github.com/OWASP/Top10/blob/567a84c2a88ad691a65a0de38f98408d48d8b9b5/2017/en/0xa8-insecure-deserialization.md)
 
-A parser's built-in handlers must be pure functions with no side effects. Further, parsers must by default _not_ allow clients to register modifiers. To enable client defined modifiers, a parser must be explicitly instructed to run in unsafe mode.
+A parser's built-in handlers must be pure functions with no side effects. Further, parsers must by default _not_ allow clients to register markers. To enable client defined markers, a parser must be explicitly instructed to run in unsafe mode.
 
-If a parser encounters a modifier for which no handler is registered, it may ignore the modifier and use the value verbatim instead.
+If a parser encounters a marker for which no handler is registered, it may ignore the marker and use the value verbatim instead.
 
-Unlike edn's tagged elements, a modifier that is not followed by a value must _not_ cause an error. A handler that is registered for the modifier may provide a default value. If the handler does not return a default value, or no handler is registered for the modifier, the modifier should be parsed as the unit type `()`.
+Unlike edn's tagged elements, a marker that is not followed by a value must _not_ cause an error. A handler that is registered for the marker may provide a default value. If the handler does not return a default value, or no handler is registered for the marker, the marker should be parsed as the unit type `()`.
 
 ### Resilience is important
 
