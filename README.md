@@ -28,7 +28,7 @@ It serves as a proper subset for the [sode data format](https://github.com/kesh-
 
 #### Composite types
 
-- **tuple** – a sequence of ordered values (usually heterogeneous), which may be named
+- **tuple** – a sequence of ordered values (usually heterogeneous)
 - **collection** – a collection of elements, either ordered values (usually homogeneous) or key/value pairs
 
 Valid keys for collections are names and whole numbers.
@@ -50,7 +50,7 @@ An empty tuple represents `null`/`void`/`none`/`undefined`/`nothing`.
 That is:
 - A name may start with, contain and end with `_` (low line)
 - A name may contain but not start or end with `-` (hyphen-minus), it may only be used as a hyphen
-- A name may not start with `$` (dollar sign), being reserved for internal use
+- A name may not start with `$` (dollar sign), it being reserved for internal use
 
 <!--
 Hyphenation:
@@ -155,7 +155,6 @@ A simple sequence of values.
 ()                      -- a 0-tuple is the unit type
 (42)                    -- a 1-tuple is equivalent to the value it contains
 ('joe', 27)             -- multiple values indexed by order
-(name: 'joe', age: 27)  -- multiple values indexed by order, named
 ```
 
 #### Collections
