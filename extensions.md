@@ -18,9 +18,9 @@ A parser's built-in handlers must be pure functions with no side effects. Furthe
 
 If a parser encounters an indicator for which no handler is registered, it may ignore the indicator and use the value verbatim instead.
 
-Unlike edn's tagged elements, an indicator that is not followed by a value must _not_ cause an error. A handler that is registered for the indicator may provide a default value. If the handler does not return a default value, or no handler is registered for the indicator, the indicator should be parsed as the unit type `()`.
-
 Parsers must be able to read any valid **na** data without causing errors. Errors may, however, be raised if the parser is run in strict mode.
+
+<!-- Unlike edn's tagged elements, an indicator that is not followed by a value must _not_ cause an error. A handler that is registered for the indicator may provide a default value. If the handler does not return a default value, or no handler is registered for the indicator, the indicator should be parsed as the unit type `()`. -->
 
 ### Examples
 
