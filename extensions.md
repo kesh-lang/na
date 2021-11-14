@@ -2,7 +2,9 @@
 
 ## Modifiers
 
-**na**'s core value types may be extended with modifiers, similar to [edn's tagged elements](https://github.com/edn-format/edn/#tagged-elements). A modifier indicates the semantic interpretation of the following value. Modifiers can either be _types_, with a leading `#`, or _functions_, without a leading `#`.
+**na**'s core value types may be extended with modifiers, similar to [edn's tagged elements](https://github.com/edn-format/edn/#tagged-elements). A modifier indicates the semantic interpretation of the following value.
+
+Modifiers can either be _types_, with a leading `#`, or _functions_, without a leading `#`.
 
 Parsers may allow clients to register handler functions for specific modifiers, transforming **na** values into data types of the target language. Handlers should be pure functions without side effects.
 
@@ -25,25 +27,21 @@ These examples are written in [sode](https://github.com/kesh-lang/sode).
 #### Types
 
 ```lua
-#person: [                     -- type definition (user defined)
-    name: #string              -- type annotation
-    friends?: #array(#person)  -- typed array (optional element)
+#person: [                  -- type definition
+    name: #string           -- type annotation
+    friends?: #[person]     -- typed indexed collection (optional field)
 ]
 
-joe: #person [name: 'Joe']     -- type assertion/casting
-```
-
-```lua
-boolean: #bool 1               -- casting a number to a boolean
-string: #string 42             -- casting a number to a string
-array: #array(1, 2, 3)         -- explicit creation of an array
+joe: #person [name: 'Joe']  -- type assertion of a keyed collection
+boolean: #bool 1            -- casting a number to a boolean
+string: #number '42'        -- casting a string to a number
 ```
 
 #### Functions
 
 ```lua
 date:   instant '1985-04-12T23:20:50.52Z'  -- casting a string to an RFC 3339/ISO 8601 timestamp
-area:   square(length: 7, width: 6)        -- applying a function to a tuple of values
+area:   square(7m, 6m)                     -- applying a function to a tuple of values
 ```
 
 ## Derived formats
