@@ -4,7 +4,7 @@
 
 **na**'s core value types may be extended with types and functions, similar to [edn's tagged elements](https://github.com/edn-format/edn/#tagged-elements).
 
-Types and functions _must_ be [named](https://github.com/kesh-lang/na#names), types having a leading `#`.
+Types and functions are [named](https://github.com/kesh-lang/na#names), types having a leading `#`.
 
 When applied to a value, a type or a function _must_ appear before the value, on the same line, separated only by whitespace.
 
