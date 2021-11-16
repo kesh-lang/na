@@ -6,7 +6,7 @@
 
 Types and functions are [named](https://github.com/kesh-lang/na#names), types having a leading `#`.
 
-When applied, they _must_ appear directly before a value, on the same line, separated only by whitespace.
+When applied to a value, a type or a function _must_ appear before the value, on the same line, separated only by whitespace.
 
 Parsers _may_ allow clients to register handlers for custom types and functions, transforming **na** values into data types of the target language. Handlers _should_ be pure functions without side effects.
 
