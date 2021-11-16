@@ -35,6 +35,7 @@ These examples are written in [sode](https://github.com/kesh-lang/sode).
 ]
 
 joe: #person [name: 'Joe']  -- type assertion of a keyed collection
+
 boolean: #bool 1            -- casting a number to a boolean
 ```
 
