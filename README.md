@@ -62,7 +62,7 @@ For example, `foo-bar` is equivalent to `foo_bar`.
 
 <!-- A parser should represent names as verbatim as possible. -->
 
-If the target language does not support `kebab-case`, names may be transliterated to a compatible [case style](https://en.wikipedia.org/wiki/Naming_convention_(programming)#Multiple-word_identifiers) that maintains the separation of words.
+If the target language does not support `kebab-case`, names may be transliterated to a compatible [case style](https://en.wikipedia.org/wiki/Naming_convention_(programming)#Multiple-word_identifiers) that maintains the separation of words within a name.
 
 ## Syntax
 
