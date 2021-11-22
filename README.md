@@ -120,8 +120,6 @@ UTF-8.
 - `\n` (line feed)
 - `\r` (carriage return)
 - `\t` (horizontal tab)
-- `\v` (vertical tab)
-- `\0` (null character)
 - `\'` (single quote)
 - `\"` (double quote)
 - `\\` (backslash)
