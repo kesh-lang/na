@@ -115,14 +115,14 @@ UTF-8.
 
 `""` strings support the following escape sequences:
 
+- `\'` (single quote)
+- `\"` (double quote)
+- `\\` (backslash)
 - `\b` (backspace)
 - `\f` (form feed)
 - `\n` (line feed)
 - `\r` (carriage return)
 - `\t` (horizontal tab)
-- `\'` (single quote)
-- `\"` (double quote)
-- `\\` (backslash)
 - `\u` (unicode)
 
 ##### Multiline
