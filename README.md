@@ -22,9 +22,9 @@ It serves as a proper subset for the [sode data format](https://github.com/kesh-
 
 #### Primitive types
 
-- **boolean**
+- **truth**
 - **number**
-- **string**
+- **text**
 
 #### Composite types
 
@@ -74,14 +74,14 @@ If the target language does not support `kebab-case`, names may be transliterate
 
 ### Primitive values
 
-#### Booleans
+#### Truth
 
 ```lua
 true
 false
 ```
 
-#### Numbers
+#### Number
 
 Arbitrary precision by default.
 
@@ -99,21 +99,21 @@ Arbitrary precision by default.
 20r22       -- radix (from 2 to 36)
 ```
 
-#### Strings
+#### Text
 
 UTF-8.
 
 ##### Inline
 
 ```lua
-'a "verbatim" string'
+'"verbatim" text'
 ```
 
 ```lua
-"an \"escaped\" string"
+"\"escaped\" text"
 ```
 
-`""` strings support the following escape sequences:
+`""` texts support the following escape sequences:
 
 - `\'` (single quote)
 - `\"` (double quote)
@@ -130,18 +130,18 @@ UTF-8.
 ```
 '''
 it's a "verbatim"
-multiline string
+multiline text
 '''
 ```
 
 ```
 """
 it's \u0061\u006e "escaped"
-multiline string
+multiline text
 """
 ```
 
-Multiline strings follow the same rules as Julia's [triple-quoted string literals](https://docs.julialang.org/en/v1/manual/strings/#Triple-Quoted-String-Literals).
+Multiline text follows the same rules as Julia's [triple-quoted string literals](https://docs.julialang.org/en/v1/manual/strings/#Triple-Quoted-String-Literals).
 
 ### Composite values
 
@@ -150,9 +150,9 @@ Multiline strings follow the same rules as Julia's [triple-quoted string literal
 A simple sequence of values.
 
 ```lua
-()                      -- a 0-tuple is the unit type
-(42)                    -- a 1-tuple is equivalent to the value it contains
-('joe', 27)             -- multiple values indexed by order
+()           -- a 0-tuple is the unit type
+(42)         -- a 1-tuple is equivalent to the value it contains
+('joe', 27)  -- multiple values indexed by order
 ```
 
 #### Collections
@@ -160,10 +160,10 @@ A simple sequence of values.
 A flexible data structure able to represent either linear or associative [collections](https://en.wikipedia.org/wiki/Collection_(abstract_data_type)).
 
 ```lua
-[]                          -- an empty collection
-[1, 2, 3]                   -- multiple values indexed by order (array/list/sequence/stack/queue)
-[foo: 42, bar: true]        -- multiple values keyed by name (object/record/struct/map/dict/hash)
-[1: false, 42: true]        -- whole numbers are valid keys (sparse array)
+[]                    -- an empty collection
+[1, 2, 3]             -- multiple values indexed by order (array/list/sequence/stack/queue)
+[foo: 42, bar: true]  -- multiple values keyed by name (object/record/struct/map/dict/hash)
+[1: false, 42: true]  -- whole numbers are valid keys (sparse array)
 ```
 
 ##### Multiline and nesting
@@ -191,6 +191,10 @@ When brackets are omitted within a collection, indentation becomes significant.
     foo:
         bar:
             baz: true
+    items:
+        1
+        2
+        3
 ]
 ```
 
