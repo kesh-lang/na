@@ -76,6 +76,8 @@ If the target language does not support `kebab-case`, names may be transliterate
 
 #### Truth
 
+Boolean truth values.
+
 ```lua
 true
 false
