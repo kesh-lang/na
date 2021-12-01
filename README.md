@@ -107,15 +107,19 @@ UTF-8.
 
 ##### Inline
 
+Single-quoted text is verbatim.
+
 ```lua
 '"verbatim" text'
 ```
+
+Double-quoted text supports escape sequences.
 
 ```lua
 "\"escaped\" text"
 ```
 
-Double-quoted texts support the following escape sequences:
+The following escape sequences are supported:
 
 - `\'` (single quote)
 - `\"` (double quote)
@@ -125,9 +129,11 @@ Double-quoted texts support the following escape sequences:
 - `\n` (line feed)
 - `\r` (carriage return)
 - `\t` (horizontal tab)
-- `\u` (unicode)
+- `\u` (unicode, 4 digits)
 
 ##### Multiline
+
+Multiline text follows the same rules as Julia's [triple-quoted string literals](https://docs.julialang.org/en/v1/manual/strings/#Triple-Quoted-String-Literals).
 
 ```
 '''
@@ -142,8 +148,6 @@ it's \u0061\u006e "escaped"
 multiline text
 """
 ```
-
-Multiline text follows the same rules as Julia's [triple-quoted string literals](https://docs.julialang.org/en/v1/manual/strings/#Triple-Quoted-String-Literals).
 
 ### Composite values
 
