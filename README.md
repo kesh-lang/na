@@ -115,7 +115,7 @@ UTF-8.
 "\"escaped\" text"
 ```
 
-`""` texts support the following escape sequences:
+Double-quoted texts support the following escape sequences:
 
 - `\'` (single quote)
 - `\"` (double quote)
