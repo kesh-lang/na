@@ -121,15 +121,15 @@ Double-quoted text supports escape sequences.
 
 The following escape sequences are supported:
 
-- `\'` (single quote)
-- `\"` (double quote)
-- `\\` (backslash)
-- `\b` (backspace)
-- `\f` (form feed)
-- `\n` (line feed)
-- `\r` (carriage return)
-- `\t` (horizontal tab)
-- `\u` (unicode, 4 digits)
+- `\'` single quote
+- `\"` double quote
+- `\\` backslash
+- `\b` backspace
+- `\f` form feed
+- `\n` line feed
+- `\r` carriage return
+- `\t` horizontal tab
+- `\u` unicode (4 digits)
 
 ##### Multiline
 
