@@ -31,7 +31,7 @@ These examples are written in [sode](https://github.com/kesh-lang/sode).
 ```lua
 #person: [                  -- type definition
     name: #string           -- type annotation
-    friends?: #[person]     -- typed indexed collection (optional field)
+    friends?: #person[]     -- typed indexed collection (optional field)
 ]
 
 joe: #person [name: 'Joe']  -- type assertion of a keyed collection
