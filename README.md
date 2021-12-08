@@ -188,7 +188,7 @@ A flexible data structure able to represent either linear or associative [collec
 ]
 ```
 
-##### Bracketless
+##### Without brackets
 
 When brackets are omitted within a collection, indentation becomes significant.
 
