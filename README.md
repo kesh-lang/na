@@ -195,8 +195,8 @@ When brackets are omitted within a collection, indentation becomes significant.
 ```lua
 [
     foo:
-        bar:
-            baz: true
+        bar: true
+        baz: true
     items:
         1
         2
