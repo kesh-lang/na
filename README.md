@@ -31,7 +31,7 @@ It serves as a proper subset for the [sode data format](https://github.com/kesh-
 - **tuple** – a sequence of ordered values (usually heterogeneous)
 - **collection** – a collection of elements, either ordered values (usually homogeneous) or key/value pairs
 
-Valid keys for collections are names and whole numbers.
+Valid keys for collections are names, strings and whole numbers.
 
 #### Unit type
 
