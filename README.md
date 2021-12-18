@@ -85,7 +85,7 @@ false
 
 #### Number
 
-Arbitrary precision by default.
+Arbitrary precision.
 
 ```lua
 42          -- integer
