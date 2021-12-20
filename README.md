@@ -144,7 +144,7 @@ multiline text
 
 ```
 """
-it's \u0061\u006e "escaped"
+it's \u(61)\u(6e) "escaped"
 multiline text
 """
 ```
