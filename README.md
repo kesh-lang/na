@@ -98,7 +98,7 @@ Arbitrary precision.
 0xdecafbad  -- hexadecimal
 0o755       -- octal
 0b101010    -- binary
-20r22       -- any radix from 2 to 36
+20r22       -- radix (from 2 to 36)
 ```
 
 #### Text
