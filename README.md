@@ -95,10 +95,10 @@ Arbitrary precision.
 1_000_000   -- separators
 27°C        -- suffix
 1e-2        -- exponent
-0xdecafbad  -- hex
+0xdecafbad  -- hexadecimal
 0o755       -- octal
 0b101010    -- binary
-20r22       -- radix (from 2 to 36)
+20r22       -- any radix from 2 to 36
 ```
 
 #### Text
@@ -129,7 +129,7 @@ The following escape sequences are supported:
 - `\n` line feed
 - `\r` carriage return
 - `\t` horizontal tab
-- `\u` unicode (4 digits)
+- `\u()` unicode (hexadecimal)
 
 ##### Multiline
 
