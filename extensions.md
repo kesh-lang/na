@@ -35,8 +35,6 @@ These examples are written in [sode](https://github.com/kesh-lang/sode).
 ]
 
 joe: #person [name: 'Joe']  -- type assertion of a keyed collection
-
-answer: #number '42'        -- casting a text to a number
 ```
 
 #### Functions
