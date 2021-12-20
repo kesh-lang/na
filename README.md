@@ -129,7 +129,7 @@ The following escape sequences are supported:
 - `\n` line feed
 - `\r` carriage return
 - `\t` horizontal tab
-- `\u()` unicode (hexadecimal)
+- `\()` unicode (hexadecimal)
 
 ##### Multiline
 
@@ -144,7 +144,7 @@ multiline text
 
 ```
 """
-it's \u(61)\u(6e) "escaped"
+it's \(61)\(6e) "escaped"
 multiline text
 """
 ```
