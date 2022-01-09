@@ -135,16 +135,16 @@ The following escape sequences are supported:
 
 Multiline text follows the same rules as Julia's [triple-quoted string literals](https://docs.julialang.org/en/v1/manual/strings/#Triple-Quoted-String-Literals).
 
-```
+```julia
 '''
-it's a "verbatim"
+this is a "verbatim"
 multiline text
 '''
 ```
 
-```
+```julia
 """
-it's \(61)\(6e) "escaped"
+this is \(61)\(6e) "escaped"
 multiline text
 """
 ```
