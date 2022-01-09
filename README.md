@@ -144,7 +144,7 @@ multiline text
 
 ```julia
 """
-this is \(61)\(6e) "escaped"
+this is \(97)\(110) "escaped"
 multiline text
 """
 ```
