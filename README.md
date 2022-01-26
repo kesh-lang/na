@@ -165,6 +165,8 @@ A simple sequence of values.
 
 A flexible data structure able to represent either linear or associative [collections](https://en.wikipedia.org/wiki/Collection_(abstract_data_type)).
 
+The brackets may be either square `[]` or curly `{}`. These examples use square brackets.
+
 ```lua
 []                    -- an empty collection
 [1, 2, 3]             -- multiple values indexed by order (array/list/sequence/stack/queue)
