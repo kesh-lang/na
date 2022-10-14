@@ -22,7 +22,7 @@ It serves as a proper subset for the [sode data format](https://github.com/kesh-
 
 #### Primitive types
 
-- **logic**
+- **truth**
 - **number**
 - **text**
 
@@ -74,9 +74,9 @@ If the target language does not support `kebab-case`, names may be transliterate
 
 ### Primitive values
 
-#### Logic
+#### Truth
 
-Boolean [logical values](https://en.wikipedia.org/wiki/Truth_value).
+Boolean [truth value](https://en.wikipedia.org/wiki/Truth_value).
 
 ```lua
 true
