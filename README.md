@@ -76,7 +76,7 @@ If the target language does not support `kebab-case`, names may be transliterate
 
 #### Truth
 
-Boolean [truth value](https://en.wikipedia.org/wiki/Truth_value).
+Boolean [truth values](https://en.wikipedia.org/wiki/Truth_value).
 
 ```lua
 true
