@@ -158,7 +158,7 @@ The enclosing brackets may be either square `[]` or curly `{}`. While semantical
 { 1: false, 42: true }  -- integer numbers as keys (sparse array)
 ```
 
-A collection is similar to Lua tables and JavaScript objects in that it can contain both linear and associative values. This should only be used if all intended targets are known to support this.
+A collection is similar to Lua tables and JavaScript objects in that it can contain both linear and associative values. This should only be used if all intended targets are known to support this flexibility.
 
 ##### Multiline and nesting
 
