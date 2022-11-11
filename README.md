@@ -18,24 +18,16 @@ It serves as a proper subset for the [sode data format](https://github.com/kesh-
 
 **na**'s value types are intended to represent a minimal set of data types common to most programming languages. A parser should attempt to map the values to data types in the target language having similar semantics.
 
-### Value types
+### Data types
 
-#### Primitive types
-
-- **truth**
-- **number**
-- **text**
-
-#### Composite types
-
-- **tuple** – a sequence of ordered values (usually heterogeneous)
-- **collection** – a collection of elements, either ordered values (usually homogeneous) or key/value pairs
-
-Valid keys for collections are names, strings and whole numbers.
+- [`#truth`](#truth) – Boolean truth values
+- [`#number`](#number) – arbitrary precision numbers
+- [`#text`](#text) – a string of UTF-8 characters
+- [`#collection`](#collections) – a collection of linear and associative values
 
 #### Unit type
 
-An empty tuple represents `null`/`void`/`none`/`undefined`/`nothing`.
+- `#none` – the concept of `nothing`/`void`/`null`/`undefined`
 
 ### Names
 
@@ -89,8 +81,8 @@ Arbitrary precision.
 
 ```lua
 42          -- integer
-3.14        -- float
-1/3         -- fraction
+3.14        -- decimal
+1/3         -- ratio
 -1          -- negative
 1_000_000   -- separators
 27°C        -- suffix
@@ -151,72 +143,65 @@ multiline text
 
 ### Composite values
 
-#### Tuples
-
-A simple sequence of values.
-
-```lua
-()           -- a 0-tuple is the unit type
-(42)         -- a 1-tuple is equivalent to the value it contains
-('joe', 27)  -- multiple values indexed by order
-```
-
 #### Collections
 
-A flexible data structure able to represent either linear or associative [collections](https://en.wikipedia.org/wiki/Collection_(abstract_data_type)).
+A flexible data structure able to represent both linear and associative [collections](https://en.wikipedia.org/wiki/Collection_(abstract_data_type)).
 
-The brackets may be either square `[]` or curly `{}`. These examples use square brackets.
+Collection keys can be [integer numbers](#number), [texts](#text) and [names](#names).
+
+The enclosing brackets may be either square `[]` or curly `{}`. While semantically equivalent, conventional practice uses square brackets for linear and curly brackets for associative collections.
 
 ```lua
-[]                    -- an empty collection
-[1, 2, 3]             -- multiple values indexed by order (array/list/sequence/stack/queue)
-[foo: 42, bar: true]  -- multiple values keyed by name (object/record/struct/map/dict/hash)
-[1: false, 42: true]  -- whole numbers are valid keys (sparse array)
+[]                      -- an empty collection
+[1, 2, 3]               -- values indexed by order (array/list/sequence/stack/queue)
+{ foo: 42, bar: true }  -- values keyed by name (object/record/struct/map/dict/hash)
+{ 1: false, 42: true }  -- integer numbers as keys (sparse array)
 ```
+
+A collection is similar to Lua tables and JavaScript objects in that it can contain both linear and associative values. This should only be used if all intended targets are known to support this.
 
 ##### Multiline and nesting
 
 ```lua
-[
-    nested-arrays: [
-        ['one']                     -- multiline items are separated by newline
-        ['two', 2]                  -- inline items are separated by comma
-        ['three', 3, ['pi', 3.14]]  -- nested inline arrays
+{
+    arrays: [
+        [1, 2, 3]               -- inline items are separated by comma
+        [4, 5, 6]               -- multiline items are separated by newline
+        [7, 8, 9]
     ]
-    nested-objects: [
-        foo: [bar: [baz: true]]     -- inline objects
-        foo.bar.qux: true           -- path shorthand
-    ]
-]
+    objects: {
+        foo: {
+            bar: { baz: true }  -- inline object
+        }
+        foo.bar.qux: true       -- path shorthand
+    }
+}
 ```
 
 ##### Without brackets
 
-When brackets are omitted within a collection, indentation becomes significant.
+When brackets are omitted within a bracketed collection, indentation becomes significant.
 
 ```lua
-[
-    foo:
-        bar: true
-        baz: true
-    items:
-        1
-        2
-        3
-]
+{
+    tensor:
+        [1, 2, 3]
+        [4, 5, 6]
+        [7, 8, 9]
+    person:
+        name: 'Joe'
+        age: 27
+}
 ```
 
 ## Features
 
 ```lua
-[
-    human-readable:    true
-    line-oriented:     true
-    line-separators:   (',', "\n")    -- newline is significant
-    indentation-based: (false, true)  -- indentation is significant only if no brackets
-    statically-typed:  true           -- see extensions.md
-    extensible:        true           -- see extensions.md
-]
+human-readable:     true
+line-oriented:      true
+line-separators:    [',', "\n"]    -- newline is significant
+indentation-based:  [false, true]  -- indentation is significant only if no brackets
+extensible:         true           -- see nax.md
 ```
 
 <!--
