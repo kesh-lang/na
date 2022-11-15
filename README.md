@@ -149,7 +149,7 @@ A flexible data structure able to represent both linear and associative [collect
 
 Collection keys can be [integer numbers](#number), [texts](#text) and [names](#names).
 
-The enclosing brackets may be either square `[]` or curly `{}`. While semantically equivalent, conventional practice uses square brackets for linear and curly brackets for associative collections.
+The enclosing brackets may be either square `[]` or curly `{}`. While semantically equivalent, these examples use the conventional square brackets for linear and curly brackets for associative collections.
 
 ```lua
 []                      -- an empty collection
