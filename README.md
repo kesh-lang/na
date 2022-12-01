@@ -20,7 +20,7 @@ It serves as a proper subset for the [sode data format](https://github.com/kesh-
 
 ### Rationale
 
-Notation matters. It should be a simple, reliable and secure foundation for a wide range of use cases.
+Notation matters and it should be a simple, reliable and secure foundation for a wide range of use cases.
 
 ### Data types
 
