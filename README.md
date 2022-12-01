@@ -191,6 +191,8 @@ When brackets are omitted within a bracketed collection, indentation becomes sig
 }
 ```
 
+See also [sode](https://github.com/kesh-lang/sode).
+
 ## Features
 
 ```lua
