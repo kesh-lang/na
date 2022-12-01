@@ -20,14 +20,14 @@ It serves as a proper subset for the [sode data format](https://github.com/kesh-
 
 ### Rationale
 
-It should be a simple, reliable and secure foundation for a wide range of use cases. Notation matters.
+Notation matters. It should be a simple, reliable and secure foundation for a wide range of use cases.
 
 ### Data types
 
 - [`#truth`](#truth) – Boolean truth values
 - [`#number`](#number) – arbitrary precision numbers
 - [`#text`](#text) – a string of UTF-8 characters
-- [`#collection`](#collections) – a collection of linear and associative values
+- [`#collection`](#collections) – a collection of linear/associative values
 
 #### Unit type
 
