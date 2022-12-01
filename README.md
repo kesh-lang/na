@@ -18,6 +18,10 @@ It serves as a proper subset for the [sode data format](https://github.com/kesh-
 
 **na**'s value types are intended to represent a minimal set of data types common to most programming languages. A parser should attempt to map the values to data types in the target language having similar semantics.
 
+### Rationale
+
+It should be a simple, reliable and secure foundation for a wide range of use cases. Notation matters.
+
 ### Data types
 
 - [`#truth`](#truth) – Boolean truth values
@@ -43,16 +47,6 @@ That is:
 - A name may start with, contain and end with `_` (low line)
 - A name may contain but not start or end with `-` (hyphen-minus), it may only be used as a hyphen
 - A name may not start with `$` (dollar sign), it being reserved for internal use
-
-<!--
-Hyphenation:
-- `_` and `-` are interchangeable when used to join words
-- Names are case-insensitive
-
-For example, `foo-bar` is equivalent to `foo_bar`.
--->
-
-<!-- A parser should represent names as verbatim as possible. -->
 
 If the target language does not support `kebab-case`, names may be transliterated to a compatible [case style](https://en.wikipedia.org/wiki/Naming_convention_(programming)#Multiple-word_identifiers) that maintains the separation of words within a name.
 
