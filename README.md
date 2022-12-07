@@ -200,7 +200,7 @@ human-readable:     true
 line-oriented:      true
 line-separators:    [',', "\n"]    -- newline is significant
 indentation-based:  [false, true]  -- indentation is significant only if no brackets
-extensible:         true           -- see nax.md
+extensible:         true           -- see extensions.md
 ```
 
 <!--
