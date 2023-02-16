@@ -196,14 +196,11 @@ See also [sode](https://github.com/kesh-lang/sode).
 
 ## Features
 
-```lua
-features:
-    'lightweight'
-    'human-readable'
-    'line-oriented'      -- newline is significant (equivalent to comma)
-    'indentation-based'  -- indentation is significant if brackets are omitted
-    'extensible'         -- see extensions.md
-```
+- Lightweight
+- Human-readable
+- Line-oriented (newline is significant, equivalent to comma)
+- Indentation-based (indentation is significant if brackets are omitted)
+- [Extensible](extensions.md)
 
 <!--
 <sub>Illustration is [CC BY-NC-ND](https://creativecommons.org/licenses/by-nc-nd/4.0/) Ursula K. Le Guin Literary Trust. From [Ursula Le Guin](https://www.ursulakleguin.com/)'s novel about the Kesh, [Always Coming Home](https://www.ursulakleguin.com/always-coming-home-book).</sub>
