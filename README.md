@@ -197,11 +197,12 @@ See also [sode](https://github.com/kesh-lang/sode).
 ## Features
 
 ```lua
-human-readable:     true
-line-oriented:      true
-line-separators:    [',', "\n"]    -- newline is significant
-indentation-based:  [false, true]  -- indentation is significant only if no brackets
-extensible:         true           -- see extensions.md
+features:
+    'lightweight'
+    'human-readable'
+    'line-oriented'           -- newline is significant (equivalent to comma)
+    'indentation-based'       -- indentation is significant if brackets are omitted
+    'extensible'              -- see extensions.md
 ```
 
 <!--
