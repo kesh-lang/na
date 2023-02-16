@@ -170,7 +170,7 @@ A collection is similar to Lua tables and JavaScript objects in that it can cont
     objects: [
         foo: [
             bar: [ baz: true ]  -- inline object
-        }
+        ]
         foo.bar.qux: true       -- path shorthand
     ]
 ]
