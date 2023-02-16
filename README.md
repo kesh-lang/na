@@ -43,10 +43,10 @@ Notation matters. It should be a simple, easy to use, reliable and secure founda
     <Continue> := <Start> + XID_Continue
     <Medial> := U+002D
 
-That is:
-- A name may start with, contain and end with `_` (low line)
-- A name may contain but not start or end with `-` (hyphen-minus), it may only be used as a hyphen
-- A name may not start with `$` (dollar sign), it being reserved for internal use
+That is, a name must conform with UAX31-R1 and:
+- may start with, contain and end with `_` (low line)
+- may contain, but cannot start or end with, `-` (hyphen-minus)
+- cannot start with `$` (dollar sign), it being reserved for internal use
 
 If the target language does not support `kebab-case`, names may be transliterated to a compatible [case style](https://en.wikipedia.org/wiki/Naming_convention_(programming)#Multiple-word_identifiers) that maintains the separation of words within a name.
 
