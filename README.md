@@ -200,9 +200,9 @@ See also [sode](https://github.com/kesh-lang/sode).
 features:
     'lightweight'
     'human-readable'
-    'line-oriented'           -- newline is significant (equivalent to comma)
-    'indentation-based'       -- indentation is significant if brackets are omitted
-    'extensible'              -- see extensions.md
+    'line-oriented'      -- newline is significant (equivalent to comma)
+    'indentation-based'  -- indentation is significant if brackets are omitted
+    'extensible'         -- see extensions.md
 ```
 
 <!--
