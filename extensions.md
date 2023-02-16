@@ -57,4 +57,4 @@ area: square[7m, 6m]  -- applying a function to a collection of values
 
 ## Derived formats
 
-**nax** itself may be used as a proper subset of other data formats. [sode](https://github.com/kesh-lang/sode) is one such format.
+**na(x)** itself may be used as a proper subset of other data formats. [sode](https://github.com/kesh-lang/sode) is one such format.
