@@ -198,7 +198,7 @@ See also [sode](https://github.com/kesh-lang/sode).
 
 - Lightweight
 - Human-readable
-- Line-oriented (newline is significant, equivalent to comma)
+- Line-oriented (newline is significant)
 - Indentation-based (indentation is significant if brackets are omitted)
 - [Extensible](extensions.md)
 
