@@ -6,7 +6,7 @@
 <p>&nbsp;</p>
 -->
 
-> **kesh** data notation format – suitable for the conveyance of values
+> **kesh** data notation format for the conveyance of values
 
 **na** is the kesh word for _river_.
 
