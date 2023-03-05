@@ -86,7 +86,6 @@ Arbitrary precision.
 1_000_000   -- separators
 27°C        -- suffix
 1e-2        -- exponent
-20r22       -- radix (from 2 to 36)
 0xdecafbad  -- hexadecimal
 0o755       -- octal
 0b101010    -- binary
