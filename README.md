@@ -147,7 +147,7 @@ A flexible data structure able to represent both linear and associative [collect
 
 Collections are enclosed by square brackets `[]`.
 
-Keys can be [positive integer numbers](#number), [texts](#text) and [names](#names).
+Keys can be [positive integer numbers](#number), [text](#text) and [names](#names).
 
 A collection is similar to Lua tables and JavaScript objects in that it can contain both linear and associative values.
 
