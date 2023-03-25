@@ -16,7 +16,7 @@ Inspired by [ren](https://pointillistic.com/ren/) and [edn](https://github.com/e
 
 It serves as a subset for the [sode data format](https://github.com/kesh-lang/sode) and the [kesh programming language](https://github.com/kesh-lang/kesh).
 
-**na**'s value types are intended to represent a minimal set of data types common to most programming languages. A parser should attempt to map the values to data types in the target language having similar semantics.
+**na**'s value types are intended to represent a minimal set of data types common to most programming languages. A parser should attempt to map the values to data types with similar semantics in the target language.
 
 ### Rationale
 
