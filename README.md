@@ -64,11 +64,11 @@ If the target language does not support `kebab-case`, names may be transliterate
 
 #### Truth
 
-Boolean [truth values](https://en.wikipedia.org/wiki/Truth_value).
+Boolean [truth values](https://en.wikipedia.org/wiki/Truth_value) are represented by a tagged union.
 
 ```lua
-true
-false
+#true
+#false
 ```
 
 #### Number
@@ -152,11 +152,11 @@ Keys can be [positive integer numbers](#number), [text](#text) and [names](#name
 A collection is similar to Lua tables and JavaScript objects in that it can contain both linear and associative values.
 
 ```lua
-[]                    -- an empty collection
-[1, 2, 3]             -- values indexed by order (array/list/sequence/stack/queue)
-[foo: 42, bar: true]  -- values keyed by name (object/record/struct/map/dict/hash)
-[1: false, 42: true]  -- integer numbers as keys (sparse array)
-[1, 2, 3, length: 3]  -- a mix of ordered and named values (array-like object)
+[]                      -- an empty collection
+[1, 2, 3]               -- values indexed by order (array/list/sequence/stack/queue)
+[foo: 42, bar: #true]   -- values keyed by name (object/record/struct/map/dict/hash)
+[1: #false, 42: #true]  -- integer numbers as keys (sparse array)
+[1, 2, 3, length: 3]    -- a mix of ordered and named values (array-like object)
 ```
 
 ##### Multiline and nesting
@@ -164,15 +164,15 @@ A collection is similar to Lua tables and JavaScript objects in that it can cont
 ```lua
 [
     arrays: [
-        [1, 2, 3]               -- inline items are separated by comma
-        [4, 5, 6]               -- multiline items are separated by newline
+        [1, 2, 3]                -- inline items are separated by comma
+        [4, 5, 6]                -- multiline items are separated by newline
         [7, 8, 9]
     ]
     objects: [
         foo: [
-            bar: [ baz: true ]  -- inline object
+            bar: [ baz: #true ]  -- inline object
         ]
-        foo.bar.qux: true       -- path shorthand
+        foo.bar.qux: #true       -- path shorthand
     ]
 ]
 ```
