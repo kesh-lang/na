@@ -85,7 +85,7 @@ Arbitrary precision.
 -1          -- negative
 1_000_000   -- separators
 27°C        -- suffix
-1e-2        -- exponent
+1e-2        -- exponential notation
 0xdecafbad  -- hexadecimal
 0o755       -- octal
 0b101010    -- binary
