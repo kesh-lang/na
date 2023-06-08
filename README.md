@@ -64,7 +64,7 @@ If the target language does not support `kebab-case`, names may be transliterate
 
 #### Truth
 
-Boolean [truth values](https://en.wikipedia.org/wiki/Truth_value) are represented by a tagged union.
+Boolean [truth values](https://en.wikipedia.org/wiki/Truth_value).
 
 ```lua
 #true
