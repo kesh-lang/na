@@ -121,21 +121,21 @@ The following escape sequences are supported:
 - `\t` horizontal tab
 - `\(…)` unicode
 
-##### Multiline
+##### Block
 
-Multiline text follows the same rules as Julia's [triple-quoted string literals](https://docs.julialang.org/en/v1/manual/strings/#Triple-Quoted-String-Literals).
+Text blocks follow the same rules as Julia's [triple-quoted string literals](https://docs.julialang.org/en/v1/manual/strings/#Triple-Quoted-String-Literals).
 
 ```julia
 '''
 this is a "verbatim"
-multiline text
+text block
 '''
 ```
 
 ```julia
 """
 this is \(97)\(110) "escaped"
-multiline text
+text block
 """
 ```
 
