@@ -111,7 +111,6 @@ Double-quoted text supports escape sequences.
 
 The following escape sequences are supported:
 
-- `\'` single quote
 - `\"` double quote
 - `\\` backslash
 - `\b` backspace
