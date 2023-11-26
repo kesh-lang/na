@@ -113,27 +113,22 @@ The following escape sequences are supported:
 
 - `\"` double quote
 - `\\` backslash
-- `\b` backspace
-- `\f` form feed
-- `\n` line feed
-- `\r` carriage return
-- `\t` horizontal tab
-- `\(…)` unicode
+- `\(…)` unicode code point (decimal, hexadecimal, octal or binary)
 
 ##### Block
 
 Text blocks follow the same rules as Julia's [triple-quoted string literals](https://docs.julialang.org/en/v1/manual/strings/#Triple-Quoted-String-Literals).
 
-```julia
+```py
 '''
 this is a "verbatim"
 text block
 '''
 ```
 
-```julia
+```py
 """
-this is \(97)\(110) "escaped"
+this is \(0x61)\(0x6e) "escaped"
 text block
 """
 ```
