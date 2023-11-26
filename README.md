@@ -26,14 +26,11 @@ The data format should be simple, easy to use, reliable and secure. It should be
 
 ### Data types
 
+- `#none` – the concept of `nothing`/`void`/`null`/`undefined` (unit type)
 - [`#truth`](#truth) – Boolean truth values
 - [`#number`](#number) – arbitrary precision numbers
 - [`#text`](#text) – a string of UTF-8 characters
-- [`#collection`](#collections) – a collection of linear/associative values
-
-#### Unit type
-
-- `#none` – the concept of `nothing`/`void`/`null`/`undefined`
+- [`#multi`](#multi) – a collection of linear/associative values
 
 ### Names
 
@@ -85,6 +82,9 @@ Arbitrary precision.
 -1          -- negative
 1_000_000   -- separators
 27°C        -- suffix
+```
+
+```lua
 1e-2        -- exponential notation
 0xdecafbad  -- hexadecimal
 0o755       -- octal
@@ -113,7 +113,7 @@ The following escape sequences are supported:
 
 - `\"` double quote
 - `\\` backslash
-- `\(…)` unicode code point (decimal, hexadecimal, octal or binary)
+- `\(…)` unicode code point integer (decimal, hexadecimal, octal or binary)
 
 ##### Block
 
@@ -135,36 +135,37 @@ text block
 
 ### Composite values
 
-#### Collections
+#### Multi
 
-A flexible data structure able to represent both linear and associative [collections](https://en.wikipedia.org/wiki/Collection_(abstract_data_type)).
+A versatile data structure able to represent both linear and associative [collections](https://en.wikipedia.org/wiki/Collection_(abstract_data_type)).
 
-Collections are enclosed by square brackets `[]`.
+Multis are enclosed by square brackets `[]`.
 
 Keys can be [non-negative integer numbers](#number), [text](#text) and [names](#names).
 
-A collection is similar to Lua tables and JavaScript objects in that it can contain both linear and associative values.
+It is similar to Lua tables and JavaScript objects in that it can contain both linear and associative values.
 
 ```lua
-[]                        -- an empty collection
-[ 1, 2, 3 ]               -- values indexed by order (array/list/sequence/stack/queue)
-[ foo: 42, bar: #true ]   -- values keyed by name (object/record/struct/map/dict/hash)
+[]                        -- empty
+[ 42 ]                    -- unary
+[ 1, 2, 3 ]               -- indexed by order (array/list/sequence/stack/queue)
+[ foo: 42, bar: #true ]   -- keyed by name (object/record/struct/map/dict/hash)
 [ 1: #false, 42: #true ]  -- integer numbers as keys (sparse array)
-[ 1, 2, 3, length: 3 ]    -- a mix of ordered and named values (array-like object)
+[ 1, 2, 3, length: 3 ]    -- a mix of ordered and named values (array-like JS object)
 ```
 
-##### Multiline and nesting
+##### Block and nesting
 
 ```lua
 [
-    arrays: [
+    linear: [                    -- block items are separated by newline
         [1, 2, 3]                -- inline items are separated by comma
-        [4, 5, 6]                -- multiline items are separated by newline
+        [4, 5, 6]
         [7, 8, 9]
     ]
-    objects: [
-        foo: [
-            bar: [ baz: #true ]  -- inline object
+    associative: [
+        foo: [                   -- block
+            bar: [ baz: #true ]  -- inline
         ]
         foo.bar.qux: #true       -- path shorthand
     ]
@@ -173,7 +174,7 @@ A collection is similar to Lua tables and JavaScript objects in that it can cont
 
 ##### Without brackets
 
-When brackets are omitted within a bracketed collection, indentation becomes significant.
+When brackets are omitted in a nested block, indentation becomes significant.
 
 ```lua
 [
@@ -194,7 +195,7 @@ See also [sode](https://github.com/kesh-lang/sode).
 - Lightweight
 - Human-readable
 - Line-oriented (newline is significant)
-- Indentation-based (indentation is significant if brackets are omitted)
+- Indentation-based (indentation is significant if brackets are omitted in a nested block)
 - [Extensible](extensions.md)
 
 <!--
