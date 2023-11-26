@@ -141,16 +141,16 @@ A flexible data structure able to represent both linear and associative [collect
 
 Collections are enclosed by square brackets `[]`.
 
-Keys can be [positive integer numbers](#number), [text](#text) and [names](#names).
+Keys can be [non-negative integer numbers](#number), [text](#text) and [names](#names).
 
 A collection is similar to Lua tables and JavaScript objects in that it can contain both linear and associative values.
 
 ```lua
-[]                      -- an empty collection
-[1, 2, 3]               -- values indexed by order (array/list/sequence/stack/queue)
-[foo: 42, bar: #true]   -- values keyed by name (object/record/struct/map/dict/hash)
-[1: #false, 42: #true]  -- integer numbers as keys (sparse array)
-[1, 2, 3, length: 3]    -- a mix of ordered and named values (array-like object)
+[]                        -- an empty collection
+[ 1, 2, 3 ]               -- values indexed by order (array/list/sequence/stack/queue)
+[ foo: 42, bar: #true ]   -- values keyed by name (object/record/struct/map/dict/hash)
+[ 1: #false, 42: #true ]  -- integer numbers as keys (sparse array)
+[ 1, 2, 3, length: 3 ]    -- a mix of ordered and named values (array-like object)
 ```
 
 ##### Multiline and nesting
