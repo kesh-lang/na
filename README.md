@@ -26,7 +26,7 @@ The data format should be simple, easy to use, reliable and secure. It should be
 
 ### Data types
 
-- `#none` – the concept of `nothing`/`void`/`null`/`undefined` (unit type)
+- `#none` – the concept of `nothing`/`void`/`null`/`undefined`
 - [`#truth`](#truth) – Boolean truth values
 - [`#number`](#number) – arbitrary precision numbers
 - [`#text`](#text) – a string of UTF-8 characters
