@@ -30,7 +30,7 @@ The data format should be simple, easy to use, reliable and secure. It should be
 - [`#truth`](#truth) – Boolean truth values
 - [`#number`](#number) – arbitrary precision numbers
 - [`#text`](#text) – a string of UTF-8 characters
-- [`#multi`](#multi) – a collection of linear/associative values
+- [`#collection`](#collection) – a collection of linear/associative values
 
 ### Names
 
@@ -135,11 +135,11 @@ text block
 
 ### Composite values
 
-#### Multi
+#### Collection
 
 A versatile data structure able to represent both linear and associative [collections](https://en.wikipedia.org/wiki/Collection_(abstract_data_type)).
 
-Multis are enclosed by square brackets `[]`.
+Collections are enclosed by square brackets `[]`.
 
 Keys can be [non-negative integer numbers](#number), [text](#text) and [names](#names).
 
