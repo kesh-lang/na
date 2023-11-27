@@ -33,10 +33,10 @@ User-defined type:
 ```lua
 #person: [               -- type definition
     name: #text          -- type annotation
-    friends?: #person[]  -- typed indexed collection (optional)
+    friends?: #person[]  -- typed array (optional)
 ]
 
-joe: #person [           -- type assertion/casting of a keyed collection
+joe: #person [           -- type assertion/casting of an object
     name: 'Joe'
 ]
 ```
@@ -52,7 +52,7 @@ Parser-defined types:
 ### Function
 
 ```lua
-area: square[7m, 6m]  -- applying a function to a collection of values
+area: square[7m, 6m]  -- applying a function to a set of values
 ```
 
 ## Derived formats
