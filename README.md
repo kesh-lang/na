@@ -196,7 +196,7 @@ See also [sode](https://github.com/kesh-lang/sode).
 ## Features
 
 - Lightweight
-- Human-readable
+- Human-friendly
 - Line-oriented (newline is significant)
 - Indentation-based (indentation is significant if brackets are omitted in a nested block)
 - [Extensible](extensions.md)
