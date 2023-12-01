@@ -141,7 +141,7 @@ A versatile data structure able to represent both linear and associative [collec
 
 Collections are enclosed by square brackets `[]`.
 
-Keys can be [non-negative integer numbers](#number), [text](#text) and [names](#names).
+Keys are optional and can be [non-negative integer numbers](#number), [texts](#text) or [names](#names).
 
 It is similar to Lua tables and JavaScript objects in that it can contain both linear and associative values.
 
