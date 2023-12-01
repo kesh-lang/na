@@ -70,7 +70,9 @@ Boolean [truth values](https://en.wikipedia.org/wiki/Truth_value).
 
 #### Number
 
-Arbitrary precision.
+Arbitrary precision positive and negative numbers.
+
+##### Base 10
 
 ```lua
 42          -- integer
@@ -79,16 +81,17 @@ Arbitrary precision.
 ```
 
 ```lua
--1          -- negative
-1_000_000   -- separators
+7e+27       -- exponential
 27°C        -- suffix
+1_000_000   -- separators
 ```
 
+##### Other bases
+
 ```lua
-1e-2        -- exponential notation
-0xdecafbad  -- hexadecimal
-0o755       -- octal
-0b101010    -- binary
+0b101010    -- base-2 (binary)
+0o755       -- base-8 (octal)
+0xdecafbad  -- base-16 (hexadecimal)
 ```
 
 #### Text
