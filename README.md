@@ -142,7 +142,7 @@ block of text
 
 A versatile data structure able to represent both linear and associative [collections](https://en.wikipedia.org/wiki/Collection_(abstract_data_type)).
 
-Blocks are enclosed by square brackets `[]`.
+Blocks are enclosed by square brackets `[]`. Inline items are separated by comma, multiline items by newline.
 
 Keys are optional and can be [non-negative integer numbers](#number), [texts](#text) or [names](#names).
 
