@@ -161,9 +161,9 @@ It is similar to Lua tables and JavaScript objects in that it can contain both l
 
 ```lua
 [
-    linear: [                    -- multiline items are separated by newline
+    linear: [
         [1, 2, 3]                -- inline items are separated by comma
-        [4, 5, 6]
+        [4, 5, 6]                -- multiline items are separated by newline
         [7, 8, 9]
     ]
     associative: [
