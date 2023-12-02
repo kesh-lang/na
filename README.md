@@ -8,7 +8,7 @@
 
 > **kesh** data notation format for the conveyance of values
 
-**na** is the kesh word for _river_.
+**na** is the [kesh](https://www.ursulakleguin.com/kesh-music) word for _river_.
 
 ## Definition
 
