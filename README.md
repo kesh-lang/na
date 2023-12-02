@@ -30,7 +30,7 @@ The data format should be simple, easy to use, reliable and secure. It should be
 - [`#truth`](#truth) – Boolean truth values
 - [`#number`](#number) – arbitrary precision numbers
 - [`#text`](#text) – a string of UTF-8 characters
-- [`#collection`](#collection) – a collection of linear/associative values
+- [`#block`](#block) – a collection of linear/associative values
 
 ### Names
 
@@ -118,31 +118,31 @@ The following escape sequences are supported:
 - `\\` backslash
 - `\(…)` unicode code point integer (decimal, hexadecimal, octal or binary)
 
-##### Block
+##### Multiline
 
-Text blocks follow the same rules as Julia's [triple-quoted string literals](https://docs.julialang.org/en/v1/manual/strings/#Triple-Quoted-String-Literals).
+Multiline texts follow the same rules as Julia's [triple-quoted string literals](https://docs.julialang.org/en/v1/manual/strings/#Triple-Quoted-String-Literals).
 
 ```py
 '''
 this is a "verbatim"
-text block
+block of text
 '''
 ```
 
 ```py
 """
 this is \(0x61)\(0x6e) "escaped"
-text block
+block of text
 """
 ```
 
 ### Composite values
 
-#### Collection
+#### Block
 
 A versatile data structure able to represent both linear and associative [collections](https://en.wikipedia.org/wiki/Collection_(abstract_data_type)).
 
-Collections are enclosed by square brackets `[]`.
+Blocks are enclosed by square brackets `[]`.
 
 Keys are optional and can be [non-negative integer numbers](#number), [texts](#text) or [names](#names).
 
@@ -157,18 +157,18 @@ It is similar to Lua tables and JavaScript objects in that it can contain both l
 [ 1, 2, 3, length: 3 ]    -- a mix of ordered and named values ("array-like object")
 ```
 
-##### Block and nesting
+##### Nested
 
 ```lua
 [
-    linear: [                    -- block items are separated by newline
+    linear: [                    -- multiline items are separated by newline
         [1, 2, 3]                -- inline items are separated by comma
         [4, 5, 6]
         [7, 8, 9]
     ]
     associative: [
-        foo: [                   -- block
-            bar: [ baz: #true ]  -- inline
+        foo: [                   -- multiline block
+            bar: [ baz: #true ]  -- inline block
         ]
         foo.bar.qux: #true       -- path shorthand
     ]
@@ -177,7 +177,7 @@ It is similar to Lua tables and JavaScript objects in that it can contain both l
 
 ##### Without brackets
 
-When brackets are omitted in a nested block, indentation becomes significant.
+When brackets are omitted in a nested multiline block, indentation becomes significant.
 
 ```lua
 [
@@ -198,7 +198,7 @@ See also [sode](https://github.com/kesh-lang/sode).
 - Lightweight
 - Human-friendly
 - Line-oriented (newline is significant)
-- Indentation-based (indentation is significant if brackets are omitted in a nested block)
+- Indentation-based (indentation is significant if brackets are omitted in a nested multiline block)
 - [Extensible](extensions.md)
 
 <!--
