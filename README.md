@@ -76,8 +76,8 @@ Arbitrary precision signed numbers.
 
 ```lua
 42          -- integer
-3.14        -- decimal
-1/3         -- ratio
+3.14        -- decimal fraction
+1/3         -- rational
 ```
 
 ```lua
