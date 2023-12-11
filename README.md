@@ -114,9 +114,10 @@ Double-quoted text supports escape sequences.
 
 The following escape sequences are supported:
 
-- `\"` double quote
-- `\\` backslash
-- `\(…)` unicode code point integer (decimal, hexadecimal, octal or binary)
+- `\"` – double quote
+- `\\` – backslash
+- `\(…)` – Unicode code point integer (decimal, hexadecimal, octal or binary)
+
 
 ##### Multiline
 
