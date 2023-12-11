@@ -191,7 +191,7 @@ When brackets are omitted in a nested multiline block, indentation becomes signi
 ]
 ```
 
-See also [sode](https://github.com/kesh-lang/sode).
+See also [sode](https://github.com/kesh-lang/sode), a tree structured data format based on **na**.
 
 ## Features
 
