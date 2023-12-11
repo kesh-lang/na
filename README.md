@@ -70,7 +70,7 @@ false
 
 #### Number
 
-Arbitrary precision positive and negative numbers.
+Arbitrary precision signed numbers.
 
 ##### Base 10
 
