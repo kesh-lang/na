@@ -29,8 +29,8 @@ The data format should be simple, easy to use, reliable and secure. It should be
 - `#none` – the concept of `nothing`/`void`/`null`/`undefined`
 - [`#truth`](#truth) – Boolean truth values
 - [`#number`](#number) – arbitrary precision numbers
-- [`#text`](#text) – a string of UTF-8 characters
-- [`#block`](#block) – a collection of linear/associative values
+- [`#text`](#text) – a sequence of UTF-8 code points
+- [`#block`](#block) – a sequence of linear/associative values
 
 ### Names
 
@@ -77,7 +77,7 @@ Arbitrary precision signed numbers.
 ```lua
 42          -- integer
 3.14        -- decimal fraction
-1/3         -- rational
+1/3         -- rational (ratio)
 ```
 
 ```lua
@@ -96,7 +96,7 @@ Arbitrary precision signed numbers.
 
 #### Text
 
-UTF-8.
+[UTF-8](https://utf8everywhere.org/).
 
 ##### Inline
 
@@ -114,9 +114,9 @@ Double-quoted text supports escape sequences.
 
 The following escape sequences are supported:
 
-- `\"` – double quote
+- `\"` – double-quote
 - `\\` – backslash
-- `\(…)` – Unicode code point integer (decimal, hexadecimal, octal or binary)
+- `\(…)` – Unicode code point integer (base-10, base-16, base-8 or base-2)
 
 
 ##### Multiline
