@@ -74,13 +74,13 @@ Arbitrary precision signed numbers.
 
 ##### Base 10
 
-```lua
+```haskell
 42          -- integer
 3.14        -- decimal fraction
 1/3         -- rational (ratio)
 ```
 
-```lua
+```haskell
 7e+27       -- exponential
 27°C        -- suffix
 1_000_000   -- separators
@@ -88,7 +88,7 @@ Arbitrary precision signed numbers.
 
 ##### Other bases
 
-```lua
+```haskell
 0b101010    -- base-2 (binary)
 0o755       -- base-8 (octal)
 0xdecafbad  -- base-16 (hexadecimal)
