@@ -8,8 +8,6 @@
 
 > **kesh** data notation format for the conveyance of values
 
-**na** is the [kesh](https://www.ursulakleguin.com/kesh-music) word for _river_.
-
 ## Definition
 
 Inspired by [ren](https://pointillistic.com/ren/) and [edn](https://github.com/edn-format/edn/), **na** is a simple yet resilient data notation for the conveyance of values.
@@ -201,6 +199,10 @@ See also [sode](https://github.com/kesh-lang/sode), a tree structured data forma
 - Line-oriented (newline is significant)
 - Indentation-based (indentation is significant if brackets are omitted in a nested multiline block)
 - [Extensible](extensions.md)
+
+---
+
+**na** is the [kesh](https://www.ursulakleguin.com/kesh-music) word for _river_.
 
 <!--
 <sub>Illustration is [CC BY-NC-ND](https://creativecommons.org/licenses/by-nc-nd/4.0/) Ursula K. Le Guin Literary Trust. From [Ursula Le Guin](https://www.ursulakleguin.com/)'s novel about the Kesh, [Always Coming Home](https://www.ursulakleguin.com/always-coming-home-book).</sub>
