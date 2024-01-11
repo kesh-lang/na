@@ -81,7 +81,8 @@ Arbitrary precision signed numbers.
 ```haskell
 7e+27       -- exponential
 27°C        -- suffix
-1_000_000   -- separators
+42EUR       -- currency suffix
+1_000_000   -- digit grouping
 ```
 
 ##### Other bases
