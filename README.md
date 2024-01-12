@@ -146,7 +146,7 @@ Blocks are enclosed by square brackets `[]`. Inline items are separated by comma
 
 Keys are optional and can be [non-negative integer numbers](#number), [texts](#text) or [names](#names).
 
-It is similar to Lua tables and JavaScript objects in that it can contain both linear and associative values.
+It is similar to Lua tables, JavaScript objects and Dart records in that it can contain both linear and associative values.
 
 ```lua
 []                        -- empty
