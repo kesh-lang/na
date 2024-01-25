@@ -28,7 +28,13 @@ The following examples are written in [sode](https://github.com/kesh-lang/sode) 
 
 ### Type
 
-Standard extended types:
+Special types:
+
+- `#integer` enforces an integer [number](README.md#number).
+- `#index` enforces a non-negative `#integer`. It may only be used as the key of a key signature.
+- `#name` enforces a [valid na name](README.md#names). It may only be used as the key of a key signature.
+
+Standard types:
 
 ```lua
 #some: #truth | #number | #text | #block
@@ -36,12 +42,6 @@ Standard extended types:
 #list: [ #index: #any ]   -- key signature
 #record: [ #name: #any ]  -- key signature
 ```
-
-Special types:
-
-- `#integer` enforces an integer [number](README.md#number)
-- `#index` enforces a non-negative `#integer`. It may only be used as the key of a key signature.
-- `#name` enforces a [valid na name](README.md#names). It may only be used as the key of a key signature.
 
 User-defined type:
 
