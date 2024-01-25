@@ -24,19 +24,36 @@ Parsers _must_ be able to read any syntactically valid **na** data without causi
 
 ## Examples
 
-The following examples are written in [sode](https://github.com/kesh-lang/sode).
+The following examples are written in [sode](https://github.com/kesh-lang/sode) with support for types.
 
 ### Type
+
+Standard extended types:
+
+```lua
+#some: #truth | #number | #text | #block
+#any: #none | #some
+
+#list: [
+    #number: #any  -- index signature
+]
+
+#record: [
+    #name: #any
+]
+```
+
+`#name` is a special type enforcing a [valid na name](readme.md#names). It is only allowed in an index signature, as above.
 
 User-defined type:
 
 ```lua
 #person: [               -- type definition
     name: #text          -- type annotation
-    friends?: #person[]  -- typed array (optional)
+    friends?: #person[]  -- typed list (recursive, item marked as optional)
 ]
 
-joe: #person [           -- type assertion/casting of an object
+joe: #person [           -- type assertion/casting of an object literal
     name: 'Joe'
 ]
 ```
@@ -44,9 +61,9 @@ joe: #person [           -- type assertion/casting of an object
 Parser-defined types:
 
 ```lua
-#instant '1985-04-12T23:20:50.52Z'            -- casting of a string to an RFC 3339 timestamp
-#uuid 'f81d4fae-7dec-11d0-a765-00a0c91e6bf6'  -- casting of a string to RFC 4122 UUID binary data
-#base64 'RG8geW91IHNwZWFrIEJhc2U2ND8='        -- assertion of a string as RFC 4648 Base64 encoded data
+#instant '1985-04-12T23:20:50.52Z'        -- casting of a string to an RFC 3339 timestamp
+#uuid 0xf81d4fae7dec11d0a76500a0c91e6bf6  -- casting of a hexadecimal to RFC 4122 UUID binary data
+#base64 'RG8geW91IHNwZWFrIEJhc2U2ND8='    -- assertion of a string as RFC 4648 Base64 encoded data
 ```
 
 ### Function
