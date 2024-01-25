@@ -144,33 +144,41 @@ A versatile data structure able to represent both linear and associative [collec
 
 Blocks are enclosed by square brackets `[]`. Inline items are separated by comma, multiline items by newline.
 
-Keys are optional and can be [non-negative integer numbers](#number), [texts](#text) or [names](#names).
+Keys are optional and can be either [non-negative integer numbers](#number) or [names](#names).
 
-Like Lua tables, JavaScript objects and Dart records, it can contain both linear and associative values.
+Linear values are implicitly given 0-indexed integer keys.
 
 ```lua
-[]                        -- empty
-[ 42 ]                    -- unary
-[ 1, 2, 3 ]               -- indexed by order (array/list/sequence/stack/queue)
-[ foo: 42, bar: true ]    -- keyed by name (object/record/struct/map/dict/hash)
-[ 1: false, 42: true ]    -- integer numbers as keys (sparse array)
-[ 1, 2, 3, length: 3 ]    -- a mix of ordered and named values ("array-like object")
+[]                      -- empty
+[ 42 ]                  -- unary
+[ 1, 2, 3 ]             -- indexed by order (array/list/sequence/stack/queue)
+[ foo: 42, bar: true ]  -- keyed by name (object/record/struct/map/dict/hash)
+[ 1: false, 42: true ]  -- integer numbers as keys (sparse array)
 ```
+
+Similar to [Lua tables](https://www.lua.org/pil/2.5.html), [JavaScript objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) and [Dart records](https://dart.dev/language/records#record-fields), one block may contain both linear and associative values.
+
+```lua
+[ 1, 2, 3, length: 3 ]  -- a mix of linear and named values
+[ 1, 2, 3, 0: 42 ]      -- explicit keys are evaluated before implicit keys
+```
+
+More specific data structures may be enforced with [types](extensions.md#type).
 
 ##### Nested
 
 ```lua
 [
     linear: [
-        [1, 2, 3]                -- inline items are separated by comma
-        [4, 5, 6]                -- multiline items are separated by newline
+        [1, 2, 3]               -- inline items are separated by comma
+        [4, 5, 6]               -- multiline items are separated by newline
         [7, 8, 9]
     ]
     associative: [
-        foo: [                   -- multiline block
-            bar: [ baz: true ]   -- inline block
+        foo: [                  -- multiline block
+            bar: [ baz: true ]  -- inline block
         ]
-        foo.bar.qux: true        -- path shorthand
+        foo.bar.qux: true       -- path shorthand
     ]
 ]
 ```
