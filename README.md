@@ -75,22 +75,21 @@ Arbitrary precision signed numbers.
 ```haskell
 42          -- integer
 3.14        -- decimal fraction
-1/3         -- rational (ratio)
+1/3         -- rational fraction (ratio)
 ```
 
 ```haskell
 7e+27       -- exponential
-27°C        -- suffix
-42EUR       -- currency suffix
+27C         -- suffix (Unicode category L)
 1_000_000   -- digit grouping
 ```
 
 ##### Other bases
 
 ```haskell
-0b101010    -- base-2 (binary)
-0o755       -- base-8 (octal)
-0xdecafbad  -- base-16 (hexadecimal)
+0b101010    -- base-2 (binary) integer
+0o755       -- base-8 (octal) integer
+0xdecafbad  -- base-16 (hexadecimal) integer
 ```
 
 #### Text
