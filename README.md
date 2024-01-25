@@ -162,7 +162,7 @@ Similar to [Lua tables](https://www.lua.org/pil/2.5.html), [JavaScript objects](
 [ 1, 2, 3, 0: 42 ]      -- explicit keys are evaluated before implicit keys
 ```
 
-More specific data structures may be enforced with [types](extensions.md#type).
+More specific data structures may be enforced with [types](extensions.md#standard-types).
 
 ##### Nested
 
