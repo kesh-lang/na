@@ -33,17 +33,11 @@ Standard extended types:
 ```lua
 #some: #truth | #number | #text | #block
 #any: #none | #some
-
-#list: [
-    #number: #any  -- index signature
-]
-
-#record: [
-    #name: #any
-]
+#list: [ #number: #any ]  -- index signature
+#record: [ #name: #any ]  -- index signature
 ```
 
-`#name` is a special type enforcing a [valid na name](README.md#names). It is only allowed in an index signature, as above.
+`#name` is a special type enforcing a [valid na name](README.md#names). It may only be used as the key of an index signature, as above.
 
 User-defined type:
 
