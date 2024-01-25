@@ -1,14 +1,14 @@
-# na(x)
+# na x
 
-**na(x)** is **na** extended with types and functions.
+**na x** is **na** extended with types and functions.
 
-**na**'s [data types](README.md#data-types) may be extended with types and functions, inspired by [edn's tagged elements](https://github.com/edn-format/edn/#tagged-elements). While serving different purposes, they are technically the same, only with different semantics and namespace.
+**na**'s [data types](README.md#data-types) may be extended with types and functions, inspired by [edn's tagged elements](https://github.com/edn-format/edn/#tagged-elements).
 
 Types may be defined by both users and parsers, while functions can only be defined by parsers.
 
-Both types and functions must be defined with a valid [name](https://github.com/kesh-lang/na#names). Types must be prefixed with a `#` sigil.
+Types and functions must be defined with a valid [name](https://github.com/kesh-lang/na#names). Types must be prefixed with a `#` sigil.
 
-When applied to a value, a type or function _must_ appear before the value, on the same line, optionally separated by space.
+When applied to a value, a type or function _must_ appear before the value, on the same line, separated by space.
 
 Parsers _may_ allow clients to register handlers for custom types and functions, for example to transform **na** values into data types of the target language. Client-defined handlers _should_ be pure functions without side effects.
 
@@ -22,26 +22,33 @@ If a parser encounters a type or function for which no handler is registered, it
 
 Parsers _must_ be able to read any syntactically valid **na** data without causing errors. Errors _may_, however, be raised if the parser is run in strict mode.
 
+## Standard extended types
+
+Special types:
+
+- `#name` enforces a [valid name](README.md#names)
+- `#real` enforces a decimal _approximation_ of a real number (ℝ)
+    - `#integer` enforces an integer number (ℤ)
+        - `#natural` enforces a natural number, a non-negative integer (ℕ)
+- `#ratio` enforces a rational number (ℚ), the ratio of two positive integers
+
+In standard **na x**, `#name` may only be used as the key of a key signature, and keys may only be of the type `#natural` or `#name`.
+
+Standard types:
+
+```lua
+#number: #real | #integer | #natural | #ratio
+#some: #truth | #number | #text | #block
+#any: #none | #some
+#list: [ #natural: #any ]  -- key signature
+#record: [ #name: #any ]   -- key signature
+```
+
 ## Examples
 
 The following examples are written in [sode](https://github.com/kesh-lang/sode) with support for types.
 
 ### Type
-
-Special types:
-
-- `#integer` enforces an integer [number](README.md#number).
-- `#index` enforces a non-negative `#integer`. It may only be used as the key of a key signature.
-- `#name` enforces a [valid na name](README.md#names). It may only be used as the key of a key signature.
-
-Standard types:
-
-```lua
-#some: #truth | #number | #text | #block
-#any: #none | #some
-#list: [ #index: #any ]   -- key signature
-#record: [ #name: #any ]  -- key signature
-```
 
 User-defined type:
 
@@ -56,20 +63,16 @@ joe: #person [           -- type assertion/casting of an object literal
 ]
 ```
 
-Parser-defined types:
-
-```lua
-#instant '1985-04-12T23:20:50.52Z'        -- casting of a string to an RFC 3339 timestamp
-#uuid 0xf81d4fae7dec11d0a76500a0c91e6bf6  -- casting of a hexadecimal to RFC 4122 UUID binary data
-#base64 'RG8geW91IHNwZWFrIEJhc2U2ND8='    -- assertion of a string as RFC 4648 Base64 encoded data
-```
-
 ### Function
 
+Parser-defined functions:
+
 ```lua
-area: square[7m, 6m]  -- applying a function to a set of values
+area: square [7m, 6m]                         -- applying a function to a block of values
+timestamp: instant '1985-04-12T23:20:50.52Z'  -- "casting" a string to an RFC 3339 timestamp
+id: uuid 'f81d4fae7dec11d0a76500a0c91e6bf6'   -- "casting" a string to an RFC 4122 UUID
 ```
 
 ## Derived formats
 
-**na(x)** may itself be used as a proper subset of other data formats. [sode](https://github.com/kesh-lang/sode) is one such format.
+**na x** may itself be used as a proper subset of other data formats. [sode](https://github.com/kesh-lang/sode) is one such format.
