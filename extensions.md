@@ -43,7 +43,7 @@ Standard extended types:
 ]
 ```
 
-`#name` is a special type enforcing a [valid na name](readme.md#names). It is only allowed in an index signature, as above.
+`#name` is a special type enforcing a [valid na name](README.md#names). It is only allowed in an index signature, as above.
 
 User-defined type:
 
