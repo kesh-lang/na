@@ -125,14 +125,14 @@ Multiline texts follow the same rules as Julia's [triple-quoted string literals]
 ```py
 '''
 this is a "verbatim"
-block of text
+text that's multiline
 '''
 ```
 
 ```py
 """
 this is \(0x61)\(0x6e) "escaped"
-block of text
+text that's multiline
 """
 ```
 
