@@ -80,8 +80,8 @@ Arbitrary precision signed numbers.
 
 ```haskell
 7e+27       -- exponential
-42cm        -- suffix (Unicode category L)
-1_000_000   -- digit grouping
+42MB        -- suffix (Unicode category L)
+1_299_709   -- digit grouping
 ```
 
 ##### Other bases
