@@ -1,6 +1,6 @@
 # na x
 
-**na x** is **na** extended with types and functions.
+**na x** is **na** extended with support for types and functions.
 
 **na**'s [data types](README.md#data-types) may be extended with types and functions, inspired by [edn's tagged elements](https://github.com/edn-format/edn/#tagged-elements).
 
@@ -43,7 +43,7 @@ In standard **na x**, `#name` may only be used as the key of a key signature, an
 
 ## Examples
 
-The following examples are written in [sode](https://github.com/kesh-lang/sode) with support for types.
+The following examples are written in [sode](https://github.com/kesh-lang/sode).
 
 ### User-defined type
 
