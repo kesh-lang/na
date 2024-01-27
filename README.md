@@ -26,7 +26,6 @@ It should be a solid foundation for a wide range of use cases.
 
 ### Data types
 
-- `#none` – the concept of `nothing`/`void`/`null`/`undefined`
 - [`#truth`](#truth) – Boolean truth values
 - [`#number`](#number) – arbitrary precision numbers
 - [`#text`](#text) – a sequence of UTF-8 code points
