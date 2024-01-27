@@ -162,7 +162,7 @@ Similar to [Lua tables](https://www.lua.org/pil/2.5.html), [JavaScript objects](
 [ 1, 2, 3, 0: 42 ]      -- explicit keys are evaluated before implicit keys
 ```
 
-More specific data structures may be enforced with [types](extensions.md#standard-types).
+More specific data structures may be enforced with [types](extended.md#standard-types).
 
 ##### Nested
 
@@ -206,7 +206,7 @@ See also [sode](https://github.com/kesh-lang/sode), a tree structured data forma
 - Human-friendly
 - Line-oriented (newline is significant)
 - Indentation-based (indentation is significant if brackets are omitted in a nested multiline block)
-- [Extensible](extensions.md)
+- [Extensible](extended.md)
 
 ---
 
