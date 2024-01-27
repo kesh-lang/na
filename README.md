@@ -20,7 +20,7 @@ It serves as a subset for the [sode data format](https://github.com/kesh-lang/so
 
 Notation matters.
 
-The data format should be simple, easy to use, reliable and secure.
+The data format should be simple, ergonomic, flexible, reliable and secure.
 
 It should be a solid foundation for a wide range of use cases.
 
