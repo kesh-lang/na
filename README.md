@@ -53,7 +53,7 @@ If the target language does not support `kebab-case`, names may be transliterate
 ### Comments
 
 ```lua
--- this is a line comment
+-- this is a comment
 ```
 
 ### Primitive values
