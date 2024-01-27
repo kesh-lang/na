@@ -25,19 +25,22 @@ Parsers _must_ be able to read any syntactically valid **na** data without causi
 ## Standard types
 
 ```lua
-#number: #real | #integer | #natural | #ratio
-#some: #truth | #number | #text | #block
 #any: #none | #some
+#some: #truth | #number | #text | #block
+#number: #real | #integer | #natural | #ratio
 #list: [ #natural: #any ]  -- key signature
 #record: [ #name: #any ]   -- key signature
 ```
 
-- `#name` enforces a [valid name](README.md#names)
+Where:
+
+- `#none` denotes the concept of `nothing`/`null`/`nil`/`void`/`undefined`
+- `#name` denotes a [valid name](README.md#names)
 - Subtypes of [`#number`](README.md#number):
-    - `#real` enforces a decimal _approximation_ of a [real number](https://en.wikipedia.org/wiki/Real_number) (ℝ)
-        - `#integer` enforces an [integer number](https://en.wikipedia.org/wiki/Integer) (ℤ)
-            - `#natural` enforces a [natural number](https://en.wikipedia.org/wiki/Natural_number) (ℕ), a non-negative integer
-    - `#ratio` enforces a [rational number](https://en.wikipedia.org/wiki/Rational_number) (ℚ), the ratio of two positive integers
+    - `#real` denotes a decimal _approximation_ of a [real number](https://en.wikipedia.org/wiki/Real_number) (ℝ)
+        - `#integer` denotes an [integer number](https://en.wikipedia.org/wiki/Integer) (ℤ)
+            - `#natural` denotes a [natural number](https://en.wikipedia.org/wiki/Natural_number) (ℕ), a non-negative integer
+    - `#ratio` denotes a [rational number](https://en.wikipedia.org/wiki/Rational_number) (ℚ), the ratio of two positive integers
 
 In standard **na x**, `#name` may only be used as the key of a key signature, and keys may only be of the type `#natural` or `#name`.
 
