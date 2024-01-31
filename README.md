@@ -114,6 +114,9 @@ Double-quoted text supports escape sequences.
 The following escape sequences are supported:
 
 - `\"` – double-quote
+- `\␤` – line continuation
+- `\␠` – non-breaking space
+- `\-` – non-breaking hyphen
 - `\\` – backslash
 - `\(…)` – Unicode code point integer (base-10, base-16, base-8 or base-2)
 
