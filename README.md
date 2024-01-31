@@ -202,7 +202,7 @@ See also [sode](https://github.com/kesh-lang/sode), a tree structured file forma
 
 ## Streaming
 
-A **na** stream is an open-ended block of linear and associative values.
+A **na** stream is an open-ended block of linear and associative values. It may be transmitted as UTF-8 text or in a suitable binary format compatible with **na**, such as [CBOR](https://ubjson.org/).
 
 ## Features
 
