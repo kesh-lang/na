@@ -134,7 +134,7 @@ text that's multiline
 
 ```py
 """
-this is \(97)\(110) "escaped"
+this is \(97)\(110) "escaped" \
 text that's multiline
 """
 ```
