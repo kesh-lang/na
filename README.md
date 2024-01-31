@@ -171,45 +171,41 @@ More specific data structures may be enforced with [types](extended.md#standard-
 ##### Nested
 
 ```lua
-[
-    linear: [
-        [1, 2, 3]               -- inline items are separated by comma
-        [4, 5, 6]               -- multiline items are separated by newline
-        [7, 8, 9]
+linear: [
+    [1, 2, 3]               -- inline items are separated by comma
+    [4, 5, 6]               -- multiline items are separated by newline
+    [7, 8, 9]
+]
+associative: [
+    foo: [                  -- multiline block
+        bar: [ baz: true ]  -- inline block
     ]
-    associative: [
-        foo: [                  -- multiline block
-            bar: [ baz: true ]  -- inline block
-        ]
-        foo.bar.qux: true       -- path shorthand
-    ]
+    foo.bar.qux: true       -- path shorthand
 ]
 ```
 
 ##### Without brackets
 
-When brackets are omitted in a nested multiline block, indentation becomes significant.
+Brackets are optional. When omitted, indentation becomes significant.
 
 ```lua
-[
-    tensor:
-        [1, 2, 3]
-        [4, 5, 6]
-        [7, 8, 9]
-    person:
-        name: 'Joe'
-        age: 27
-]
+tensor:
+    [1, 2, 3]
+    [4, 5, 6]
+    [7, 8, 9]
+person:
+    name: 'Joe'
+    age: 27
 ```
 
-See also [sode](https://github.com/kesh-lang/sode), a tree structured data format based on **na**.
+See also [sode](https://github.com/kesh-lang/sode), a tree structured file format based on **na**.
 
 ## Features
 
 - Lightweight
 - Human-friendly
 - Line-oriented (newline is significant)
-- Indentation-based (indentation is significant if brackets are omitted in a nested multiline block)
+- Indentation-based (indentation is significant if brackets are omitted)
 - [Extensible](extended.md)
 
 ---
