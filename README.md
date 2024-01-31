@@ -200,6 +200,10 @@ person:
 
 See also [sode](https://github.com/kesh-lang/sode), a tree structured file format based on **na**.
 
+## Streaming
+
+A **na** stream is an open-ended block of linear and associative values, in a simple UTF-8 based encoding format.
+
 ## Features
 
 - Lightweight
