@@ -62,13 +62,13 @@ If the target language does not support `kebab-case`, names may be transliterate
 
 Boolean [truth values](https://en.wikipedia.org/wiki/Truth_value).
 
-UTF-8 encoded as `⊨` (true) and `⊭` (false).
+UTF-8 encoded as `⊤` (true) and `⊥` (false).
 
 For convenience, the keywords `true` and `false` are also provided.
 
 ```lua
-true:  ⊨
-false: ⊭
+true:  ⊤
+false: ⊥
 ```
 
 #### Number
