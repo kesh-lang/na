@@ -62,7 +62,7 @@ If the target language does not support `kebab-case`, names may be transliterate
 
 Boolean [truth values](https://en.wikipedia.org/wiki/Truth_value).
 
-UTF-8 encoded as `⊤` (true) and `⊥` (false).
+UTF-8 encoded as `⊤` (U+22A4) and `⊥` (U+22A5).
 
 For convenience, the keywords `true` and `false` are also provided.
 
