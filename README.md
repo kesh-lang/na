@@ -43,7 +43,7 @@ It should be a solid foundation for a wide range of use cases.
 
 That is, a name must conform with UAX31-R1 and:
 - may start with, contain and end with `_` (low line)
-- may contain, but cannot start or end with, `-` (hyphen-minus)
+- may contain but cannot start or end with `-` (hyphen-minus)
 
 If the target language does not support `kebab-case`, names may be transliterated to a compatible [case style](https://en.wikipedia.org/wiki/Naming_convention_(programming)#Multiple-word_identifiers) that maintains the separation of words within a name.
 
