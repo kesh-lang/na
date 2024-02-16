@@ -77,23 +77,23 @@ Arbitrary precision signed numbers.
 ##### Base 10
 
 ```haskell
-42          -- integer
-3.14        -- decimal fraction
-1/3         -- rational fraction (ratio)
+42         -- integer
+3.14       -- decimal fraction
+1/3        -- rational fraction (ratio)
 ```
 
 ```haskell
-7e+27       -- exponential
-4150KB      -- suffix (Unicode category L)
-1_771_561   -- digit grouping
+7e+27      -- exponential
+4150KB     -- suffix (Unicode category L)
+1_771_561  -- digit grouping
 ```
 
 ##### Other bases
 
 ```haskell
-0b101010    -- base-2 (binary) integer
-0o755       -- base-8 (octal) integer
-0xdecafbad  -- base-16 (hexadecimal) integer
+0b101010   -- base-2 (binary) integer
+0o755      -- base-8 (octal) integer
+0xdecaf    -- base-16 (hexadecimal) integer
 ```
 
 #### Text
