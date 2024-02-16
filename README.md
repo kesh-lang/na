@@ -84,7 +84,7 @@ Arbitrary precision signed numbers.
 
 ```haskell
 7e+27       -- exponential
-42MB        -- suffix (Unicode category L)
+4150KB      -- suffix (Unicode category L)
 1_771_561   -- digit grouping
 ```
 
