@@ -12,7 +12,7 @@
 
 Inspired by [ren](https://pointillistic.com/ren/) and [edn](https://github.com/edn-format/edn/), **na** is a simple yet resilient data notation for the conveyance of values.
 
-It serves as a subset for the [sode data format](https://github.com/kesh-lang/sode) and the [kesh programming language](https://github.com/kesh-lang/kesh).
+It serves as a subset for the [kesh programming language](https://github.com/kesh-lang/kesh).
 
 **na**'s value types are intended to represent a minimal set of data types common to most programming languages. A parser should attempt to map the values to data types with similar semantics in the target language.
 
@@ -201,7 +201,7 @@ person:
     age: 27
 ```
 
-See also [sode](https://github.com/kesh-lang/sode), a tree structured file format based on **na**.
+See also [nason](https://github.com/kesh-lang/nason), a JSON(5) compatible data interchange format based on **na**.
 
 ## Streaming
 
