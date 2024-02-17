@@ -177,7 +177,7 @@ More specific data structures may be enforced with [types](extended.md#standard-
 linear: [
     [1, 2, 3]               -- inline items are separated by comma
     [4, 5, 6]               -- multiline items are separated by newline
-    [7, 8, 9],              -- trailing comma is ignored
+    [7, 8, 9],              -- trailing commas are allowed
 ]
 associative: [
     foo: [                  -- multiline block
