@@ -59,7 +59,7 @@ If the target language does not support `kebab-case`, names may be transliterate
 
 #### Truth
 
-Boolean [truth values](https://en.wikipedia.org/wiki/Truth_value) are represented with the Unicode symbols `⊤` and `⊥`.
+Boolean [truth values](https://en.wikipedia.org/wiki/Truth_value), represented with Unicode symbols `⊤` and `⊥`.
 
 For convenience, the English words `true` and `false` may be used.
 
