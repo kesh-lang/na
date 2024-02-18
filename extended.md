@@ -64,7 +64,7 @@ joe: #person [           -- typed record
 ### Parser-defined functions
 
 ```lua
-area: square [7m, 6m]                         -- applying a function to a block of values
+area: square[7m, 6m]                         -- applying a function to a block of values
 timestamp: instant '1985-04-12T23:20:50.52Z'  -- "casting" a string to an RFC 3339 timestamp
 id: uuid 'f81d4fae7dec11d0a76500a0c91e6bf6'   -- "casting" a string to an RFC 4122 UUID
 ```
