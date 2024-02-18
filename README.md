@@ -202,8 +202,6 @@ person:
     age: 27
 ```
 
-See also [nason](https://github.com/kesh-lang/nason), a JSON(5) compatible data interchange format based on **na**.
-
 ## Streaming
 
 A **na** stream is an open-ended block of linear and associative values. It may be transmitted as UTF-8 text or in a suitable binary format compatible with **na**, for example [CBOR](https://en.wikipedia.org/wiki/CBOR).
