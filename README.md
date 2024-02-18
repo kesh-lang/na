@@ -90,7 +90,7 @@ Arbitrary precision signed numbers.
 
 ##### Other bases
 
-Any radix from 1 to 36.
+Any radix from 1 to 36, using 0-9 + A-Z as numerals (case insensitive).
 
 ```euphoria
 2\101010   -- binary
