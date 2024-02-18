@@ -92,7 +92,7 @@ Arbitrary precision signed numbers.
 
 Any radix from 1 to 36.
 
-```haskell
+```euphoria
 2\101010   -- binary
 8\755      -- octal
 16\decaf   -- hexadecimal
