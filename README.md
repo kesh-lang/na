@@ -189,7 +189,7 @@ associative: [
 
 ##### Without brackets
 
-Brackets are optional. When omitted, indentation becomes significant.
+Brackets are optional for multiline blocks. When omitted, indentation becomes significant.
 
 ```lua
 tensor:
