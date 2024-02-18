@@ -204,7 +204,7 @@ person:
 
 ## Streaming
 
-A **na** stream is an open-ended block of linear and associative values. It may be transmitted as UTF-8 text or in a suitable binary format compatible with **na**, for example [CBOR](https://en.wikipedia.org/wiki/CBOR).
+A **na** stream is an open-ended block of linear and associative values. It may be transmitted as UTF-8 text or in a suitable binary format compatible with **na**, for example [CBOR](https://en.wikipedia.org/wiki/CBOR) or [Nota](https://www.crockford.com/nota.html).
 
 ## Features
 
