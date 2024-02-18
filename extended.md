@@ -53,10 +53,10 @@ The following examples are written in [sode](https://github.com/kesh-lang/sode).
 ```lua
 #person: [               -- type definition
     name: #text          -- type annotation
-    friends?: #person[]  -- typed list (recursive, item marked as optional)
+    friends?: #person[]  -- typed list (item marked as optional)
 ]
 
-joe: #person [           -- type assertion/casting of an object literal
+joe: #person [           -- typed record
     name: 'Joe'
 ]
 ```
