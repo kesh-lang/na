@@ -71,4 +71,4 @@ id: uuid 'f81d4fae7dec11d0a76500a0c91e6bf6'   -- "casting" a string to an RFC 41
 
 ## Derived formats
 
-**na x** may itself be used as a proper subset of other data formats. [sode](https://github.com/kesh-lang/sode) is one such format.
+**na x** may itself be used as a subset of other data formats.
