@@ -159,9 +159,9 @@ Linear values are implicitly given 0-indexed integer keys.
 ```lua
 []                      -- empty
 [ 42 ]                  -- unary
-[ 1, 2, 3 ]             -- implicit integer keys (array/list/sequence/stack/queue)
+[ 1, 2, 3 ]             -- implicit integer keys (list/array/sequence/stack/queue)
 [ 1: true, 42: true ]   -- explicit integer keys (sparse array)
-[ foo: 42, bar: true ]  -- explicit names (object/record/map/structure/dictionary/hash)
+[ foo: 42, bar: true ]  -- explicit names (record/object/map/structure/dictionary/hash)
 ```
 
 Similar to [Lua tables](https://www.lua.org/pil/2.5.html), [JavaScript objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) and [Dart records](https://dart.dev/language/records#record-fields), a block may contain both linear and associative values.
