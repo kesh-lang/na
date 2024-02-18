@@ -160,7 +160,7 @@ Linear values are implicitly given 0-indexed integer keys.
 []                      -- empty
 [ 42 ]                  -- unary
 [ 1, 2, 3 ]             -- implicit integer keys (list/array/sequence/stack/queue)
-[ 1: true, 42: true ]   -- explicit integer keys (sparse array)
+[ 7: true, 42: true ]   -- explicit integer keys (sparse array)
 [ foo: 42, bar: true ]  -- explicit names (record/object/map/structure/dictionary/hash)
 ```
 
