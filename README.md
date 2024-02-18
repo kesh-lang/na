@@ -90,10 +90,12 @@ Arbitrary precision signed numbers.
 
 ##### Other bases
 
+Any radix from 1 to 36.
+
 ```haskell
-0b101010   -- base-2 (binary) integer
-0o755      -- base-8 (octal) integer
-0xdecaf    -- base-16 (hexadecimal) integer
+2\101010   -- binary
+8\755      -- octal
+16\decaf   -- hexadecimal
 ```
 
 #### Text
@@ -121,7 +123,7 @@ The following escape sequences are supported:
 - `\␠` – non-breaking space
 - `\-` – non-breaking hyphen
 - `\\` – backslash
-- `\(…)` – Unicode code point integer (base-10, base-16, base-8 or base-2)
+- `\(…)` – Unicode code point
 
 
 ##### Multiline
@@ -130,15 +132,15 @@ Multiline texts follow the same rules as Julia's [triple-quoted string literals]
 
 ```py
 '''
-this is a "verbatim"
-text that's multiline
+this is a "verbatim" text
+that's multiline
 '''
 ```
 
 ```py
 """
-this is \(97)\(110) "escaped" \
-text that's multiline
+this is an "escaped" text \
+that's multiline \(1F632)
 """
 ```
 
@@ -177,7 +179,7 @@ More specific data structures may be enforced with [types](extended.md#standard-
 linear: [
     [1, 2, 3]               -- inline items are separated by comma
     [4, 5, 6]               -- multiline items are separated by newline
-    [7, 8, 9],              -- trailing commas are allowed
+    [7, 8, 9],              -- trailing commas are ignored
 ]
 associative: [
     foo: [                  -- multiline block
