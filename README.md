@@ -69,13 +69,13 @@ Arbitrary precision signed numbers.
 
 ##### Base 10
 
-```haskell
+```euphoria
 42         -- integer
 3.14       -- decimal fraction
 1/3        -- rational fraction (ratio)
 ```
 
-```haskell
+```euphoria
 7e+27      -- e notation
 4150KB     -- suffix (Unicode category L)
 1_771_561  -- digit grouping
