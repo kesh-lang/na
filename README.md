@@ -112,10 +112,10 @@ Double-quoted text supports escape sequences.
 The following escape sequences are supported:
 
 - `\"` – double-quote
-- `\␤` – line continuation
+- `\\` – backslash
 - `\␠` – non-breaking space
 - `\-` – non-breaking hyphen
-- `\\` – backslash
+- `\␤` – line continuation
 - `\(…)` – Unicode code point
 
 
@@ -132,7 +132,7 @@ that's multiline
 
 ```py
 """
-this is an "escaped" text \
+this is an "escaped" text
 that's multiline \(1F632)
 """
 ```
