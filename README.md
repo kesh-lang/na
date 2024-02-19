@@ -61,7 +61,7 @@ If the target language does not support `kebab-case`, names may be transliterate
 
 Boolean [truth values](https://en.wikipedia.org/wiki/Truth_value), represented with Unicode symbols `⊤` and `⊥`.
 
-For convenience, the English words `true` and `false` may be used.
+For convenience, the English words `true` and `false` may also be used.
 
 #### Number
 
