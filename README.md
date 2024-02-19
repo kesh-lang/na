@@ -145,7 +145,7 @@ A versatile data structure able to represent both linear and associative [collec
 
 Blocks are enclosed by square brackets `[]`. Inline items are separated by comma, multiline items by newline.
 
-Keys are optional and can be either [non-negative integer numbers](#number) or [names](#names).
+Keys are optional and can be either [non-negative integer numbers](#number) or [names](#names). Duplicates are not allowed.
 
 Linear values are implicitly given 0-indexed integer keys.
 
@@ -160,7 +160,6 @@ Similar to [Lua tables](https://www.lua.org/pil/2.5.html), [JavaScript objects](
 
 ```lua
 [ 1, 2, 3, length: 3 ]  -- a mix of implicitly indexed and explicitly named values
-[ 1, 2, 3, 0: 42 ]      -- explicit keys are evaluated before implicit keys
 ```
 
 More specific data structures may be enforced with [types](extended.md#standard-types).
