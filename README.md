@@ -76,14 +76,15 @@ Arbitrary precision signed numbers.
 ```
 
 ```euphoria
-7e+27      -- e notation
-4150KB     -- suffix (Unicode category L)
+1.616e-35  -- scientific e notation
 1_771_561  -- digit grouping
+256px      -- suffix (Unicode category L)
+007        -- leading zeros
 ```
 
 ##### Other bases
 
-Any radix from 1 to 36, using 0-9 + A-Z as numerals (case insensitive).
+Any radix from 1 to 36, using 0-9 + A-Z as numerals.
 
 ```euphoria
 2\101010   -- binary
