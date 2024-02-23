@@ -120,10 +120,8 @@ The following escape sequences are supported:
 - `\\` – reverse solidus `U+005C`
 - `\t` - horizontal tab `U+0009`
 - `\n` - newline `U+000A`
+- `\␤` - line continuation
 - `\HHHHHH` – Unicode code point (6 hexadecimal numerals)
-
-Any other character escaped with `\` is ignored, including newline (line continuation).
-
 
 ##### Multiline
 
