@@ -84,11 +84,12 @@ Arbitrary precision signed numbers.
 
 ##### Other bases
 
-Any radix from 1 to 36, using 0-9 + A-Z as numerals.
+Any radix from 1 to 36, using 0-9 + A-Z/a-z as numerals.
 
 ```euphoria
 2\101010   -- binary
 8\755      -- octal
+12\B69     -- duodecimal
 16\decaf   -- hexadecimal
 ```
 
