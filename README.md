@@ -28,7 +28,7 @@ It should be a solid foundation for a wide range of use cases.
 
 - [`#truth`](#truth) – Boolean truth values
 - [`#number`](#number) – arbitrary precision numbers
-- [`#text`](#text) – a sequence of UTF-8 code points
+- [`#text`](#text) – a sequence of Unicode scalar values
 - [`#block`](#block) – a sequence of linear/associative values
 
 ### Names
@@ -98,7 +98,7 @@ Bases with radix from 1 to 36 is supported, using 0-9 + A-Z/a-z as numerals.
 
 #### Text
 
-[UTF-8](https://utf8everywhere.org/).
+A sequence of zero or more [Unicode scalar values](https://www.unicode.org/glossary/#unicode_scalar_value) in [UTF-8](https://utf8everywhere.org/) encoding.
 
 ##### Inline
 
@@ -116,12 +116,13 @@ Double-quoted text supports escape sequences.
 
 The following escape sequences are supported:
 
-- `\"` – double-quote
-- `\\` – backslash
-- `\␠` – non-breaking space
-- `\-` – non-breaking hyphen
-- `\␤` – line continuation
-- `\(…)` – Unicode code point
+- `\"` – quotation mark `U+0022`
+- `\\` – reverse solidus `U+005C`
+- `\t` - horizontal tab `U+0009`
+- `\n` - newline `U+000A`
+- `\HHHHHH` – Unicode code point (6 hexadecimal numerals)
+
+Any other character escaped with `\` is ignored, including newline (line continuation).
 
 
 ##### Multiline
@@ -138,7 +139,7 @@ that's multiline
 ```py
 """
 this is an "escaped" text
-that's multiline \(1F632)
+that's multiline \01F632
 """
 ```
 
