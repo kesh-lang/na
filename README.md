@@ -67,7 +67,9 @@ For convenience, the English words `true` and `false` may also be used.
 
 Arbitrary precision signed numbers.
 
-##### Base 10
+##### Bases
+
+Base 10 by default.
 
 ```euphoria
 42         -- integer
@@ -75,22 +77,23 @@ Arbitrary precision signed numbers.
 -1/12      -- rational fraction (ratio)
 ```
 
-```euphoria
-1.616e-35  -- scientific e notation
-1_771_561  -- digit grouping
-48fps      -- suffix (Unicode category L)
-007        -- leading zeros
-```
-
-##### Other bases
-
-Any radix from 1 to 36, using 0-9 + A-Z/a-z as numerals.
+Bases with radix from 1 to 36 is supported, using 0-9 + A-Z/a-z as numerals.
 
 ```euphoria
 2\101010   -- binary
 8\755      -- octal
 12\B69     -- duodecimal
 16\decaf   -- hexadecimal
+```
+
+##### Formatting
+
+```euphoria
+6.022\23   -- exponential notation
+1_771_561  -- digit grouping
+007        -- leading zeros
+99%        -- percent (ratio to 100)
+48fps      -- suffix (Unicode category L, only for base 10)
 ```
 
 #### Text
