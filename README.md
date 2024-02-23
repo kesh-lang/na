@@ -174,9 +174,9 @@ More specific data structures may be enforced with [types](extended.md#standard-
 
 ```lua
 linear: [
-    [1, 2, 3]               -- inline items are separated by comma
-    [4, 5, 6]               -- multiline items are separated by newline
-    [7, 8, 9],              -- trailing commas are ignored
+    [1, 2, 3]               -- inline items separated by comma for readability
+    [4, 5, 6]               -- multiline items separated by newline
+    [7, 8, 9]
 ]
 associative: [
     foo: [                  -- multiline block
@@ -188,7 +188,7 @@ associative: [
 
 ##### Without brackets
 
-Brackets are optional for multiline blocks. When omitted, indentation becomes significant.
+Brackets are only required for inline blocks. Indentation is significant if multiline.
 
 ```lua
 tensor:
@@ -202,7 +202,7 @@ person:
 
 ## Streaming
 
-A **na** stream is an open-ended block of linear and associative values.
+A **na** stream is an open-ended sequence of linear/associative values.
 
 ## Encoding
 
@@ -213,7 +213,7 @@ Either UTF-8 or a compatible binary format, for example [CBOR](https://en.wikipe
 - Lightweight
 - Human-friendly
 - Line-oriented (newline is significant)
-- Indentation-based (indentation is significant if brackets are omitted)
+- Indentation-based (indentation is significant if multiline)
 - [Extensible](extended.md)
 
 ---
