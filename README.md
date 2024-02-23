@@ -72,7 +72,7 @@ Arbitrary precision signed numbers.
 ```euphoria
 42         -- integer
 6.28       -- decimal fraction
-1/3        -- rational fraction (ratio)
+-1/12      -- rational fraction (ratio)
 ```
 
 ```euphoria
