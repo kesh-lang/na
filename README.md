@@ -78,7 +78,7 @@ Arbitrary precision signed numbers.
 ```euphoria
 1.616e-35  -- scientific e notation
 1_771_561  -- digit grouping
-256px      -- suffix (Unicode category L)
+48fps      -- suffix (Unicode category L)
 007        -- leading zeros
 ```
 
