@@ -180,7 +180,6 @@ associative: [
     foo: [                  -- multiline block
         bar: [ baz: true ]  -- inline block
     ]
-    foo.bar.qux: true       -- path shorthand
 ]
 ```
 
