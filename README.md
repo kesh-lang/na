@@ -147,7 +147,7 @@ that's multiline \01F632
 
 A versatile data structure able to represent both linear and associative [collections](https://en.wikipedia.org/wiki/Collection_(abstract_data_type)).
 
-Blocks are enclosed by square brackets `[]`. Inline items are separated by comma, multiline items by newline.
+Blocks are enclosed by square brackets `[]`. Inline items may be separated by comma.
 
 Keys are optional and can be either [non-negative integer numbers](#number) or [names](#names). Duplicates are not allowed.
 
@@ -184,18 +184,24 @@ associative: [
 ]
 ```
 
-##### Without brackets
+##### Optional syntax
 
 Brackets are only required for inline blocks. Indentation is significant if multiline.
 
+Commas are optional and have no semantics. Recommended only between inline values for readability.
+
+Multiline values may be prefixed with the [bullet glyph](https://en.wikipedia.org/wiki/Bullet_(typography)) `•` for readability.
+
 ```lua
-tensor:
-    [1, 2, 3]
-    [4, 5, 6]
-    [7, 8, 9]
 person:
-    name: 'Joe'
+    name: 'Joey'
     age: 27
+    friends:
+        • 'Chandler'
+        • 'Monica'
+        • 'Phoebe'
+        • 'Rachel'
+        • 'Ross'
 ```
 
 ## Streaming
