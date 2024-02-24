@@ -1,24 +1,18 @@
 # na
 
-<!--
-<p>&nbsp;</p>
-<p align="center" width="100%"><img height="381px" alt="A Kesh map of the watershed of Sinshan Creek" src="https://i.imgur.com/JsIGehK.png"></p>
-<p>&nbsp;</p>
--->
-
-> data notation format for the conveyance of values
+> data notation for the conveyance of values
 
 ## Definition
 
-Inspired by [ren](https://pointillistic.com/ren/) and [edn](https://github.com/edn-format/edn/), **na** is a simple yet resilient data notation for the conveyance of values.
+Inspired by [ren](https://pointillistic.com/ren/) and [edn](https://github.com/edn-format/edn/), **na** is a simple yet resilient data notation format.
 
-**na**'s value types are intended to represent a minimal set of common data types.
+Its value types are intended to represent a minimal set of common data types.
 
 ### Rationale
 
 Notation matters.
 
-The format should be simple, ergonomic, flexible, reliable and secure.
+The syntax should be simple, ergonomic, flexible, reliable and secure.
 
 It should be a solid foundation for a wide range of use cases.
 
@@ -216,7 +210,3 @@ Either UTF-8 or a compatible binary format, for example [CBOR](https://en.wikipe
 ---
 
 **na** is the [kesh](https://www.ursulakleguin.com/kesh-music) word for _river_.
-
-<!--
-<sub>Illustration is [CC BY-NC-ND](https://creativecommons.org/licenses/by-nc-nd/4.0/) Ursula K. Le Guin Literary Trust. From [Ursula Le Guin](https://www.ursulakleguin.com/)'s novel about the Kesh, [Always Coming Home](https://www.ursulakleguin.com/always-coming-home-book).</sub>
--->
