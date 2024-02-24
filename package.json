@@ -1,0 +1,13 @@
+{
+  "name": "na",
+  "module": "compiler/index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@biomejs/biome": "1.5.3",
+    "@types/bun": "^1.0.0",
+    "vitest": "^1.0.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
