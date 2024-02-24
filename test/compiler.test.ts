@@ -1,7 +1,6 @@
 import { Glob } from 'bun'
 import { describe, test, expect } from 'vitest'
 import { compile } from '../compiler'
-import { Parser } from '../compiler/parser'
 
 const dir = `${import.meta.dir}/data`
 
