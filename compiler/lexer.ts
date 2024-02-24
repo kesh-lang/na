@@ -61,14 +61,12 @@ export class Lexer {
 		this.whitespace()
 
 		// Return end token if the end of the source is reached
-		if (this.pos >= this.length)
-			return new EndToken(this.length)
+		if (this.pos >= this.length) return new EndToken(this.length)
 
 		const char = this.get(this.pos)
 
 		// Newline
-		if (char === '\n')
-			return this.newline()
+		if (char === '\n') return this.newline()
 
 		// Text
 		if (char === "'" || char === '"')
@@ -79,32 +77,25 @@ export class Lexer {
 		// Comment or negative number
 		if (char === '-') {
 			const next = this.get(this.pos + 1)
-			if (next === '-')
-				return this.comment()
-			if (isDigit(next))
-				return this.number(1)
+			if (next === '-') return this.comment()
+			if (isDigit(next)) return this.number(1)
 		}
 
 		// Positive number
-		if (char === '+' && isDigit(this.get(this.pos + 1)))
-			return this.number(1)
+		if (char === '+' && isDigit(this.get(this.pos + 1))) return this.number(1)
 
 		// Type
-		if (char === '#' && isNameStart(this.get(this.pos + 1)))
-			return this.name(1)
+		if (char === '#' && isNameStart(this.get(this.pos + 1))) return this.name(1)
 
 		// Unsigned number
-		if (isDigit(char))
-			return this.number()
+		if (isDigit(char)) return this.number()
 
 		// Name
-		if (isNameStart(char))
-			return this.name()
+		if (isNameStart(char)) return this.name()
 
 		// Operators
 		const operator = this.operators[char]
-		if (operator)
-			return new Token(operator, char, this.pos, this.pos + 1)
+		if (operator) return new Token(operator, char, this.pos, this.pos + 1)
 
 		// Fallback to Error
 		throw Error(`Unexpected character ${char} at ${this.pos}`)
@@ -130,12 +121,10 @@ export class Lexer {
 	private whitespace() {
 		while (this.pos < this.length) {
 			const char = this.get(this.pos)
-			if (char === ' ' || char === '\t' || char === ',')
-				this.pos++
+			if (char === ' ' || char === '\t' || char === ',') this.pos++
 			// else if (char === '-' && this.get(this.pos + 1) === '-')
 			// 	this.pos = this.pos + 2
-			else
-				break
+			else break
 		}
 	}
 
@@ -146,15 +135,11 @@ export class Lexer {
 		// Keep track of indentation while skipping \t characters
 		if (this.get(this.pos + 1) === '\t') {
 			let end = this.pos + 2
-			while (end < this.length && this.get(end) === '\t')
-				end++
+			while (end < this.length && this.get(end) === '\t') end++
 
 			// Calculate depth and dent (-, 0, +)
 			meta.depth = end - this.pos - 1
-			meta.dent = meta.depth >= this.depth
-				? meta.depth - this.depth
-				: -(this.depth - meta.depth)
-
+			meta.dent = meta.depth >= this.depth ? meta.depth - this.depth : -(this.depth - meta.depth)
 		}
 		// Detect outdent when \n is not followed by an indent
 		else if (this.depth) {
@@ -171,10 +156,7 @@ export class Lexer {
 		const start = this.pos
 
 		let end = this.pos + 2
-		while (end < this.length && this.get(end) !== '\n')
-			end++
-
-		this.pos = end
+		while (end < this.length && this.get(end) !== '\n') end++
 
 		return new Token('comment', this.source.slice(start, end), start, end)
 	}
@@ -183,17 +165,11 @@ export class Lexer {
 	private number(skip = 0) {
 		const start = this.pos
 
-		let end = this.pos + skip + 1
-		while (end < this.length && isNumeric(this.get(end))) {
-			// @todo process number
-			end++
-		}
-
-		//
-		if (this.get(end) === '%' && this.source.slice(start, end).includes(''))
-			end++
-
 		// @todo consume characters more precisely, validate and assign subtype
+		let end = this.pos + skip + 1
+		while (end < this.length && isNumeric(this.get(end))) end++
+
+		if (this.get(end) === '%') end++
 
 		return new Token('number', this.source.slice(start, end), start, end)
 	}
@@ -207,17 +183,12 @@ export class Lexer {
 		let end = this.pos + 1
 		let char = this.get(end)
 		while (end < this.length && char !== marker) {
-			if (verbatim && char === '\n')
-				throw Error(`Unterminated text literal at ${start}`)
-
-			if (!verbatim && char === '\\' && this.get(end + 1) === marker)
-				end++ // skip escaped marker
-
+			if (verbatim && char === '\n') throw Error(`Unterminated text literal at ${start}`)
+			if (!verbatim && char === '\\' && this.get(end + 1) === marker) end++ // skip escaped marker
 			char = this.get(++end)
 		}
 
-		if (end === this.length)
-			throw Error(`Unterminated text literal at ${start}`)
+		if (end === this.length) throw Error(`Unterminated text literal at ${start}`)
 
 		return new Token('text', this.source.slice(start, end + 1), start, end + 1, meta)
 	}
@@ -229,7 +200,11 @@ export class Lexer {
 
 		let end = this.pos + 1
 		while (end < this.length) {
-			if (this.get(end) === marker && this.get(end + 1) === marker && this.get(end + 2) === marker) {
+			if (
+				this.get(end) === marker &&
+				this.get(end + 1) === marker &&
+				this.get(end + 2) === marker
+			) {
 				end = end + 3
 				break
 			}
@@ -245,20 +220,17 @@ export class Lexer {
 		const start = this.pos
 
 		let end = this.pos + skip + 1
-		while (end < this.length && isNameMedial(this.get(end)))
-			end++
+		while (end < this.length && isNameMedial(this.get(end))) end++
 
 		// Backtrack to remove any trailing '-' characters matched by isNameMedial
-		while (this.get(end - 1) === '-')
-			end--
+		while (this.get(end - 1) === '-') end--
 
 		return new Token('name', this.source.slice(start, end), start, end)
 	}
 
 	/** Implements the iterable protocol. */
 	*[Symbol.iterator]() {
-		while (this.next().end === false)
-			yield this.current
+		while (this.next().end === false) yield this.current
 	}
 }
 
@@ -267,15 +239,17 @@ function isDigit(char: string) {
 }
 
 function isNumeric(char: string) {
-	return (char >= '0' && char <= '9') // digit
-		|| char === '.'                   // decimal point
-		|| char === '/'                   // ratio
-		|| char === '_'                   // separator
-		|| char === '+'                   // positive sign
-		|| char === '-'                   // negative sign
-		|| (char >= 'a' && char <= 'z')   // radix 10-36, e notation, suffix
-		|| (char >= 'A' && char <= 'Z')   // radix 10-36, e notation, suffix
-		|| char === '\\'                  // base
+	return (
+		(char >= '0' && char <= '9') || // digit
+		char === '.' || // decimal point
+		char === '/' || // ratio
+		char === '_' || // separator
+		char === '+' || // positive sign
+		char === '-' || // negative sign
+		(char >= 'a' && char <= 'z') || // radix 10-36, e notation, suffix
+		(char >= 'A' && char <= 'Z') || // radix 10-36, e notation, suffix
+		char === '\\' // base
+	)
 }
 
 function isNameStart(char: string) {
