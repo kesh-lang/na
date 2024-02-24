@@ -201,10 +201,6 @@ person:
         • 'Ross'
 ```
 
-## Streaming
-
-A **na** stream is an open-ended sequence of linear/associative values.
-
 ## Encoding
 
 Either UTF-8 or a compatible binary format, for example [CBOR](https://en.wikipedia.org/wiki/CBOR) or a derivative of [Nota](https://www.crockford.com/nota.html).
