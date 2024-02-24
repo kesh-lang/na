@@ -6,7 +6,7 @@
 <p>&nbsp;</p>
 -->
 
-> **kesh** data notation format for the conveyance of values
+> data notation format for the conveyance of values
 
 ## Definition
 
