@@ -183,7 +183,7 @@ associative: [
 ]
 ```
 
-##### Optional syntax
+##### Flexible syntax
 
 Brackets are only required for inline blocks. Indentation is significant if multiline.
 
