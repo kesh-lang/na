@@ -15,6 +15,8 @@
 	"javascript": {
 		"formatter": {
 			"enabled": true,
+			"indentStyle": "tab",
+			"indentWidth": 2,
 			"lineWidth": 100,
 			"semicolons": "asNeeded",
 			"quoteStyle": "single"
