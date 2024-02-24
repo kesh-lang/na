@@ -12,8 +12,6 @@
 
 Inspired by [ren](https://pointillistic.com/ren/) and [edn](https://github.com/edn-format/edn/), **na** is a simple yet resilient data notation for the conveyance of values.
 
-It serves as a subset for the [kesh programming language](https://github.com/kesh-lang/kesh).
-
 **na**'s value types are intended to represent a minimal set of common data types.
 
 ### Rationale
