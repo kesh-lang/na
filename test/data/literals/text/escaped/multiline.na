@@ -1,0 +1,6 @@
+["""\na multiline\n\\"escaped\\"\ntext\n"""]
+"""
+a multiline
+\\"escaped\\"
+text
+"""
