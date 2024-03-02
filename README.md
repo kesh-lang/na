@@ -74,18 +74,17 @@ Bases with radix from 1 to 36 is supported, using 0-9 + A-Z/a-z as numerals.
 ```euphoria
 2\101010   -- binary
 8\755      -- octal
-12\B69     -- duodecimal
 16\decaf   -- hexadecimal
 ```
 
 ##### Formatting
 
 ```euphoria
-6.022\23   -- exponential notation
+6.022\23   -- scientific/exponential notation
 1_771_561  -- digit grouping
 007        -- leading zeros
-99%        -- percent (ratio to 100, only for base 10)
-48fps      -- suffix (Unicode category L, only for base 10)
+48fps      -- suffix (Unicode General Category L, only for base 10)
+99%        -- percentage (ratio to 100, only for base 10)
 ```
 
 #### Text
