@@ -25,7 +25,7 @@ It should be a solid foundation for a wide range of use cases.
 
 ### Names
 
-**na** meets [UAX31-R1-2](https://unicode.org/reports/tr31/#R1-2) by using a _profile_ of [UAX31-R1-1](https://unicode.org/reports/tr31/#R1-1), adding the optional start character `_` (low line) and the optional medial character `-` (hyphen-minus). In the syntax of [UAX31-D1](https://unicode.org/reports/tr31/#D1):
+**na** meets [UAX31-R1-2](https://unicode.org/reports/tr31/#R1-2) by using a **_profile_** of [UAX31-R1-1](https://unicode.org/reports/tr31/#R1-1), adding the optional start character `_` (low line) and the optional medial character `-` (hyphen-minus). In the syntax of [UAX31-D1](https://unicode.org/reports/tr31/#D1):
 
     <Identifier> := <Start> <Continue>* (<Medial> <Continue>+)*
 
