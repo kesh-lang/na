@@ -79,7 +79,7 @@ Arbitrary precision signed numbers.
 
 ##### Other bases
 
-Bases with radix from 2 to 36 is supported, using 0-9 + A-Z/a-z as numerals.
+Bases with radix from 2 to 36 is supported, using 0…9 + A…Z/a…z as numerals.
 
 ```euphoria
 2\101010   -- binary
