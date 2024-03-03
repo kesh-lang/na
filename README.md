@@ -25,19 +25,21 @@ It should be a solid foundation for a wide range of use cases.
 
 ### Names
 
-**na** meets [UAX31-R1](https://unicode.org/reports/tr31/#R1) of Unicode 13 by adopting a _profile_ adding the optional start character `_` (low line) and the optional medial character `-` (hyphen-minus). In the syntax of UAX31:
+**na** meets [UAX31-R1-2](https://unicode.org/reports/tr31/#R1-2) by using a _profile_ of [UAX31-R1-1](https://unicode.org/reports/tr31/#R1-1), adding the optional start character `_` (low line) and the optional medial character `-` (hyphen-minus). In the syntax of [UAX31-D1](https://unicode.org/reports/tr31/#D1):
 
     <Identifier> := <Start> <Continue>* (<Medial> <Continue>+)*
 
     <Start> := XID_Start + U+005F
-    <Continue> := <Start> + XID_Continue
+    <Continue> := XID_Continue
     <Medial> := U+002D
 
-That is, a name must conform with UAX31-R1 and:
+That is, a name must conform with [UAX31-R1-1](https://unicode.org/reports/tr31/#R1-1) and:
 - may start with, contain and end with `_` (low line)
 - may contain but cannot start or end with `-` (hyphen-minus)
 
-If the target language does not support `kebab-case`, names may be transliterated to a compatible [case style](https://en.wikipedia.org/wiki/Naming_convention_(programming)#Multiple-word_identifiers) that maintains the separation of words within a name.
+Names are case insensitive, meeting [UAX31-R4](https://unicode.org/reports/tr31/#R4) with normalization form KC and [UAX31-R5](https://unicode.org/reports/tr31/#R5) with full case folding. Implementations should ignore default ignorable code points in comparison.
+
+When compiling to a target language that does not support `kebab-case`, names may be transliterated to a compatible [case style](https://en.wikipedia.org/wiki/Naming_convention_(programming)#Multiple-word_identifiers) that maintains the separation of words within a name.
 
 ## Syntax
 
