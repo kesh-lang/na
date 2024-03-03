@@ -33,7 +33,7 @@ It should be a solid foundation for a wide range of use cases.
     <Continue> := XID_Continue
     <Medial> := U+002D
 
-That is, a name must conform with [UAX31-R1-1](https://unicode.org/reports/tr31/#R1-1) and:
+That is, a name must conform with [UAX31-R1-2](https://unicode.org/reports/tr31/#R1-2) where:
 - may start with, contain and end with `_` (low line)
 - may contain but cannot start or end with `-` (hyphen-minus)
 
