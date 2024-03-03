@@ -66,11 +66,11 @@ Arbitrary precision signed numbers.
 ```euphoria
 42         -- integer
 6.28       -- decimal fraction
--1/12      -- rational fraction (ratio)
+1/3        -- rational fraction (ratio)
+1.6\-35    -- scientific/exponential notation
 ```
 
 ```euphoria
-6.022\23   -- scientific/exponential notation
 1_771_561  -- digit grouping
 007        -- leading zeros
 48fps      -- suffix (Unicode General Category L)
