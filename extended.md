@@ -48,15 +48,17 @@ In standard **na x**, `#name` may only be used as the key of a key signature, an
 
 The following examples are written in [sode](https://github.com/kesh-lang/sode).
 
-### User-defined type
+### User-defined types
 
 ```lua
-#person: [               -- type definition
-    name: #text          -- type annotation
-    friends?: #person[]  -- typed list (item marked as optional)
+#person: [                     -- type definition
+    name: #text                -- type annotation
+    friends: #persons | #none  -- optional item
 ]
 
-joe: #person [           -- typed record
+#persons: [#natural: #person]  -- list type (key signature)
+
+joe: #person [                 -- typed record
     name: 'Joe'
 ]
 ```
