@@ -138,11 +138,13 @@ that's multiline \01F632
 
 A versatile data structure able to represent both linear and associative [collections](https://en.wikipedia.org/wiki/Collection_(abstract_data_type)).
 
-Blocks are enclosed by square brackets `[]`. Inline items may be separated by comma.
+Blocks are enclosed by square brackets `[]`. Inline items are separated by comma `,`.
 
-Keys are optional and can be either [non-negative integer numbers](#number) or [names](#names). Duplicates are not allowed.
+Keys are optional and can be either [non-negative integers](#number) or [names](#names).
 
-Linear values are implicitly given 0-indexed integer keys.
+Associative items are explicitly defined with colon `:`. Duplicates are not allowed.
+
+Linear items are implicitly given 0-indexed integer keys.
 
 ```lua
 []                      -- empty
@@ -157,7 +159,7 @@ Similar to [Lua tables](https://www.lua.org/pil/2.5.html), [JavaScript objects](
 [ 1, 2, 3, length: 3 ]  -- a mix of implicitly indexed and explicitly named values
 ```
 
-More specific data structures may be enforced with [types](extended.md#standard-types).
+More specific data types may be enforced with [extensions](extended.md#standard-types).
 
 ##### Nested
 
@@ -174,24 +176,21 @@ associative: [
 ]
 ```
 
-##### Flexible syntax
+##### Lightweight syntax
 
-Brackets are only required for inline blocks. Indentation is significant if multiline.
+Indentation is significant in multiline blocks.
 
-Commas are optional and have no semantics. Recommended only between inline values for readability.
+Brackets and commas are required for inline blocks and optional for multiline blocks.
 
-Multiline values may be prefixed with the [bullet glyph](https://en.wikipedia.org/wiki/Bullet_(typography)) `•` for readability.
+Multiline items may be prefixed with [bullet point](https://en.wikipedia.org/wiki/Bullet_(typography)) `•` for readability.
 
 ```lua
 person:
-    name: 'Joey'
-    age: 27
+    name: 'Alan'
+    age: 38
     friends:
-        • 'Chandler'
-        • 'Monica'
-        • 'Phoebe'
-        • 'Rachel'
-        • 'Ross'
+        • 'Ada'
+        • 'Charles'
 ```
 
 ## Encoding
@@ -203,7 +202,7 @@ Either UTF-8 or a compatible binary format, for example [CBOR](https://en.wikipe
 - Lightweight
 - Human-friendly
 - Line-oriented (newline is significant)
-- Indentation-based (indentation is significant if multiline)
+- Indentation-based (indentation is significant)
 - [Extensible](extended.md)
 
 ---
