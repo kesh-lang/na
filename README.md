@@ -165,7 +165,7 @@ More specific data types may be enforced with [extensions](extended.md#standard-
 
 ```lua
 linear: [
-    [1, 2, 3]               -- inline items separated by comma for readability
+    [1, 2, 3]               -- inline items separated by comma
     [4, 5, 6]               -- multiline items separated by newline
     [7, 8, 9]
 ]
