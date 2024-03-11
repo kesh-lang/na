@@ -36,13 +36,38 @@ Where:
 
 - `#none` denotes the concept of `nothing`/`null`/`nil`/`void`/`undefined`
 - `#name` denotes a [valid name](README.md#names)
-- [`#number`](README.md#number) has the following subtypes:
+- [`#number`](README.md#number) denotes an arbitrary-precision number, with the following subtypes:
     - `#decimal` denotes a decimal _approximation_ of a [real number](https://en.wikipedia.org/wiki/Real_number) (ℝ)
         - `#integer` denotes an [integer number](https://en.wikipedia.org/wiki/Integer) (ℤ)
             - `#natural` denotes a [natural number](https://en.wikipedia.org/wiki/Natural_number) (ℕ), a non-negative integer
     - `#ratio` denotes a [rational number](https://en.wikipedia.org/wiki/Rational_number) (ℚ), the ratio of two positive integers
 
 In standard **na x**, `#name` may only be used as the key of a key signature, and keys may only be of the type `#natural` or `#name`.
+
+### Fixed-precision numbers
+
+Support for fixed-precision numbers are implementation/platform dependent.
+
+Implementations should use type names from the following list:
+
+- Signed integers
+    - `#i8` denotes an 8-bit signed integer
+    - `#i16` denotes a 16-bit signed integer
+    - `#i32` denotes a 32-bit signed integer
+    - `#i64` denotes a 64-bit signed integer
+    - `#i128` denotes a 128-bit signed integer
+    - …
+- Unsigned integers
+    - `#u8` denotes an 8-bit unsigned integer
+    - `#u16` denotes a 16-bit unsigned integer
+    - `#u32` denotes a 32-bit unsigned integer
+    - `#u64` denotes a 64-bit unsigned integer
+    - `#u128` denotes a 128-bit unsigned integer
+    - …
+- Floating-point
+    - `#f32` denotes an [IEEE 754 single-precision binary floating-point](https://en.wikipedia.org/wiki/Single-precision_floating-point_format) number (binary32)
+    - `#f64` denotes an [IEEE 754 double-precision binary floating-point](https://en.wikipedia.org/wiki/Double-precision_floating-point_format) number (binary64)
+    - …
 
 ## Examples
 
