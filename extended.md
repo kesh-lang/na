@@ -71,8 +71,6 @@ Implementations should use type names from the following list:
 
 ## Examples
 
-The following examples are written in [sode](https://github.com/kesh-lang/sode).
-
 ### User-defined types
 
 ```lua
