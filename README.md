@@ -178,9 +178,9 @@ associative: [
 
 ##### Lightweight syntax
 
-Brackets and commas are only required for inline blocks, and optional for multiline blocks.
+Brackets and commas are required for inline blocks and optional for multiline blocks.
 
-Indentation is significant in multiline blocks.
+Indentation is significant for multiline blocks.
 
 Multiline items may be prefixed with [bullet point](https://en.wikipedia.org/wiki/Bullet_(typography)) `•` for readability.
 
