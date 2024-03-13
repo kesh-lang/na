@@ -4,7 +4,7 @@
 
 ## Definition
 
-**na** is a simple yet flexible data notation format inspired by [ren](https://pointillistic.com/ren/) and [edn](https://github.com/edn-format/edn/).
+**na** is a simple yet flexible data notation format.
 
 Its value types represent a minimal set of common data types.
 
