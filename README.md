@@ -73,7 +73,7 @@ Arbitrary precision signed numbers.
 ```euphoria
 1_771_561  -- digit grouping
 007        -- leading zeros
-48fps      -- suffix (Unicode General Category L)
+48fps      -- suffix
 99%        -- percentage (ratio to 100)
 ```
 
