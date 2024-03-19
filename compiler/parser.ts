@@ -1,5 +1,5 @@
 import { Lexer } from './lexer'
-import { OperatorToken, StartToken, type Token } from './token'
+import { StartToken, type Token } from './token'
 import {
 	Node,
 	Block,
@@ -193,12 +193,5 @@ export class Parser {
 		if (this.ahead.type === 'newline' || this.ahead.end)
 			throw Error('A bullet list item can not be empty')
 		return this.item(this.advance())
-	}
-
-	/** Processes a percent token. */
-	private processPercent(token: Token) {
-		if (!(this.behind.type === 'number' && this.behind.meta?.type === 'integer'))
-			throw Error('Percentage sign can only follow an integer number')
-		return new Numeric(this.behind, `${this.behind.match}%`)
 	}
 }

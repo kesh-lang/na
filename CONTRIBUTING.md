@@ -2,7 +2,7 @@
 
 Oh, you want to contribute? Nice!
 
-If you have any ideas, criticisms (of the constructive kind) or other useful input, you're welcome to open an issue or get in touch. I'm interested in hearing what others think of this.
+If you have any ideas, criticisms (of the constructive kind) or other useful contributions, you're welcome to open an issue or get in touch. I'm interested in hearing what others think of this.
 
 I made it for my own use, but I never meant to keep it to myself.
 
