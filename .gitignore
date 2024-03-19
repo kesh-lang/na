@@ -3,5 +3,6 @@
 /bun.lockb
 
 # for local development
+/notes
 /.editorconfig
 /index.ts
