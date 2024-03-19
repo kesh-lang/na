@@ -9,6 +9,9 @@
 			"recommended": true,
 			"complexity": {
 				"noForEach": "warn"
+			},
+			"suspicious": {
+				"noAssignInExpressions": "off"
 			}
 		}
 	},
