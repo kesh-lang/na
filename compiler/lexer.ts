@@ -3,7 +3,7 @@ import {
 	InvalidRadixCompilerError,
 	DigitGroupingCompilerError,
 	MissingClosingMarkerCompilerError,
-	UnexpectedTokenSyntaxError,
+	UnexpectedCharacterSyntaxError,
 	UnsupportedCharacterSyntaxError,
 	InvalidNumberCompilerError,
 } from './error'
@@ -136,8 +136,10 @@ export class Lexer {
 			this.character = this.get(this.position)
 
 			if (this.character === '\u0020') {
-				// Disallow space at the start of the source
-				if (this.position === 0) throw new UnexpectedTokenSyntaxError(this.character, this.position)
+				if (this.position === 0) {
+					// Disallow space at the start of the source
+					throw new UnexpectedCharacterSyntaxError(this.character, this.position)
+				}
 				this.position++
 			} else {
 				break
@@ -174,7 +176,7 @@ export class Lexer {
 		}
 		// Tab (not as indentation)
 		else if (this.character === '\u0009') {
-			throw new UnexpectedTokenSyntaxError(this.character, this.position)
+			throw new UnexpectedCharacterSyntaxError(this.character, this.position)
 		}
 		// Unsupported character
 		else if (regexUnsupported.test(this.character)) {
@@ -194,8 +196,10 @@ export class Lexer {
 		let depth = 0 // indentation depth of the following line
 		let dent = 0 // change in indentation depth (-n | 0 | +n)
 
-		// Disallow space directly after newline
-		if (this.ahead === '\u0020') throw new UnexpectedTokenSyntaxError(this.character, this.position)
+		if (this.ahead === '\u0020') {
+			// Disallow space directly after newline
+			throw new UnexpectedCharacterSyntaxError(this.character, this.position)
+		}
 
 		// Keep track of indentation while skipping any tab characters
 		if (this.ahead === '\u0009') {
@@ -203,9 +207,10 @@ export class Lexer {
 			depth = end - start - 1
 			dent = depth >= this.depth ? depth - this.depth : -(this.depth - depth)
 
-			// Disallow space directly after indentation
-			if (this.get(end) === '\u0020')
-				throw new UnexpectedTokenSyntaxError(this.character, this.position)
+			if (this.get(end) === '\u0020') {
+				// Disallow space directly after indentation
+				throw new UnexpectedCharacterSyntaxError(this.character, this.position)
+			}
 		}
 		// Detect outdent when newline is not followed by an indent
 		else if (this.depth) {

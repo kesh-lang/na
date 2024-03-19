@@ -7,6 +7,13 @@ export class UnknownCharacterSyntaxError extends SyntaxError {
 	}
 }
 
+export class UnexpectedCharacterSyntaxError extends SyntaxError {
+	constructor(char: string, position: number) {
+		const message = format('Unexpected character {char} ({position})', { char, position })
+		super(message)
+	}
+}
+
 export class UnsupportedCharacterSyntaxError extends SyntaxError {
 	constructor(char: string, position: number) {
 		const message = format('Unsupported character {char} ({position})', { char, position })
@@ -22,11 +29,11 @@ export class MissingTokenSyntaxError extends SyntaxError {
 }
 
 export class UnexpectedTokenSyntaxError extends SyntaxError {
-	constructor(char: string, position: number) {
-		const message = format('Unexpected {char} ({position})', { char, position })
-		super(message)
+		constructor(type: string, position: number) {
+			const message = format('Unexpected {type} ({position})', { type, position })
+			super(message)
+		}
 	}
-}
 
 export class ExpectedTokenSyntaxError extends SyntaxError {
 	constructor(expected: string, received: string, position: number) {
