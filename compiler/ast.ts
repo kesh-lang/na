@@ -10,6 +10,11 @@ export class Node {
 	}
 }
 
+export class Separator extends Node {}
+export class Operator extends Node {}
+export class Indent extends Node {}
+export class Outdent extends Node {}
+
 // A value node is one that produces a value by itself, excluding comments and definitions
 export class Value<T = unknown> extends Node {
 	value: T
@@ -35,21 +40,28 @@ export class Truth extends Value<boolean> {
 }
 
 export class Numeric extends Value<string> {
-	constructor(token: Token) {
-		super(token, token.match)
+		constructor(token: Token, value?: string) {
+			super(token, value ?? token.match)
+		}
 	}
-}
 
 export class Text extends Value<string> {
-	constructor(token: Token) {
-		super(token, token.match)
-		this.value = token.meta?.multiline ? this.value.slice(3, -3) : this.value.slice(1, -1)
+		constructor(token: Token) {
+			super(token, token.match)
+		}
 	}
-}
 
 export class Name extends Value<string> {
 	constructor(token: Token) {
 		super(token, token.match)
+	}
+}
+
+export class Type extends Value<string> {
+	operator: Token
+	constructor(token: Token, operator: Token) {
+		super(token, token.match, 'type')
+		this.operator = operator
 	}
 }
 

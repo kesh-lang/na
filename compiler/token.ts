@@ -18,6 +18,15 @@ export class Token {
 	}
 }
 
+export class OperatorToken extends Token {
+	declare meta: {
+		bind: {
+			left: boolean
+			right: boolean
+		}
+	}
+}
+
 export class StartToken extends Token {
 	constructor() {
 		super('(top)', '', -1, -1)

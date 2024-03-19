@@ -1,15 +1,15 @@
 import { Parser } from './parser'
-import { Block, Truth, Definition, type Node, Comment, Ignored } from './ast'
+import { Block, Truth, Definition, type Node, Comment, Ignored, Value, Separator } from './ast'
 
 export { Parser } from './parser'
-export { Lexer } from './lexer'
+export { Lexer, type Token } from './lexer'
 
 export type RenderFunction = (node: Node) => string | undefined
 
 const parser = new Parser()
 
 /**
- * Compile a na source text, passing the parse tree through a render function.
+ * Compiles a na source text, passing the parse tree through a render function.
  *
  * Compiles to normalized na by default.
  *
@@ -24,15 +24,16 @@ export function compile(source: string, render: RenderFunction = toNormalized) {
 compile.toJSON = (source: string) => compile(source, toJSON)
 
 /**
- * Render a parse tree node and any child nodes as normalized na.
+ * Renders a parse tree node and any child nodes as normalized na.
  *
- * Not pretty. @todo better!
+ * Not pretty, buggy (wrong indexes). @todo better
  */
 export function toNormalized(node: Node): string | undefined {
 	if (node instanceof Block)
 		return `[${node.nodes
 			.map((child: Node, index: number, nodes: Node[]) => {
 				if (child instanceof Ignored) return undefined
+				if (child instanceof Separator) return undefined
 				if (child instanceof Definition) {
 					const next = nodes[index + 1]
 					nodes[index + 1] = new Ignored(next.token)
@@ -43,20 +44,22 @@ export function toNormalized(node: Node): string | undefined {
 			.filter(Boolean) // truthy
 			.join(', ')}]`
 	if (node instanceof Truth) return node.value ? '⊤' : '⊥'
+	if (node instanceof Value) return node.value
 	if (node instanceof Comment) return undefined
 	return node.token.match
 }
 
 /**
- * Render a parse tree node and any child nodes as JSON.
+ * Renders a parse tree node and any child nodes as JSON.
  *
- * Ripped off toNormalized. @todo better!
+ * Not pretty, buggy (wrong indexes). @todo better
  */
 export function toJSON(node: Node): string | undefined {
 	if (node instanceof Block)
 		return `{${node.nodes
 			.map((child: Node, index: number, nodes: Node[]) => {
 				if (child instanceof Ignored) return undefined
+				if (child instanceof Separator) return undefined
 				if (child instanceof Definition) {
 					const next = nodes[index + 1]
 					nodes[index + 1] = new Ignored(next.token)
@@ -67,6 +70,7 @@ export function toJSON(node: Node): string | undefined {
 			.filter(Boolean) // truthy
 			.join(', ')}}`
 	if (node instanceof Truth) return node.value ? 'true' : 'false'
+	if (node instanceof Value) return node.value
 	if (node instanceof Comment) return undefined
 	return node.token.match
 }
