@@ -110,7 +110,7 @@ The following escape sequences are supported:
 - `\"` – quotation mark `U+0022`
 - `\\` – reverse solidus `U+005C`
 - `\␤` - line continuation
-- `\HHHHHH` – Unicode code point (6 hexadecimal numerals padded with leading zeros)
+- `\xxxxxx` – Unicode code point (6 hexadecimal numerals padded with leading zeros)
 
 ##### Multiline
 
