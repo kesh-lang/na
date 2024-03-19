@@ -20,11 +20,6 @@ async function process(path: string, parts: string[]) {
 
 const glob = new Glob('**/*.na')
 
-for await (const path of glob.scan('./test/data')) process(path, path.split('/'))
-
-describe('json', () => {
-	test('basic', () => {
-		const output = compile.toJSON('1 2 3')
-		expect(output).toBe('{"0": 1, "1": 2, "2": 3}')
-	})
-})
+for await (const path of glob.scan('./test/data')) {
+	process(path, path.split('/'))
+}

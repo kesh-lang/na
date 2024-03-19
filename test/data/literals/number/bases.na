@@ -1,0 +1,13 @@
+[2\10, 3\012, 4\0123, 5\01234, 6\012345, 7\0123456, 8\01234567, 9\012345678, 10\0123456789, 11\0123456789a, 12\0123456789ab, 36\0123456789abcdefghijklmnopqrstuvwxyz]
+2\10 -- base-2 (binary)
+3\012 -- base-3
+4\0123 -- base-4
+5\01234 -- base-5
+6\012345 -- base-6
+7\0123456 -- base-7
+8\01234567 -- base-8 (octal)
+9\012345678 -- base-9
+10\0123456789 -- base-10 (decimal)
+11\0123456789a -- base-11
+12\0123456789ab -- base-12 (duodecimal/dozenal)
+36\0123456789abcdefghijklmnopqrstuvwxyz -- base-36

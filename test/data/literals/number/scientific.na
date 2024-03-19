@@ -1,0 +1,7 @@
+[0.0\0, 6.022\23, +1.0\10, -1.0\10, 6.022\+23, 1.6\-35]
+0.0\0
+6.022\23
++1.0\10 -- negative sign
+-1.0\10 -- positive sign
+6.022\+23 -- positive exponent sign
+1.6\-35 -- negative exponent sign
