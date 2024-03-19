@@ -348,6 +348,9 @@ export class Lexer {
 			end++
 		}
 
+		if (end === this.source.length)
+			throw new MissingClosingMarkerCompilerError(marker + marker + marker, start)
+
 		this.emit(new Token('text', this.source.slice(start, end), start, end, meta))
 	}
 
@@ -355,12 +358,14 @@ export class Lexer {
 	private operator(start: number) {
 		const token = this.operators[this.character]
 		if (token === undefined) throw new UnknownCharacterSyntaxError(this.character, start)
+		
 		const meta = {
 			bind: {
 				left: !isBoundary(this.get(start - 1)),
 				right: !isBoundary(this.get(start + 1)),
 			},
 		}
+		
 		this.emit(new OperatorToken(token, this.character, start, start + 1, meta))
 	}
 
@@ -407,7 +412,8 @@ export class Lexer {
 		while ((token = this.next()) && !token.end) yield token
 	}
 }
-/** Tests whether a character is a valid boundary for a token. */
+
+/** Tests whether a character is a valid boundary for an operator. */
 function isBoundary(char: string) {
 	return char === '' || !regexWord.test(char)
 }
