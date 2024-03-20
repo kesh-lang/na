@@ -2,7 +2,7 @@
 
 A handwritten and very rudimentary compiler for na.
 
-Its intention is not to serve as an example of how na _should_ be parsed, but to explore what it's like to parse na by hand and to uncover any pain points doing so. It was developed using the [test suite](../test/), intended to discover any mistakes or ambiguities in the specification.
+Its intention is not to serve as an example of how na _should_ be parsed, but to explore what it's like to parse na by hand and to uncover any pain points doing so. It was developed using the [test suite](../test/), to discover any mistakes or ambiguities in the specification.
 
 This was my first compiler. The lexer works reasonably well, but the parser needs more work. Notably, it doesn't handle nested multiline blocks or percentage numbers. Ideally, I'd start over again with Pratt parsing.
 
