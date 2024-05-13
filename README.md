@@ -67,7 +67,7 @@ Arbitrary precision signed numbers.
 42         -- integer
 6.28       -- decimal fraction
 1/3        -- rational fraction (ratio)
-1.6\-35    -- scientific/exponential notation
+1.6e-35    -- scientific/exponential notation
 ```
 
 ```euphoria
