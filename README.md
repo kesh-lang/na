@@ -140,7 +140,7 @@ Blocks are enclosed by square brackets `[]`. Inline items are separated by comma
 
 Keys are optional and can be either [non-negative integers](#number) or [names](#names).
 
-Associative items are explicitly defined with colon `:`. Duplicates are not allowed.
+Associative items are explicitly defined with colon `:`.
 
 Linear items are implicitly given 0-indexed integer keys.
 
