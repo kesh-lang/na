@@ -193,7 +193,7 @@ person:
 
 ## Encoding
 
-Either UTF-8 or a compatible binary format, for example [CBOR](https://en.wikipedia.org/wiki/CBOR) or a derivative of [Nota](https://www.crockford.com/nota.html).
+Either UTF-8 text or a compatible binary encoding, for example [CBOR](https://en.wikipedia.org/wiki/CBOR) or [OSC](https://opensoundcontrol.org/encoding.html).
 
 ## Features
 
